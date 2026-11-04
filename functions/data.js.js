@@ -26,15 +26,18 @@ export async function onRequestGet({ env, next }) {
     "Cache-Control": "no-store",
     "Access-Control-Allow-Origin": "*"
   };
-  const kv = env.MS_KV ? await env.MS_KV.get("data.js") : null;
+  const bound = !!env.MS_KV;
+  const kv = bound ? await env.MS_KV.get("data.js") : null;
   let old = "";
   try { const r = await next(); if (r.ok) old = await r.text(); } catch (e) {}
-  if (!kv) return new Response(old, { status: old ? 200 : 404, headers });
-  if (!old) return new Response(kv, { headers });
+  // petite ligne de diagnostic à la fin du fichier : binding=oui/non, kv=donnée trouvée oui/non, static=ancien fichier oui/non
+  const tag = "\n/* ms-fn binding=" + (bound ? "oui" : "non") + " kv=" + (kv ? "oui" : "non") + " static=" + (old ? "oui" : "non") + " */";
+  if (!kv) return new Response(old + tag, { status: old ? 200 : 404, headers });
+  if (!old) return new Response(kv + tag, { headers });
   try {
     const M = "window.MS_DATA=";
     const a = arrayBounds(kv, M), b = arrayBounds(old, M);
-    if (!a || !b) return new Response(kv, { headers });
+    if (!a || !b) return new Response(kv + tag, { headers });
     const fresh = JSON.parse(kv.slice(a.start, a.end));
     const legacy = JSON.parse(old.slice(b.start, b.end));
     const seen = new Set(fresh.map(x => key(x.s)));
@@ -42,9 +45,9 @@ export async function onRequestGet({ env, next }) {
     const merged = fresh.concat(extra);
     let out = kv.slice(0, a.start) + JSON.stringify(merged) + kv.slice(a.end);
     out = out.replace(/("count"\s*:\s*)\d+/, "$1" + merged.length);
-    return new Response(out, { headers });
+    return new Response(out + tag, { headers });
   } catch (e) {
-    return new Response(kv, { headers });
+    return new Response(kv + tag, { headers });
   }
 }
  
