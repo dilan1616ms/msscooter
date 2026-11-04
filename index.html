@@ -201,6 +201,34 @@ footer{margin-top:0}
 #offer .xx{position:absolute;inset-block-start:50%;inset-inline-end:10px;transform:translateY(-50%);width:34px;height:34px;border:0;border-radius:50%;background:#0004;color:#fff;display:grid;place-items:center}
 #offer .xx:hover{background:#0008}
 #offer .cta2{background:#fff;color:#7f1d1d;border-radius:99px;padding:3px 14px;font-size:13px}
+/* features (adapted from 21st features-8) */
+.fx{display:grid;gap:12px}
+.fx .fc{position:relative;overflow:hidden;padding:26px;transition:border-color .25s,transform .35s var(--e)}.fx .fc:hover{border-color:var(--red);transform:translateY(-3px)}
+@media(min-width:640px){.fx{grid-template-columns:repeat(6,1fr)}.fx .f1{grid-column:span 6}.fx .f2,.fx .f3{grid-column:span 3}.fx .f4,.fx .f5{grid-column:span 6}}
+@media(min-width:1000px){.fx .f1,.fx .f2,.fx .f3{grid-column:span 2}.fx .f4,.fx .f5{grid-column:span 3}}
+.fx h3{font-size:20px;font-weight:900;line-height:1.3}.fx p{color:var(--mu);margin-top:6px}
+.f1{display:grid;place-items:center;text-align:center}
+.f1 .bl{position:relative;width:224px;height:96px;display:grid;place-items:center;margin-inline:auto}
+.f1 .bl svg{position:absolute;inset:0;width:100%;height:100%;color:var(--mt)}
+.f1 .bl b{position:relative;font-size:56px;font-weight:900;line-height:1;color:var(--red);font-variant-numeric:tabular-nums}.f1 .bl b small{font-size:18px;color:var(--ink);margin-inline-start:6px}
+.fring{position:relative;width:56px;height:56px;border-radius:50%;border:1px solid var(--bd);display:grid;place-items:center;color:var(--red);margin:8px}
+.fring:before{content:'';position:absolute;inset:-8px;border-radius:50%;border:1px solid var(--bd)}.fring svg{width:26px;height:26px}
+.f2,.f3{text-align:center;display:grid;justify-items:center;align-content:start;gap:2px}.f2 .btn,.f3 .tags{margin-top:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}.tags span{padding:3px 12px;border-radius:99px;font-size:13px;font-weight:800;background:var(--mt);border:1px solid var(--bd)}
+.f4,.f5{display:grid;gap:22px}@media(min-width:640px){.f4,.f5{grid-template-columns:1fr 1fr}}
+.f4>div:first-child,.f5>div:first-child{display:flex;flex-direction:column;gap:18px;justify-content:space-between}
+.win{position:relative;border:1px solid var(--bd);border-radius:14px;background:var(--mt);padding:30px 14px 12px;display:grid;gap:6px;align-content:start}
+.win:before{content:'';position:absolute;inset-block-start:12px;inset-inline-start:14px;width:8px;height:8px;border-radius:50%;background:var(--bd);box-shadow:14px 0 var(--bd),28px 0 var(--bd)}
+.win div{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:var(--cd);border:1px solid var(--bd);font-weight:800;font-size:14px}
+.win em,.ctl em{font-style:normal;font-size:12px;font-weight:800;color:#15803d;background:#22c55e1f;border-radius:99px;padding:1px 10px}
+.ctl{position:relative;display:grid;gap:14px;padding-block:8px;align-content:center}
+.ctl:before{content:'';position:absolute;inset-block:0;inset-inline-start:50%;width:1px;background:var(--bd)}
+.ctl>div{position:relative;display:flex;align-items:center;gap:8px;width:calc(50% - 14px);font-weight:800;font-size:14px}
+.ctl>div:nth-child(odd){justify-content:flex-end}.ctl>div:nth-child(even){margin-inline-start:calc(50% + 14px)}
+.ctl>div:after{content:'';position:absolute;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px var(--cd)}
+.ctl>div:nth-child(odd):after{inset-inline-end:-19px}.ctl>div:nth-child(even):after{inset-inline-start:-19px}
+.ctl .cn{padding:4px 12px;border:1px solid var(--bd);border-radius:8px;background:var(--cd);box-shadow:0 1px 2px #0001}
+.ctl .home .cn{border-color:var(--red);color:var(--rd)}
 /* scanner + verify popup */
 .scv{position:relative;border-radius:14px;overflow:hidden;background:#000;aspect-ratio:1;max-height:60vh;width:100%;margin-top:14px}
 .scv video{width:100%;height:100%;object-fit:cover;display:block}
@@ -260,7 +288,7 @@ footer{margin-top:0}
 <div id="ann" class="hide"></div>
 <header id="hd"><div class="w">
   <a href="#top" aria-label="MS Scooter"><img src="logo.webp" width="82" height="38" alt="MS Scooter"></a>
-  <nav id="nv" aria-label="Main"><a class="v" href="#verify" data-i="n1"></a><a href="#store" data-i="n2"></a><a href="#why" data-i="n3"></a><a href="#how" data-i="n4"></a><a href="#tiktok" data-i="n5"></a><a href="#faq" data-i="n6"></a><a href="#contact" data-i="n7"></a></nav>
+  <nav id="nv" aria-label="Main"><a class="v" href="#verify" data-i="n1"></a><a class="v" href="#features" data-i="n3"></a><a href="#store" data-i="n2"></a><a href="#why" data-i="n3"></a><a href="#how" data-i="n4"></a><a href="#tiktok" data-i="n5"></a><a href="#faq" data-i="n6"></a><a href="#contact" data-i="n7"></a></nav>
   <span class="sp"></span>
   <div class="seg" id="lang" dir="ltr"><button type="button" data-l="ar">AR</button><button type="button" data-l="fr">FR</button><button type="button" data-l="en">EN</button></div>
   <button id="th" type="button" class="ib" aria-label="Theme"><svg><use href="#i-sun"/></svg></button>
@@ -295,6 +323,11 @@ footer{margin-top:0}
 <section id="brands" aria-label="Brands"><div class="mq" dir="ltr" id="mq"><img src="brand-niu.webp" alt="NIU" height="38"><img src="brand-scoozer.webp" alt="Scoozer" height="38"><img src="brand-eziride.webp" alt="EziRide" height="38"><img src="brand-aima.webp" alt="AIMA" height="38"></div></section>
 
 <div class="w hide" id="proof"><div id="pf"></div></div>
+
+<section id="features" class="sec" style="padding-top:0"><div class="w">
+  <div class="sh rv"><span class="eyebrow" data-i="ey2"></span><h2 data-i="fth"></h2><p data-i="ftp"></p></div>
+  <div class="fx" id="fx"></div>
+</div></section>
 
 <section id="store" class="sec"><div class="w">
   <div class="sh rv"><span class="eyebrow" data-i="ey1"></span><h2 data-i="st"></h2><p data-i="sp"></p></div>
@@ -370,8 +403,15 @@ var $=function(i){return document.getElementById(i)},H=document.documentElement,
 var T={
 bd:['الشلف · توصيل إلى 58 ولاية','Chlef · Livraison 58 wilayas','Chlef · Delivery to 58 wilayas'],
 h1:['دراجتك الكهربائية، تصلك أينما كنت','Votre scooter électrique, livré partout en Algérie','Your electric scooter, delivered across Algeria'],
-hp:['NIU وScoozer وEziRide وAIMA. اختر الموديل والباقة، أضفها إلى السلة واطلب عبر واتساب.','NIU, Scoozer, EziRide, AIMA. Choisissez modèle et pack, ajoutez au panier et commandez sur WhatsApp.','NIU, Scoozer, EziRide, AIMA. Pick model and pack, add to cart and order on WhatsApp.'],
-wbt:['اطلب الأسعار عبر واتساب','Prix sur WhatsApp','Get prices on WhatsApp'],scn:['افتح الكاميرا لمسح الرمز','Ouvrir la caméra pour scanner','Open camera to scan'],scs:['وجّه الكاميرا نحو رمز QR على وصلك، يقرأه تلقائياً.','Pointez la caméra vers le QR de votre reçu, lecture automatique.','Point the camera at the QR on your receipt, it reads automatically.'],sce:['تعذر فتح الكاميرا. اسمح بالوصول أو أدخل الرقم التسلسلي.','Caméra indisponible. Autorisez l’accès ou saisissez le n° de série.','Camera unavailable. Allow access or type the serial number.'],vrt:['نتيجة التحقق','Résultat de la vérification','Verification result'],mre:['المزيد','Plus de détails','More details'],
+hp:['دراجات كهربائية NIU وScoozer وEziRide وAIMA بضمان 12 شهراً، مع قطع الغيار والصيانة وتوصيل مجاني للولايات القريبة. للأسعار والتفاصيل راسلنا على واتساب.','Scooters électriques NIU, Scoozer, EziRide et AIMA avec 12 mois de garantie, pièces détachées, réparation et livraison gratuite dans les wilayas proches. Prix et détails sur WhatsApp.','NIU, Scoozer, EziRide and AIMA electric scooters with a 12-month warranty, spare parts, repairs and free delivery to nearby wilayas. Prices and details on WhatsApp.'],
+hpOld:['NIU وScoozer وEziRide وAIMA. اختر الموديل والباقة، أضفها إلى السلة واطلب عبر واتساب.','NIU, Scoozer, EziRide, AIMA. Choisissez modèle et pack, ajoutez au panier et commandez sur WhatsApp.','NIU, Scoozer, EziRide, AIMA. Pick model and pack, add to cart and order on WhatsApp.'],
+wbt:['اطلب الأسعار عبر واتساب','Prix sur WhatsApp','Get prices on WhatsApp'],fth:['كل ما تحتاجه بعد الشراء','Tout ce qu’il vous faut après l’achat','Everything you need after you buy'],ftp:['ضمان وقطع غيار وصيانة وتوصيل، في مكان واحد.','Garantie, pièces, réparation et livraison, au même endroit.','Warranty, parts, repair and delivery, all in one place.'],
+f1h:['ضمان على الدراجة','Garantie sur le scooter','Scooter warranty'],f1u:['شهراً','mois','months'],
+f2h:['ضمان قابل للتحقق','Garantie vérifiable','Verifiable warranty'],f2p:['امسح رمز QR على وصلك أو أدخل الرقم التسلسلي، وشاهد حالة ضمانك في ثوانٍ.','Scannez le QR de votre reçu ou saisissez le n° de série pour voir l’état de votre garantie en quelques secondes.','Scan the QR on your receipt or enter the serial number to see your warranty status in seconds.'],f2b:['تحقق الآن','Vérifier maintenant','Verify now'],
+f3h:['ورشة صيانة وإصلاح','Atelier SAV et réparation','Service and repair workshop'],f3p:['ورشتنا في الشلف تتكفل بكل الإصلاحات والمراجعة الدورية.','Notre atelier à Chlef s’occupe de toutes les réparations et révisions.','Our Chlef workshop handles every repair and check-up.'],f3t:['فحص دوري|تغيير البطارية|ضبط الفرامل|تركيب القطع','Contrôle|Batterie|Freins|Montage pièces','Check-up|Battery swap|Brake tuning|Parts fitting'],
+f4h:['قطع غيار للدراجات الكهربائية','Pièces détachées pour scooters électriques','Electric scooter spare parts'],f4p:['كل ما يحتاجه سكوترك من قطع، نوفره في الورشة أو نرسله إليك.','Toutes les pièces dont votre scooter a besoin, à l’atelier ou expédiées chez vous.','Every part your scooter needs, at the workshop or shipped to you.'],avl:['متوفر','Dispo','In stock'],
+f5h:['توصيل مجاني للولايات القريبة','Livraison gratuite dans les wilayas proches','Free delivery to nearby wilayas'],f5p:['من الشلف إلى الولايات المجاورة بدون مصاريف. ونوصل إلى بقية الولايات الـ 58 بسعر يُتفق عليه عبر واتساب.','De Chlef aux wilayas voisines sans frais. Les autres wilayas (58 au total) : tarif convenu sur WhatsApp.','From Chlef to neighbouring wilayas at no cost. Other wilayas (58 in total): rate agreed on WhatsApp.'],free:['مجاني','Gratuit','Free'],
+scn:['افتح الكاميرا لمسح الرمز','Ouvrir la caméra pour scanner','Open camera to scan'],scs:['وجّه الكاميرا نحو رمز QR على وصلك، يقرأه تلقائياً.','Pointez la caméra vers le QR de votre reçu, lecture automatique.','Point the camera at the QR on your receipt, it reads automatically.'],sce:['تعذر فتح الكاميرا. اسمح بالوصول أو أدخل الرقم التسلسلي.','Caméra indisponible. Autorisez l’accès ou saisissez le n° de série.','Camera unavailable. Allow access or type the serial number.'],vrt:['نتيجة التحقق','Résultat de la vérification','Verification result'],mre:['المزيد','Plus de détails','More details'],
 askp:['الأسعار عبر واتساب','Prix sur WhatsApp','Prices on WhatsApp'],sh:['قريباً','Bientôt','Coming soon'],sh2:['باقي الأقسام قريباً','Le reste arrive très vite','The rest is coming soon'],sp2:['نكمّلو الموقع في أقرب وقت. للأسعار والتفاصيل اضغط على واتساب ونبعثولك كلش.','Nous terminons le site au plus vite. Pour les prix et les détails, cliquez sur WhatsApp et nous vous envoyons tout.','We are finishing the site ASAP. For prices and details, tap WhatsApp and we will send you everything.'],
 cta1:['تصفح الدراجات','Voir les scooters','Browse scooters'],
 vt:['تحقق من دراجتك','Vérifiez votre scooter','Verify your scooter'],vp:['أدخل الرقم التسلسلي: الضمان، السجل والإصلاحات.','Entrez le n° de série : garantie, historique et réparations.','Enter the serial number: warranty, history and repairs.'],
@@ -479,11 +519,22 @@ var cbtn=$('cbtn');
 function total(){return cart.reduce(function(a,i){return a+i.p*i.q},0)}
 function save(){try{localStorage.setItem('ms-cart',JSON.stringify(cart))}catch(e){}renderCart()}
 function wilName(){return wsel!==''&&WIL[+wsel]?(+wsel+1)+' - '+WIL[+wsel][L=='ar'?0:1]:''}
+var orderStartedAt=0,orderBusy=false;
 function renderCart(){var n=cart.reduce(function(a,i){return a+i.q},0),b=$('cb');b.textContent=n;b.classList.toggle('hide',!n);
  $('cl').innerHTML=cart.length?cart.map(function(i,x){return'<div class="card ci"><div class="ph">'+(i.img?'<img src="'+esc(i.img)+'" alt="" width="76" height="76" loading="lazy">':'<b>MS</b>')+'</div><div><b>'+esc(i.n)+'</b><small>'+esc(i.pk)+(i.p?' · '+fmt(i.p):'')+'</small><div class="rw"><div class="qty"><button type="button" data-q="'+x+'" data-d="-1" aria-label="-">'+ic('minus')+'</button><b>'+i.q+'</b><button type="button" data-q="'+x+'" data-d="1" aria-label="+">'+ic('plus')+'</button></div><button type="button" class="rm" data-r="'+x+'" aria-label="'+t('rmv')+'">'+ic('trash')+'</button></div></div></div>'}).join(''):'<p class="em">'+t('empty')+'</p>';
- var tt=total();$('df').innerHTML=cart.length?'<label for="wsel">'+t('wlb')+'</label><select class="sel" id="wsel"><option value="">'+t('wpk')+'</option>'+WIL.map(function(w,i){return'<option value="'+i+'"'+(String(i)===wsel?' selected':'')+'>'+(i+1)+' - '+esc(w[L=='ar'?0:1])+'</option>'}).join('')+'</select><div class="tt"><span>'+t('tot')+'</span><span>'+(tt?fmt(tt):t('od'))+'</span></div><a class="btn lg blk" id="co" target="_blank" rel="noopener" href="'+wa(cartMsg())+'">'+ic('wa')+t('ck')+'</a><small>'+t('dn')+'</small>':'';
- var ws=$('wsel');if(ws)ws.onchange=function(){wsel=ws.value;try{localStorage.setItem('ms-wil',wsel)}catch(e){}$('co').href=wa(cartMsg())}}
+ var tt=total(),ar=L==='ar',fr=L==='fr';
+ var labels=ar?{name:'الاسم الكامل',phone:'رقم الهاتف',delivery:'طريقة الاستلام',ship:'توصيل إلى الولاية',pickup:'استلام من المحل',note:'ملاحظة (اختياري)',send:'تأكيد الطلب',wait:'جارٍ إرسال الطلب…',success:'تم استلام طلبك. رقم الطلب: ',error:'تعذر إرسال الطلب. حاول مرة أخرى أو تواصل معنا عبر واتساب.',missing:'يرجى اختيار الولاية.'}:fr?{name:'Nom complet',phone:'Téléphone',delivery:'Mode de réception',ship:'Livraison à la wilaya',pickup:'Retrait en boutique',note:'Note (facultatif)',send:'Confirmer la commande',wait:'Envoi en cours…',success:'Commande reçue. Référence : ',error:'Envoi impossible. Réessayez ou contactez-nous sur WhatsApp.',missing:'Veuillez choisir une wilaya.'}:{name:'Full name',phone:'Phone number',delivery:'Delivery method',ship:'Delivery to wilaya',pickup:'Store pickup',note:'Note (optional)',send:'Place order',wait:'Sending order…',success:'Order received. Reference: ',error:'Could not send the order. Try again or contact us on WhatsApp.',missing:'Please select a wilaya.'};
+ $('df').innerHTML=cart.length?'<label for="wsel">'+t('wlb')+'</label><select class="sel" id="wsel" required><option value="">'+t('wpk')+'</option>'+WIL.map(function(w,i){return'<option value="'+i+'"'+(String(i)===wsel?' selected':'')+'>'+(i+1)+' - '+esc(w[L=='ar'?0:1])+'</option>'}).join('')+'</select><div class="tt"><span>'+t('tot')+'</span><span>'+(tt?fmt(tt):t('od'))+'</span></div><form id="orderForm" style="display:grid;gap:10px"><label for="orderName">'+labels.name+'</label><input class="inp" id="orderName" name="name" minlength="2" maxlength="60" autocomplete="name" required><label for="orderPhone">'+labels.phone+'</label><input class="inp" id="orderPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="05 XX XX XX XX" required dir="ltr"><label for="orderDelivery">'+labels.delivery+'</label><select class="sel" id="orderDelivery" name="delivery"><option value="ship">'+labels.ship+'</option><option value="pickup">'+labels.pickup+'</option></select><label for="orderNote">'+labels.note+'</label><textarea class="inp" id="orderNote" name="note" rows="2" maxlength="200" style="padding:12px;resize:vertical"></textarea><input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px"><button class="btn lg blk" id="co" type="submit">'+labels.send+'</button><small id="orderStatus" role="status" aria-live="polite">'+t('dn')+'</small></form>':'';
+ var ws=$('wsel');if(ws)ws.onchange=function(){wsel=ws.value;try{localStorage.setItem('ms-wil',wsel)}catch(e){}};
+ var form=$('orderForm');if(form){if(!orderStartedAt)orderStartedAt=Date.now();form.onsubmit=function(e){submitOrder(e,labels)}}}
 function cartMsg(){var l=cart.map(function(i){return'• '+i.q+'× '+i.n+' — '+i.pk+(i.p?' ('+fmt(i.p)+')':'')}).join('\n'),tt=total(),w=wilName();return t('wc')+'\n'+l+(tt?'\n'+t('tot')+': '+fmt(tt):'')+(w?'\n📍 '+t('wlw')+': '+w:'')}
+async function submitOrder(e,labels){e.preventDefault();if(orderBusy)return;var status=$('orderStatus'),btn=$('co'),w=wilName();if(!w){status.textContent=labels.missing;$('wsel').focus();return}
+ var base=String(S.order_url||'').replace(/\/+$/,'');if(!base){status.textContent=labels.error;window.open(wa(cartMsg()),'_blank','noopener');return}
+ orderBusy=true;btn.disabled=true;status.textContent=labels.wait;
+ var items=cart.map(function(i){return i.q+'x '+i.n}).join(', '),packs=cart.map(function(i){return i.pk}).filter(Boolean).join(', '),extra=String($('orderNote').value||'').trim(),note=(extra?extra+' | ':'')+'Total: '+fmt(total())+' | '+items;
+ var payload={name:$('orderName').value.trim(),phone:$('orderPhone').value.trim(),wilaya:Number(wsel)+1,model:items.slice(0,80),pack:packs.slice(0,80),delivery:$('orderDelivery').value,note:note.slice(0,300),lang:L,t:Date.now()-orderStartedAt,website:$('orderForm').elements.website.value};
+ try{var response=await fetch(base+'/order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}),data=await response.json();if(!response.ok||!data.ok)throw new Error(data.error||'request');status.textContent=labels.success+data.ref;cart=[];wsel='';orderStartedAt=0;try{localStorage.removeItem('ms-cart');localStorage.removeItem('ms-wil')}catch(e){}save();say(labels.success+data.ref)}catch(err){status.textContent=labels.error;btn.disabled=false;orderBusy=false;return}
+ orderBusy=false;btn.disabled=false;}
 $('cl').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;if(b.dataset.q!=null){var i=cart[+b.dataset.q];i.q=Math.max(1,i.q+ +b.dataset.d)}else if(b.dataset.r!=null)cart.splice(+b.dataset.r,1);save()});
 function openCart(){lastF=document.activeElement;dr.classList.add('on');dr.setAttribute('aria-hidden','false');scr.classList.add('on');lock(1);$('dx').focus()}
 cbtn.onclick=openCart;$('dx').onclick=closeAll;
@@ -547,6 +598,16 @@ function hero(){var hc=$('hc');clearInterval(hero.t);hc.innerHTML='';
  function reset(el){el.style.removeProperty('--rx');el.style.removeProperty('--ry')}
  document.addEventListener('pointerleave',function(){if(cur){reset(cur);cur=null}},true);
  var tp=$('top');tp.addEventListener('pointermove',function(e){if(rm)return;var r=tp.getBoundingClientRect();tp.style.setProperty('--mx',(e.clientX-r.left)+'px');tp.style.setProperty('--my',(e.clientY-r.top)+'px')},{passive:true})})();
+/* ---- features ---- */
+function feat(){var PT=[['بطارية','Batterie','Battery'],['شاحن','Chargeur','Charger'],['إطارات','Pneus','Tyres'],['فرامل','Freins','Brakes'],['متحكم','Contrôleur','Controller'],['أضواء','Éclairage','Lights']],CI=[1,43,41,47,37,26],wn=function(i){return WIL[i][L=='ar'?0:1]},
+ cd2=function(c,d,h){return'<div class="card fc '+c+' rv" style="--d:'+d+'ms">'+h+'</div>'},ring=function(n){return'<div class="fring">'+ic(n)+'</div>'};
+ $('fx').innerHTML=[
+ cd2('f1',0,'<div class="bl"><svg viewBox="0 0 254 104" fill="none"><path d="M112.891 97.7022C140.366 97.0802 171.004 94.6715 201.087 87.5116C210.43 85.2881 219.615 82.6412 228.284 78.2473C232.198 76.3179 235.905 73.9942 239.348 71.3124C241.85 69.2557 243.954 66.7571 245.555 63.9408C249.34 57.3235 248.281 50.5341 242.498 45.6109C239.033 42.7237 235.228 40.2703 231.169 38.3054C219.443 32.7209 207.141 28.4382 194.482 25.534C184.013 23.1927 173.358 21.7755 162.64 21.2989C161.376 21.3512 160.113 21.181 158.908 20.796C158.034 20.399 156.857 19.1682 156.962 18.4535C157.115 17.8927 157.381 17.3689 157.743 16.9139C158.104 16.4588 158.555 16.0821 159.067 15.8066C160.14 15.4683 161.274 15.3733 162.389 15.5286C179.805 15.3566 196.626 18.8373 212.998 24.462C220.978 27.2494 228.798 30.4747 236.423 34.1232C240.476 36.1159 244.202 38.7131 247.474 41.8258C254.342 48.2578 255.745 56.9397 251.841 65.4892C249.793 69.8582 246.736 73.6777 242.921 76.6327C236.224 82.0192 228.522 85.4602 220.502 88.2924C205.017 93.7847 188.964 96.9081 172.738 99.2109C153.442 101.949 133.993 103.478 114.506 103.79C91.1468 104.161 67.9334 102.97 45.1169 97.5831C36.0094 95.5616 27.2626 92.1655 19.1771 87.5116C13.839 84.5746 9.1557 80.5802 5.41318 75.7725C-0.54238 67.7259 -1.13794 59.1763 3.25594 50.2827C5.82447 45.3918 9.29572 41.0315 13.4863 37.4319C24.2989 27.5721 37.0438 20.9681 50.5431 15.7272C68.1451 8.8849 86.4883 5.1395 105.175 2.83669C129.045 0.0992292 153.151 0.134761 177.013 2.94256C197.672 5.23215 218.04 9.01724 237.588 16.3889C240.089 17.3418 242.498 18.5197 244.933 19.6446C246.627 20.4387 247.725 21.6695 246.997 23.615C246.455 25.1105 244.814 25.5605 242.63 24.5811C230.322 18.9961 217.233 16.1904 204.117 13.4376C188.761 10.3438 173.2 8.36665 157.558 7.52174C129.914 5.70776 102.154 8.06792 75.2124 14.5228C60.6177 17.8788 46.5758 23.2977 33.5102 30.6161C26.6595 34.3329 20.4123 39.0673 14.9818 44.658C12.9433 46.8071 11.1336 49.1622 9.58207 51.6855C4.87056 59.5336 5.61172 67.2494 11.9246 73.7608C15.2064 77.0494 18.8775 79.925 22.8564 82.3236C31.6176 87.7101 41.3848 90.5291 51.3902 92.5804C70.6068 96.5773 90.0219 97.7419 112.891 97.7022Z" fill="currentColor"/></svg><b dir="ltr">12<small>'+t('f1u')+'</small></b></div><h3 style="margin-top:22px">'+t('f1h')+'</h3>'),
+ cd2('f2',80,ring('shield')+'<h3 style="margin-top:14px">'+t('f2h')+'</h3><p>'+t('f2p')+'</p><a class="btn" href="#verify">'+t('f2b')+'</a>'),
+ cd2('f3',160,ring('wrench')+'<h3 style="margin-top:14px">'+t('f3h')+'</h3><p>'+t('f3p')+'</p><div class="tags">'+t('f3t').split('|').map(function(x){return'<span>'+esc(x)+'</span>'}).join('')+'</div>'),
+ cd2('f4',0,'<div><div class="fring" style="margin:8px 8px 0">'+ic('bolt')+'</div><div><h3>'+t('f4h')+'</h3><p>'+t('f4p')+'</p></div></div><div class="win">'+PT.map(function(x){return'<div><span>'+x[LI[L]]+'</span><em>'+t('avl')+'</em></div>'}).join('')+'</div>'),
+ cd2('f5',80,'<div><div class="fring" style="margin:8px 8px 0">'+ic('truck')+'</div><div><h3>'+t('f5h')+'</h3><p>'+t('f5p')+'</p></div></div><div class="ctl">'+CI.map(function(i,x){return'<div'+(x===0?' class="home"':'')+'><span class="cn">'+esc(wn(i))+'</span><em>'+t('free')+'</em></div>'}).join('')+'</div>')
+ ].join('');reveal()}
 /* ---- static sections ---- */
 function lists(){var mk=function(keys,ics,nn){return keys.map(function(k,i){var p=t(k).split('|');return'<div class="card rv"'+(nn?' data-n="0'+(i+1)+'"':'')+' style="--d:'+i*80+'ms">'+(ics?'<span class="ibx">'+ic(ics[i])+'</span>':'')+'<h3>'+p[0]+'</h3><p>'+p[1]+'</p></div>'}).join('')};
  $('bn').innerHTML=mk(['w1','w2','w3','w4'],['truck','shield','wrench','star'],1);$('hw').innerHTML=mk(['o1','o2','o3','o4']);
@@ -575,7 +636,7 @@ function apply(){H.lang=L;H.dir=L==='ar'?'rtl':'ltr';
  document.querySelectorAll('#lang button').forEach(function(b){b.classList.toggle('on',b.dataset.l===L)});
  var ST={ar:'تخطي إلى المحتوى',fr:'Aller au contenu',en:'Skip to content'};$('skp').textContent=ST[L];
  var a=$('ann'),bn=S.banner_on?(L=='ar'?S.banner_ar:S.banner_fr)||S.banner_fr||S.banner_ar:'';a.textContent=bn||'';a.classList.toggle('hide',!bn);
- closeAll();closeNav();var w=wa(t('wp'));$('wa').href=w;$('fwa').href=wa(t('wp'));$('swa').href=w;$('hwa').href=w;hero();tiles();store();lists();proof();videos();renderCart();saveW();contact();reveal()}
+ closeAll();closeNav();var w=wa(t('wp'));$('wa').href=w;$('fwa').href=wa(t('wp'));$('swa').href=w;$('hwa').href=w;hero();tiles();store();lists();feat();proof();videos();renderCart();saveW();contact();reveal()}
 document.querySelectorAll('#lang button').forEach(function(b){b.onclick=function(){L=b.dataset.l;try{localStorage.setItem('ms-lang',L)}catch(e){}apply()}});
 $('th').onclick=function(){var n=H.dataset.th==='dark'?'light':'dark';H.dataset.th=n;try{localStorage.setItem('ms-th',n)}catch(e){}};
 $('up').onclick=function(){scrollTo({top:0,behavior:'smooth'})};
