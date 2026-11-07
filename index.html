@@ -654,8 +654,8 @@ html:not([data-th=dark]) .dl .ph img{mix-blend-mode:multiply}
 body.xo .blob,body.xo .mq{display:none}
 #oq,#lb{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
 #oq{background:#000c!important}#oq,#oq.on,#oq .dl,#lb.on{animation:none!important;opacity:1}
-#oq .dl{contain:content;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
-#oq{z-index:500;align-items:flex-start;overflow-y:auto}#oq .dl{margin:auto;max-height:none}
+#oq .dl{overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;touch-action:pan-y;max-height:92vh;max-height:calc(100dvh - 24px)!important;padding-bottom:max(22px,env(safe-area-inset-bottom))}
+#oq{z-index:500;align-items:center;overflow:hidden}#oq .dl{margin:auto}
 #oq .dl{max-width:540px}
 #oq h3{font-size:22px;font-weight:900;margin:0 36px 12px 0}[dir=rtl] #oq h3{margin:0 0 12px 36px}
 .oqi{display:grid;grid-template-columns:72px 1fr;gap:12px;align-items:center;padding:10px;border:1px solid var(--bd);border-radius:14px;background:var(--cd);margin-bottom:12px}
