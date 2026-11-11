@@ -22,9 +22,9 @@
 .msp-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--c2);padding:4px;border-radius:13px}\
 .msp-tabs button{border:0;background:transparent;color:var(--mut);font:inherit;font-weight:800;font-size:13px;padding:8px 6px;border-radius:10px;cursor:pointer}.msp-tabs button.on{background:var(--c);color:var(--ink);box-shadow:0 1px 4px #0002}\
 .msp-book{display:grid;perspective:1500px}\
-.msp-pg{grid-area:1/1;display:flex;transform-origin:left center;transition:transform .6s cubic-bezier(.3,.7,.2,1),opacity .45s;backface-visibility:hidden}\
+.msp-pg{grid-area:1/1;display:flex;align-self:start;max-height:3000px;transform-origin:left center;transition:transform .6s cubic-bezier(.3,.7,.2,1),opacity .45s;backface-visibility:hidden}\
 [dir=rtl] .msp-pg{transform-origin:right center}\
-.msp-pg.off{opacity:0;pointer-events:none;transform:rotateY(-80deg)}[dir=rtl] .msp-pg.off{transform:rotateY(80deg)}\
+.msp-pg.off{opacity:0;pointer-events:none;transform:rotateY(-80deg);max-height:0;overflow:hidden;transition:transform .6s cubic-bezier(.3,.7,.2,1),opacity .45s,max-height 0s .6s}[dir=rtl] .msp-pg.off{transform:rotateY(80deg)}\
 .msp-pg>.msp-pp{flex:1}.msp-pp{--p:#f6efdd;position:relative;border-radius:14px;padding:16px 14px 14px;background:var(--p);color:#1f2937;border:1px solid #d9cfb4;overflow:hidden;box-shadow:inset 0 0 40px #b4975a22,0 6px 18px -10px #0006;min-height:520px}\
 .msp-pp:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;background:repeating-radial-gradient(circle at 20% 110%,transparent 0 9px,#8b5e3c14 9px 10px),repeating-radial-gradient(circle at 85% -10%,transparent 0 11px,#1d4ed814 11px 12px)}\
 .msp-pp>*{position:relative}\
@@ -61,6 +61,13 @@
 @media(max-width:400px){.msp-i1{grid-template-columns:96px 1fr}.msp-in{padding:14px 10px}}\
 @media print{.msp-scan{display:none}.msp-pg.off{display:none}}@media(prefers-reduced-motion:reduce){.msp-scan,.msp-bdg i{animation:none}.msp-pg{transition:none}}';
 
+  CSS += '.msp-sc{position:relative;margin:0 0 10px;border:1.5px solid #1f293733;border-radius:12px;overflow:hidden;aspect-ratio:16/10;background:radial-gradient(120% 100% at 50% 0%,#fff,#e3e9f1)}' +
+    '.msp-sc>img.ph{position:absolute;inset:0;width:100%;height:100%;box-sizing:border-box;padding:9% 6% 15%;object-fit:contain;filter:drop-shadow(0 10px 10px #0003)}' +
+    '.msp-sc .lgb,.msp-sc .wm{position:absolute;inset-block-start:8px;height:30px;display:grid;place-items:center;padding:3px 8px;border-radius:9px;background:#fffe;border:1px solid #1f293726}' +
+    '.msp-sc .lgb{inset-inline-start:8px}.msp-sc .wm{inset-inline-end:8px}.msp-sc .lgb img,.msp-sc .wm img{display:block;height:100%;width:auto;max-width:72px;object-fit:contain}' +
+    '.msp-sc .cap{position:absolute;inset:auto 0 0;padding:18px 11px 7px;background:linear-gradient(transparent,#1f2937e6);color:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}' +
+    '.msp-sc .cap b{font-size:13.5px;font-weight:900;overflow-wrap:anywhere}.msp-sc .cap small{font-size:10.5px;font-weight:700;opacity:.88;text-align:end}';
+
   CSS += '.msp-dots{color:#9ca3af;letter-spacing:.12em}.msp-f b bdi{unicode-bidi:isolate}' +
     '.msp-photo .lkb{position:absolute;inset-inline-start:6px;inset-block-end:6px;width:26px;height:26px;border-radius:50%;background:#1f2937;color:#fff;display:grid;place-items:center}.msp-photo .lkb svg{width:14px;height:14px}' +
     '.msp-rc{margin-top:12px;padding:11px;border-radius:12px;border:1.5px solid #b4975a;background:#fffaf0}.msp-rc .rt{display:flex;gap:10px;align-items:center}.msp-rc .ri{width:36px;height:36px;border-radius:10px;background:#1f2937;color:#fff;display:grid;place-items:center;flex:none}.msp-rc .ri svg{width:19px;height:19px}.msp-rc b{display:block;font-size:13.5px}.msp-rc small{display:block;font-size:11.5px;color:#6b5b3e}.msp-rc .rb{display:flex;gap:6px;margin-top:9px;flex-wrap:wrap}.msp-rc button{flex:1 1 90px;border:0;border-radius:9px;padding:9px 8px;background:#dc2626;color:#fff;font:inherit;font-weight:800;font-size:12.5px;cursor:pointer}.msp-rc button.alt{background:#1f2937}' +
@@ -81,7 +88,7 @@
     '.msp-pp.id .pp-m{display:flex;gap:13px;padding:10px 14px 4px;align-items:flex-start}' +
     '.msp-pp.id .msp-photo{width:100px;flex:none;aspect-ratio:3/4;border:1.5px solid #14213d66;border-radius:3px;box-shadow:0 0 0 3px #fff8;background:linear-gradient(#dbe7f7,#a9c1e6)}.msp-pp.id .msp-photo.f{background:linear-gradient(#fbe3f0,#efb4d3)}.msp-pp.id .msp-photo.n{background:linear-gradient(#eceff3,#c5ccd6)}' +
     '.msp-pp.id .msp-photo:after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:color-dodge;opacity:.5;background:linear-gradient(120deg,transparent 20%,#a5f3fc 40%,#f0abfc 55%,#fde68a 70%,transparent 85%);background-size:250% 100%;animation:msp-ho 5s linear infinite}@keyframes msp-ho{from{background-position:130% 0}to{background-position:-130% 0}}' +
-    '.msp-pp.id .pp-f{display:grid;gap:7px;min-width:0;flex:1}.msp-pp.id .pp-x{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;padding:8px 14px 8px;flex:1;align-content:space-evenly}.msp-pp.id .pp-x .pf:last-child:nth-child(odd){grid-column:1/-1}' +
+    '.msp-pp.id .pp-f{display:grid;gap:7px;min-width:0;flex:1}.msp-pp.id .pp-x{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;padding:8px 14px 8px;flex:0 0 auto;align-content:start}.msp-pp.id .pp-x .pf:last-child:nth-child(odd){grid-column:1/-1}' +
     '.msp-pp.id .pf{min-width:0;border-bottom:1px dotted #14213d4d;padding-bottom:3px}.msp-pp.id .pf small{display:block;font-size:9px;font-weight:800;letter-spacing:.06em;color:#4b5d83;text-transform:uppercase}.msp-pp.id .pf small i{font-style:italic;font-weight:600;text-transform:none;letter-spacing:0}' +
     '.msp-pp.id .pf b{display:block;font-size:14px;font-weight:800;color:#0f172a;letter-spacing:.03em;text-transform:uppercase;overflow-wrap:anywhere;min-height:0}.msp-pp.id .pf.big b{font-size:19px;line-height:1.15}.msp-pp.id .pf b .msp-dots{color:#7f8cab}' +
     '.msp-pp.id .msp-ul,.msp-pp.id .msp-fpd{margin:4px 14px 12px;border-color:#9f1239aa;background:#fffaf0cc}.msp-pp.id .msp-ul button{background:#1e2a5a}' +
@@ -142,6 +149,28 @@
   function css() { if (document.getElementById('msp-css')) return; var s = document.createElement('style'); s.id = 'msp-css'; s.textContent = CSS; document.head.appendChild(s); }
   function find(serial) { var n = norm(serial); if (!n) return null; return (window.MS_DATA || []).filter(function (x) { return norm(x.s) === n; })[0] || null; }
   function repOf(serial) { var n = norm(serial); return (window.MS_REP || []).filter(function (x) { return norm(x.s) === n; })[0] || null; }
+
+  /* ---- scooter photo (page 2): taken from the product catalogue (MS_CAT). STRICT match on brand + model, otherwise no photo at all (never a wrong scooter). ---- */
+  var CKEY = { white: ['white', 'blanc', 'ابيض'], black: ['black', 'noir', 'اسود'], red: ['red', 'rouge', 'احمر'], blue: ['blue', 'bleu', 'ازرق'], grey: ['grey', 'gray', 'gris', 'رمادي'], green: ['green', 'vert', 'اخضر'], yellow: ['yellow', 'jaune', 'اصفر'], orange: ['orange', 'برتقالي'] };
+  function cnorm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u065f\u0670]/g, '').replace(/[أإآٱ]/g, 'ا').replace(/[^a-z\u0600-\u06ff]/g, ''); }
+  function colKey(s) { var n = cnorm(s); if (!n) return ''; var hit = []; Object.keys(CKEY).forEach(function (k) { if (CKEY[k].some(function (w) { w = cnorm(w); return n === w || n.indexOf(w) > -1; })) hit.push(k); }); return hit.length === 1 ? hit[0] : ''; }
+  function mkey(brand, model) { var b = norm(brand), m = norm(model); if (b && m.indexOf(b) === 0 && m.length > b.length) m = m.slice(b.length); return b + '|' + m; }
+  function catFor(e) {
+    var C = window.MS_CAT || [], k = mkey(e.b, e.m); if (!C.length || k.length < 3 || k.charAt(0) === '|' || k.slice(-1) === '|') return null;
+    var hit = C.filter(function (c) { return mkey(c.b, c.m) === k; }); return hit[0] || null;
+  }
+  function scooterCard(e, lg) {
+    var c = catFor(e); if (!c) return '';
+    var ph = (c.ph || []).filter(Boolean), v = c.v3, k = colKey(e.c), cols = (c.cl || []).filter(Boolean), src = '', exact = false, arr = null;
+    if (v && !Array.isArray(v) && k) arr = v[k] || (k === 'grey' ? v.gray : k === 'gray' ? v.grey : null);
+    if (arr && arr[0]) { src = arr[0]; exact = true; }
+    else if (ph[0]) { src = ph[0]; exact = cols.length < 2; }
+    if (!src) return '';
+    var NOTE = { ar: 'صورة توضيحية للطراز', fr: 'Photo illustrative du modèle', en: 'Illustrative photo of the model' };
+    return '<div class="msp-sc"><img class="ph" src="' + esc(src) + '" alt="' + esc(((e.b || '') + ' ' + (e.m || '')).trim()) + '" decoding="async">' +
+      '<span class="lgb"><img src="brand-' + esc(slug(e.b)) + '.webp" alt=""></span><span class="wm"><img src="logo.webp" alt="MS Scooter"></span>' +
+      '<div class="cap"><b>' + esc(((e.b || '') + ' ' + (e.m || '')).trim()) + (e.v ? ' · VIP' : '') + '</b><small>' + esc(exact ? (e.c || '') : NOTE[lg]) + '</small></div></div>';
+  }
 
   /* ---- decrypt (same scheme as the app's seal(): PBKDF2-SHA256 40000 it -> 64 bytes ; HMAC-SHA256 stream cipher ; HMAC tag) ---- */
   function u8(h) { var u = new Uint8Array(h.length / 2); for (var i = 0; i < u.length; i++) u[i] = parseInt(h.substr(2 * i, 2), 16); return u; }
@@ -345,7 +374,7 @@
       (e.c ? '<div class="row"><span>' + esc(L.color) + '</span><span>' + esc(e.c) + '</span></div>' : '') + '<div class="row"><span>' + esc(L.ser) + '</span><span>' + esc(e.s) + '</span></div>' + (e.k ? '<div class="row"><span>' + esc(L.km) + '</span><span>' + esc(e.k) + ' km</span></div>' : '') + '</div></div>';
     stamps += '<div class="pst" style="--r:' + rot('f') + ';--k:#7c3aed"><div class="pst-logo"><img src="brand-' + esc(slug(e.b)) + '.webp" alt="" onerror="this.parentNode.innerHTML=\'<span>' + esc((e.b || '?').charAt(0).toUpperCase()) + '</span>\'"></div></div>';
     if (e.v) stamps += '<div class="pst" style="--r:' + rot('g') + ';--k:#b45309"><div class="pst-big">★ VIP ★</div></div>';
-    var page2 = '<div class="msp-pp msp-visa"><div class="msp-ph"><b>' + esc(L.p2t) + '</b><small>' + esc(L.sub) + '</small></div><div class="msp-st">' + stamps + '</div>' +
+    var page2 = '<div class="msp-pp msp-visa"><div class="msp-ph"><b>' + esc(L.p2t) + '</b><small>' + esc(L.sub) + '</small></div>' + scooterCard(e, lg) + '<div class="msp-st">' + stamps + '</div>' +
       '<div class="msp-vn"><span>' + esc(L.visa) + ' ' + esc(e.r || e.s) + '</span>' + barcode(e.s) + '</div></div>';
 
     function ulHtml(msg) {
@@ -392,6 +421,7 @@
       '<div class="msp-book"><div class="msp-pg" data-pg="1"></div><div class="msp-pg off" data-pg="2">' + page2 + '</div><div class="msp-pg off" data-pg="3"><div class="msp-pp"><div class="msp-ph"><b>' + esc(L.p3t) + '</b><small>' + esc(L.sub) + '</small></div><div class="p3"></div></div></div></div>' +
       '<div class="msp-v ' + verdict[0] + '">' + verdict[1] + '<span>' + esc(verdict[2]) + '</span></div><p class="msp-ft">' + esc(L.priv) + '</p></div></div></div>';
 
+    [].forEach.call(el.querySelectorAll('.msp-sc img'), function (im) { im.addEventListener('error', function () { if (im.classList.contains('ph')) { var sc = im.closest('.msp-sc'); if (sc) sc.remove(); } else im.remove(); }); });
     var p1 = el.querySelector('[data-pg="1"]'), p3 = el.querySelector('.p3'), pgs = el.querySelectorAll('.msp-pg'), tabs = el.querySelectorAll('.msp-tabs button'), cur = 1, st3 = { locked: true, rcp: null, done: false };
     function rcSrc() {
       var dd = function (x) { return x ? ('0' + x.getDate()).slice(-2) + '/' + ('0' + (x.getMonth() + 1)).slice(-2) + '/' + x.getFullYear() : ''; };
@@ -441,7 +471,86 @@
     var sx = 0; el.addEventListener('touchstart', function (ev) { sx = ev.touches[0].clientX; }, { passive: true });
     el.addEventListener('touchend', function (ev) { var dx = ev.changedTouches[0].clientX - sx; if (Math.abs(dx) > 70 && !/INPUT|BUTTON/.test((ev.target || {}).tagName || '')) go(Math.max(1, Math.min(3, cur + ((dx < 0) === (lg !== 'ar') ? 1 : -1)))); }, { passive: true });
     go(page);
+    try { PWA.seen(e.s); PWA.mount(el, lg); } catch (x) {}
     return e;
   }
+  /* ---- PWA : app icon on the phone's home screen + offline use.
+     The desk app publishes manifest.webmanifest, sw.js and the icons next to this file at each publish.
+     - the passport the owner opened last is remembered, so the home-screen icon (start_url ...?pwa=1) reopens it directly
+     - sw.js keeps the page, data.js, fonts, brand logos and photos on the phone : warranty, stamps and the receipt/QR (after the owner's code) work without internet ---- */
+  var PWA = (function () {
+    var TX = {
+      ar: { t: 'جواز السكوتر في هاتفك', s: 'ضع أيقونة MS Scooter في الشاشة الرئيسية : الضمان و QR ديالك دايماً معاك، حتى بلا أنترنت.', b: 'أضف للشاشة الرئيسية', ios: 'في Safari : اضغط زر المشاركة ثم « إضافة إلى الشاشة الرئيسية ».', and: 'من قائمة المتصفح ⋮ اختر « تثبيت التطبيق » أو « إضافة إلى الشاشة الرئيسية ».', off: 'بلا أنترنت : بيانات محفوظة في هاتفك', rdy: 'يخدم بلا أنترنت' },
+      fr: { t: 'Le passeport dans votre téléphone', s: 'Ajoutez l’icône MS Scooter à l’écran d’accueil : garantie et QR toujours à portée de main, même sans internet.', b: 'Ajouter à l’écran d’accueil', ios: 'Dans Safari : touchez le bouton Partager puis « Sur l’écran d’accueil ».', and: 'Menu du navigateur ⋮ puis « Installer l’application » ou « Ajouter à l’écran d’accueil ».', off: 'Hors ligne : données enregistrées sur ce téléphone', rdy: 'Disponible hors ligne' },
+      en: { t: 'The passport on your phone', s: 'Add the MS Scooter icon to your home screen: warranty and QR always at hand, even offline.', b: 'Add to home screen', ios: 'In Safari: tap the Share button, then “Add to Home Screen”.', and: 'Browser menu ⋮ then “Install app” or “Add to Home screen”.', off: 'Offline: data saved on this phone', rdy: 'Works offline' }
+    };
+    var KEY = 'ms-pp-last', HIDE = 'ms-pp-hide', dip = null, swOk = false, cur = null, showHow = false;
+    function ls(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) {} return null; }
+    function standalone() { try { return (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || window.navigator.standalone === true; } catch (e) { return false; } }
+    function isIos() { var u = navigator.userAgent || ''; return /iphone|ipad|ipod/i.test(u) || (/Macintosh/.test(u) && navigator.maxTouchPoints > 1); }
+    function tick() { if (cur) { try { cur(); } catch (e) {} } }
+
+    /* opened from the home-screen icon without a serial : go back to the last passport of this phone */
+    (function () {
+      if (!/[?&]pwa=1/.test(location.search) || /[?&]s=/.test(location.search) || /^#v1\./.test(location.hash)) return;
+      var last = ls(KEY); if (last) { try { location.replace(location.pathname + '?s=' + encodeURIComponent(last)); } catch (e) {} }
+    })();
+
+    window.addEventListener('beforeinstallprompt', function (ev) { ev.preventDefault(); dip = ev; tick(); });
+    window.addEventListener('appinstalled', function () { dip = null; ls(HIDE, String(Date.now())); tick(); });
+    window.addEventListener('online', tick); window.addEventListener('offline', tick);
+
+    function head() {
+      var h = document.head; if (!h || document.getElementById('msp-pwa-h')) return;
+      function add(tag, at) { var n = document.createElement(tag); for (var k in at) n.setAttribute(k, at[k]); h.appendChild(n); return n; }
+      if (!document.querySelector('link[rel="manifest"]')) add('link', { rel: 'manifest', href: 'manifest.webmanifest' });
+      if (!document.querySelector('link[rel="apple-touch-icon"]')) add('link', { rel: 'apple-touch-icon', href: 'apple-touch-icon.png' });
+      if (!document.querySelector('meta[name="theme-color"]')) add('meta', { name: 'theme-color', content: '#dc2626' });
+      add('meta', { name: 'mobile-web-app-capable', content: 'yes' }).id = 'msp-pwa-h';
+      add('meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }); add('meta', { name: 'apple-mobile-web-app-title', content: 'MS Passport' });
+    }
+    function register() {
+      if (!('serviceWorker' in navigator)) return;
+      var go = function () { try { navigator.serviceWorker.register('sw.js').then(function () { return navigator.serviceWorker.ready; }).then(function () { swOk = true; tick(); }).catch(function () {}); } catch (e) {} };
+      if (document.readyState === 'complete') go(); else window.addEventListener('load', go);
+    }
+    function pcss() {
+      if (document.getElementById('msp-pwa-css')) return; var s = document.createElement('style'); s.id = 'msp-pwa-css';
+      s.textContent = '.msp-pwa{display:grid;gap:8px}.msp-pwa-card{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 12px;border:1px solid var(--bd);border-radius:14px;background:var(--c2)}' +
+        '.msp-pwa-ic{width:38px;height:38px;border-radius:11px;background:var(--nfob);color:var(--nfo);display:grid;place-items:center;flex:none}.msp-pwa-ic svg{width:21px;height:21px}' +
+        '.msp-pwa-tx{flex:1 1 150px;min-width:0}.msp-pwa-tx b{display:block;font-size:13.5px;font-weight:800}.msp-pwa-tx small{display:block;font-size:11.5px;color:var(--mut);line-height:1.35}' +
+        '.msp-pwa-go{border:0;border-radius:10px;padding:9px 12px;background:#dc2626;color:#fff;font:inherit;font-weight:800;font-size:12.5px;cursor:pointer;flex:none}' +
+        '.msp-pwa-x{border:0;background:transparent;color:var(--mut);font-size:15px;cursor:pointer;padding:4px 6px;flex:none}' +
+        '.msp-pwa-how{margin:0;font-size:12px;color:var(--mut);text-align:center;line-height:1.4}' +
+        '.msp-pwa-chip{justify-self:center;font-size:11.5px;font-weight:800;padding:3px 11px;border-radius:99px;border:1px solid}' +
+        '.msp-pwa-chip.ok{color:var(--ok);background:var(--okb);border-color:var(--ok)}.msp-pwa-chip.off{color:var(--warn);background:var(--warnb);border-color:var(--warn)}@media print{.msp-pwa{display:none}}';
+      document.head.appendChild(s);
+    }
+    function mount(el, lg) {
+      var S = TX[lg] || TX.ar, box = el.querySelector('.msp-in'); if (!box) return;
+      pcss(); head(); register();
+      var old = box.querySelector('.msp-pwa'); if (old && old.parentNode) old.parentNode.removeChild(old);
+      var d = document.createElement('div'); d.className = 'msp-pwa'; box.appendChild(d);
+      cur = function () {
+        if (!d.isConnected) return;
+        var h = '', off = navigator.onLine === false, hidden = Date.now() - (+ls(HIDE) || 0) < 12096e5;
+        if (off) h += '<div class="msp-pwa-chip off">' + esc(S.off) + '</div>'; else if (swOk) h += '<div class="msp-pwa-chip ok">✓ ' + esc(S.rdy) + '</div>';
+        if (!standalone() && !hidden) {
+          h += '<div class="msp-pwa-card"><span class="msp-pwa-ic">' + SV.ok + '</span><div class="msp-pwa-tx"><b>' + esc(S.t) + '</b><small>' + esc(S.s) + '</small></div><button type="button" class="msp-pwa-go">' + esc(S.b) + '</button><button type="button" class="msp-pwa-x" aria-label="×">✕</button></div>';
+          if (showHow) h += '<p class="msp-pwa-how">' + esc(isIos() ? S.ios : S.and) + '</p>';
+        }
+        d.innerHTML = h;
+        var go = d.querySelector('.msp-pwa-go'), x = d.querySelector('.msp-pwa-x');
+        if (go) go.onclick = function () {
+          if (dip) { var p = dip; dip = null; try { p.prompt(); (p.userChoice || Promise.resolve()).then(tick, tick); } catch (e) { showHow = true; tick(); } return; }
+          showHow = true; tick();
+        };
+        if (x) x.onclick = function () { ls(HIDE, String(Date.now())); showHow = false; tick(); };
+      };
+      cur();
+    }
+    return { mount: mount, seen: function (s) { if (s) ls(KEY, String(s)); } };
+  })();
+
   window.MSPassport = { render: render, find: find, lang: lang };
 })();
