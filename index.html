@@ -187,7 +187,7 @@ footer .big{font-size:clamp(44px,15vw,200px);font-weight:900;line-height:.95;let
 #nv a:not(.v):not([href="#store"]){display:none}
 #hd img{filter:brightness(0) saturate(100%) invert(21%) sepia(94%) saturate(5300%) hue-rotate(352deg) brightness(92%)}
 #pf{grid-template-columns:repeat(2,1fr);max-width:760px;margin-inline:auto}
-#soon .card{padding:clamp(28px,5vw,56px);text-align:center;display:grid;gap:14px;justify-items:center;border-color:#dc262660;background:linear-gradient(135deg,#dc262612,transparent)}
+#stamps .card{grid-template-columns:minmax(0,1fr);padding:clamp(28px,5vw,56px);text-align:center;display:grid;gap:14px;justify-items:center;border-color:#dc262660}#stamps p{color:var(--mu);font-size:18px;max-width:36rem}.stg{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:18px 10px;width:100%;max-width:760px;margin:8px 0 6px;align-items:center;justify-items:center}.stp{width:min(100%,170px);transform:rotate(var(--r,0deg));opacity:.92;filter:url(#stink)}.stp svg{display:block;width:100%;height:auto}@media(max-width:600px){.stg .stp:last-child:nth-child(odd){grid-column:1/-1}}[data-th=dark] .stp{filter:url(#stink) brightness(1.7) saturate(1.2)}#soon .card{padding:clamp(28px,5vw,56px);text-align:center;display:grid;gap:14px;justify-items:center;border-color:#dc262660;background:linear-gradient(135deg,#dc262612,transparent)}
 #soon p{color:var(--mu);font-size:18px;max-width:34rem}
 #soon .so{justify-content:center}
 footer{margin-top:0}
@@ -670,6 +670,23 @@ body.xo .blob,body.xo .mq{display:none}
 .btn.gw{background:#16a34a}.btn.gw:hover{background:#15803d;box-shadow:0 10px 24px -8px #16a34a80}
 .oqok{text-align:center;display:grid;gap:12px;padding:12px 0}.oqok .big{font-size:46px;line-height:1}.oqok b{font-size:20px}.oqok .ref{font-weight:900;letter-spacing:.06em;direction:ltr}
 .cow{display:grid;gap:6px;margin-top:8px}
+/* 360° viewer */
+.v3m{position:fixed;inset:0;z-index:700;display:grid;place-items:center;padding:12px;background:#000b;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);animation:v3f .2s}@keyframes v3f{from{opacity:0}}
+.v3b{width:100%;max-width:640px;max-height:100%;overflow:auto;overscroll-behavior:contain;background:var(--bg);color:var(--ink);border:1px solid var(--bd);border-radius:22px;padding:14px;display:grid;gap:12px}
+.v3h{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.v3h b{display:block;font-size:19px;font-weight:900;line-height:1.2}.v3h small{display:block;color:var(--mu);font-weight:700}
+.v3s{position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:radial-gradient(120% 90% at 50% 0%,color-mix(in srgb,var(--red) 12%,var(--mt)),var(--mt));border:1px solid var(--bd);touch-action:pan-y;cursor:grab;-webkit-user-select:none;user-select:none;outline-offset:3px}.v3s.dg{cursor:grabbing}
+.v3s canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.v3still{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6%;opacity:.9}
+.v3tag{position:absolute;inset-block-start:10px;inset-inline-start:10px;padding:3px 11px;border-radius:99px;background:var(--ink);color:var(--bg);font-weight:900;font-size:13px;letter-spacing:.06em;pointer-events:none}
+.v3hint{position:absolute;inset-inline:0;inset-block-end:10px;text-align:center;font-weight:800;font-size:13px;color:var(--mu);pointer-events:none;transition:opacity .5s}
+.v3ld{position:absolute;inset-block-start:10px;inset-inline-end:10px;padding:3px 11px;border-radius:99px;background:var(--cd);border:1px solid var(--bd);font-weight:800;font-size:12px;color:var(--mu);pointer-events:none}
+.v3off{display:none!important}
+.v3ctl{display:flex;align-items:center;gap:8px}.v3ctl .ib{font-size:22px;font-weight:900;line-height:1;flex:none}.v3r{flex:1;min-width:0;accent-color:var(--red);height:32px}
+.v3cl>small{display:block;font-weight:800;color:var(--mu);margin-bottom:8px}.v3cl b{color:var(--ink)}
+.v3sw{display:flex;flex-wrap:wrap;gap:8px}.v3k{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:2px solid var(--bd);border-radius:99px;background:var(--cd);font-weight:800;transition:border-color .2s,background-color .2s}.v3k i{width:18px;height:18px;border-radius:50%;border:1px solid #8886;flex:none}.v3k.on{border-color:var(--red);background:#dc262610}.v3k.nf{border-style:dashed;opacity:.7}.v3k:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.v3nf{margin:0;padding:10px 14px;border-radius:12px;border:1px solid #f59e0b88;background:#f59e0b18;font-weight:700}
+.v3go{margin-top:10px}
+.v3chip{position:absolute;z-index:3;inset-block-end:10px;inset-inline-start:10px;min-height:36px;padding:0 14px;border:0;border-radius:99px;background:var(--ink);color:var(--bg);font-weight:900;font-size:14px;letter-spacing:.06em;box-shadow:0 8px 18px -8px #0007;transition:transform .25s var(--e)}.v3chip:hover{transform:scale(1.06)}
+@media(prefers-reduced-motion:reduce){.v3m{animation:none}}
 </style>
 <script src="data.js" defer></script>
 </head>
@@ -851,11 +868,12 @@ body.xo .blob,body.xo .mq{display:none}
     <div class="so"><a id="s-ig" class="btn out" target="_blank" rel="noopener" href="#"><svg><use href="#i-ig"/></svg>Instagram</a><a id="s-tt" class="btn out" target="_blank" rel="noopener" href="#"><svg><use href="#i-tt"/></svg>TikTok</a><a id="s-wa" class="btn out" target="_blank" rel="noopener" href="#"><svg><use href="#i-wa"/></svg>WhatsApp</a></div>
   </div><iframe id="map" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 </div></section>
-<section id="soon" class="sec"><div class="w"><div class="card rv">
-  <span class="bdg r"><i></i><span data-i="sh"></span></span>
-  <h2 data-i="sh2"></h2><p data-i="sp2"></p>
+<section id="stamps" class="sec"><div class="w"><div class="card rv"><svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="stink" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" result="d"/><feTurbulence type="fractalNoise" baseFrequency="0.05 0.9" numOctaves="2" seed="9" result="t"/><feColorMatrix in="t" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.7 1.75" result="m"/><feComposite in="d" in2="m" operator="in"/></filter></svg>
+  <span class="bdg r"><i></i><span data-i="stB"></span></span>
+  <h2 data-i="stT"></h2><p data-i="stS"></p>
+  <div class="stg"><div class="stp" style="--r:-8deg"><svg viewBox="0 0 200 200" style="color:#1d4ed8"><defs><path id="st1t" d="M 26,100 A 74,74 0 0 1 174,100"/><path id="st1b" d="M 14,100 A 86,86 0 0 0 186,100"/></defs><circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="100" cy="100" r="62" fill="none" stroke="currentColor" stroke-width="2.5"/><text font-size="15" font-weight="900" letter-spacing="2.4" fill="currentColor" text-anchor="middle"><textPath href="#st1t" startOffset="50%">MS SCOOTER · CHLEF</textPath></text><text font-size="14" font-weight="900" letter-spacing="2" fill="currentColor" text-anchor="middle" dy="3"><textPath href="#st1b" startOffset="50%">VERIFIED · موثّق</textPath></text><text x="100" y="104" font-size="40" font-weight="900" fill="currentColor" text-anchor="middle">✓</text><text x="100" y="128" font-size="17" font-weight="900" fill="currentColor" text-anchor="middle" letter-spacing="1">VERIFIED</text><text x="36" y="104" font-size="14" fill="currentColor" text-anchor="middle">★</text><text x="164" y="104" font-size="14" fill="currentColor" text-anchor="middle">★</text></svg></div><div class="stp" style="--r:5deg"><svg viewBox="0 0 220 150" style="color:#b91c1c"><rect x="6" y="6" width="208" height="138" rx="10" fill="none" stroke="currentColor" stroke-width="5"/><rect x="16" y="16" width="188" height="118" rx="6" fill="none" stroke="currentColor" stroke-width="2"/><text x="110" y="44" font-size="15" font-weight="900" letter-spacing="5" fill="currentColor" text-anchor="middle">SINCE</text><text x="110" y="98" font-size="58" font-weight="900" fill="currentColor" text-anchor="middle" letter-spacing="2">2024</text><text x="110" y="124" font-size="14" font-weight="900" fill="currentColor" text-anchor="middle">منذ 2024 في الميدان</text></svg></div><div class="stp" style="--r:-4deg"><svg viewBox="0 0 220 150" style="color:#15803d"><ellipse cx="110" cy="75" rx="104" ry="68" fill="none" stroke="currentColor" stroke-width="5"/><ellipse cx="110" cy="75" rx="90" ry="55" fill="none" stroke="currentColor" stroke-width="1.8"/><text x="110" y="52" font-size="12" font-weight="900" letter-spacing="3" fill="currentColor" text-anchor="middle">WE BRING YOU</text><text x="110" y="86" font-size="34" font-weight="900" letter-spacing="3" fill="currentColor" text-anchor="middle">THE BEST</text><text x="110" y="112" font-size="14" font-weight="900" fill="currentColor" text-anchor="middle">نجيبولك الأحسن</text></svg></div><div class="stp" style="--r:7deg"><svg viewBox="0 0 200 200" style="color:#7c3aed"><polygon points="100,6 158,22 194,70 194,130 158,178 100,194 42,178 6,130 6,70 42,22" fill="none" stroke="currentColor" stroke-width="5"/><polygon points="100,22 148,35 178,74 178,126 148,165 100,178 52,165 22,126 22,74 52,35" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="62" font-size="13" font-weight="900" letter-spacing="3" fill="currentColor" text-anchor="middle">MS SCOOTER</text><text x="100" y="96" font-size="26" font-weight="900" fill="currentColor" text-anchor="middle">SPECIALIST</text><line x1="48" y1="108" x2="152" y2="108" stroke="currentColor" stroke-width="2"/><text x="100" y="132" font-size="14" font-weight="900" fill="currentColor" text-anchor="middle">مختصون في السكوتر</text><text x="100" y="156" font-size="12" font-weight="900" letter-spacing="2" fill="currentColor" text-anchor="middle">★ ★ ★</text></svg></div><div class="stp" style="--r:-6deg"><svg viewBox="0 0 200 200" style="color:#0f766e"><defs><path id="st5t" d="M 26,100 A 74,74 0 0 1 174,100"/><path id="st5b" d="M 14,100 A 86,86 0 0 0 186,100"/></defs><circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="100" cy="100" r="62" fill="none" stroke="currentColor" stroke-width="2.5"/><text font-size="15" font-weight="900" letter-spacing="2.4" fill="currentColor" text-anchor="middle"><textPath href="#st5t" startOffset="50%">MS SCOOTER · ALGÉRIE</textPath></text><text font-size="14" font-weight="900" letter-spacing="2" fill="currentColor" text-anchor="middle" dy="3"><textPath href="#st5b" startOffset="50%">EXPERIENCE · 2024</textPath></text><text x="100" y="104" font-size="40" font-weight="900" fill="currentColor" text-anchor="middle">2024</text><text x="100" y="128" font-size="17" font-weight="900" fill="currentColor" text-anchor="middle" letter-spacing="1">الخبرة</text><text x="36" y="104" font-size="14" fill="currentColor" text-anchor="middle">★</text><text x="164" y="104" font-size="14" fill="currentColor" text-anchor="middle">★</text></svg></div></div>
   <a id="swa" class="btn lg" target="_blank" rel="noopener" href="#"><svg><use href="#i-wa"/></svg><span data-i="wbt"></span></a>
-  <div class="so"><a id="z-ig" class="btn out" target="_blank" rel="noopener" href="#"><svg><use href="#i-ig"/></svg>Instagram</a><a id="z-tt" class="btn out" target="_blank" rel="noopener" href="#"><svg><use href="#i-tt"/></svg>TikTok</a></div>
+  <span hidden><a id="z-ig" href="#"></a><a id="z-tt" href="#"></a></span>
 </div></div></section>
 </main>
 
@@ -896,7 +914,7 @@ f3h:['ورشة صيانة وإصلاح','Atelier SAV et réparation','Service an
 f4h:['قطع غيار للدراجات الكهربائية','Pièces détachées pour scooters électriques','Electric scooter spare parts'],f4p:['كل ما يحتاجه سكوترك من قطع، نوفره في الورشة أو نرسله إليك.','Toutes les pièces dont votre scooter a besoin, à l’atelier ou expédiées chez vous.','Every part your scooter needs, at the workshop or shipped to you.'],avl:['متوفر','Dispo','In stock'],
 f5h:['توصيل مجاني للولايات القريبة','Livraison gratuite dans les wilayas proches','Free delivery to nearby wilayas'],f5p:['من الشلف إلى الولايات القريبة منا بدون مصاريف. باقي الولايات الـ 58: السعر حسب المكان.','De Chlef aux wilayas proches sans frais. Autres wilayas (58) : tarif selon la destination.','From Chlef to nearby wilayas at no cost. Other wilayas (58): rate depends on the place.'],free:['مجاني','Gratuit','Free'],farh:['الولايات القريبة منا','Wilayas proches','Nearby wilayas'],farv:['','',''],farp:['🏜️ الجنوب والصحراء والولايات البعيدة: سعر ومدة التوصيل يختلفان حسب المكان — راسلنا على واتساب ونعطيك السعر فوراً.','🏜️ Sud, Sahara et wilayas éloignées : prix et délai selon la destination — écrivez-nous sur WhatsApp pour le tarif.','🏜️ South, Sahara & far wilayas: price and speed depend on the place — message us on WhatsApp for the rate.'],
 scn:['افتح الكاميرا لمسح الرمز','Ouvrir la caméra pour scanner','Open camera to scan'],scs:['وجّه الكاميرا نحو رمز QR على وصلك، يقرأه تلقائياً.','Pointez la caméra vers le QR de votre reçu, lecture automatique.','Point the camera at the QR on your receipt, it reads automatically.'],sce:['تعذر فتح الكاميرا. اسمح بالوصول أو أدخل الرقم التسلسلي.','Caméra indisponible. Autorisez l’accès ou saisissez le n° de série.','Camera unavailable. Allow access or type the serial number.'],vrt:['نتيجة التحقق','Résultat de la vérification','Verification result'],mre:['المزيد','Plus de détails','More details'],
-askp:['الأسعار عبر واتساب','Prix sur WhatsApp','Prices on WhatsApp'],sh:['قريباً','Bientôt','Coming soon'],sh2:['باقي الأقسام قريباً','Le reste arrive très vite','The rest is coming soon'],sp2:['نكمّلو الموقع في أقرب وقت. للأسعار والتفاصيل اضغط على واتساب ونبعثولك كلش.','Nous terminons le site au plus vite. Pour les prix et les détails, cliquez sur WhatsApp et nous vous envoyons tout.','We are finishing the site ASAP. For prices and details, tap WhatsApp and we will send you everything.'],
+askp:['الأسعار عبر واتساب','Prix sur WhatsApp','Prices on WhatsApp'],sh:['قريباً','Bientôt','Coming soon'],stB:['موثّق','Vérifié','Verified'],stT:['ختوم MS Scooter','Les cachets MS Scooter','MS Scooter stamps'],stS:['موثّقون ومن 2024 في الميدان — باش نجيبولك الأحسن.','Vérifiés, dans le métier depuis 2024 — pour vous apporter le meilleur.','Verified, in the field since 2024 — to bring you the best.'],sh2:['باقي الأقسام قريباً','Le reste arrive très vite','The rest is coming soon'],sp2:['نكمّلو الموقع في أقرب وقت. للأسعار والتفاصيل اضغط على واتساب ونبعثولك كلش.','Nous terminons le site au plus vite. Pour les prix et les détails, cliquez sur WhatsApp et nous vous envoyons tout.','We are finishing the site ASAP. For prices and details, tap WhatsApp and we will send you everything.'],
 cta1:['تصفح الدراجات','Voir les scooters','Browse scooters'],
 vt:['تحقق من دراجتك','Vérifiez votre scooter','Verify your scooter'],vp:['أدخل الرقم التسلسلي: الضمان، السجل والإصلاحات.','Entrez le n° de série : garantie, historique et réparations.','Enter the serial number: warranty, history and repairs.'],
 vph:['الرقم التسلسلي','N° de série','Serial number'],vb:['تحقق','Vérifier','Verify'],vq:['أو امسح رمز QR الموجود على وصلك.','Ou scannez le QR de votre reçu.','Or scan the QR on your receipt.'],
@@ -1174,13 +1192,14 @@ function say(x){tt.textContent=x;tt.classList.remove('hide');tt.style.animation=
 function recent(){var R=(P.recent||[]).filter(function(r){return r.m});if(!R.length||md.classList.contains('on')||dr.classList.contains('on')||document.visibilityState!=='visible')return;var r=R[tn++%R.length];say(fm(t(r.w?'toast':'toast0'),r.w?[r.w,r.m]:[r.m]))}
 tt.onclick=function(){tt.classList.add('hide');$('store').scrollIntoView({behavior:'smooth'})};
 /* ---- product dialog ---- */
-function openP(c){lastF=document.activeElement;var ph=c.ph||[],pks=pkOf(c),k=0,qn=1;pks.forEach(function(p,i){if(p.s==1&&!k)k=i});setHash('#p='+encodeURIComponent(cid(c)));
+function openP(c){lastF=document.activeElement;var ph=c.ph||[],pks=pkOf(c),k=0,qn=1,selCol='';pks.forEach(function(p,i){if(p.s==1&&!k)k=i});setHash('#p='+encodeURIComponent(cid(c)));
  var th=ph.length>1?'<div class="th2" dir="ltr">'+ph.map(function(p,i){return'<img data-t="'+i+'" src="'+esc(p)+'" alt="" width="64" height="50" loading="lazy" class="'+(i?'':'on')+'">'}).join('')+'</div>':'';
- md.innerHTML='<div class="dl"><button id="mx" type="button" class="ib x" aria-label="'+t('close')+'">'+ic('x')+'</button><div class="mg"><div><div class="ph">'+(ph.length?'<img id="mi" src="'+esc(ph[0])+'" alt="'+esc(c.b+' '+c.m)+'">':'<b>'+esc(c.b)+'</b>')+'</div>'+th+'</div><div><span class="bdg r">'+esc(c.b)+'</span><h3>'+esc(c.m)+'</h3><div class="dtr"><span>'+ic('truck')+t('b1')+'</span><span>'+ic('shield')+t('b2')+'</span><span>'+ic('wrench')+t('b3')+'</span></div>'+specsHtml(c)+'<p style="color:var(--mu);margin-top:12px">'+t('two')+'</p><div class="pk" role="radiogroup">'+
+ md.innerHTML='<div class="dl"><button id="mx" type="button" class="ib x" aria-label="'+t('close')+'">'+ic('x')+'</button><div class="mg"><div><div class="ph">'+(ph.length?'<img id="mi" src="'+esc(ph[0])+'" alt="'+esc(c.b+' '+c.m)+'">':'<b>'+esc(c.b)+'</b>')+(window.MSV360?MSV360.chip(c):'')+'</div>'+th+(window.MSV360?MSV360.btn(c):'')+'</div><div><span class="bdg r">'+esc(c.b)+'</span><h3>'+esc(c.m)+'</h3><div class="dtr"><span>'+ic('truck')+t('b1')+'</span><span>'+ic('shield')+t('b2')+'</span><span>'+ic('wrench')+t('b3')+'</span></div>'+specsHtml(c)+'<p style="color:var(--mu);margin-top:12px">'+t('two')+'</p><div class="pk" role="radiogroup">'+
  pks.map(function(p,i){return'<label class="pkc'+(i===k?' sel':'')+(isVip(p,i,pks)?' vip':'')+'"><input type="radio" name="pk" value="'+i+'"'+(i===k?' checked':'')+'>'+(isVip(p,i,pks)?'<span class="xvs">👑 VIP</span>':'')+'<span class="hdr"><span class="n">'+esc(p.n)+(p.s==1?' · '+t('star'):'')+'</span><b class="pr">'+oldP(p)+(p.p?fmt(p.p):'—')+offB(p)+'</b></span>'+(p.bw>0?'<span class="gf xlive"><i></i><span>'+fm(t('bw'),['<b class="cnt" data-n="'+(+p.bw)+'">'+num(p.bw)+'</b>'])+'</span></span>':'')+'<ul>'+String(p.d||'').split(/[+\n;]/).map(function(x){return x.trim()}).filter(Boolean).map(function(x){return'<li>'+ic('ok')+'<span>'+esc(x)+'</span></li>'}).join('')+(isVip(p,i,pks)&&partsOn()?'<li class="vperk">'+ic('ok')+'<span>👑 '+fm(t('vperk'),[PCT])+'</span></li>':'')+'</ul>'+giftBox(p)+'</label>'}).join('')+'</div><span class="gf" id="gg"></span>'+
  '<div class="act"><div class="qty"><button type="button" id="qm" aria-label="-">'+ic('minus')+'</button><b id="qv">1</b><button type="button" id="qp" aria-label="+">'+ic('plus')+'</button></div><button type="button" class="btn" id="ad">'+ic('bag')+t('add')+'</button><a id="no" class="btn out" target="_blank" rel="noopener" href="#">'+ic('wa')+t('now')+'</a></div><button type="button" class="btn lg blk" id="oqb" style="margin-top:10px">'+ic('check')+q3('اطلب الآن · استمارة الطلب','Commander · formulaire','Order now · order form')+'</button><a id="mw" class="btn out blk" target="_blank" rel="noopener" href="'+wa(fm(t('wi'),[c.b+' '+c.m]))+'" style="margin-top:10px">'+t('adv')+'</a>'+
  '<div class="sub"><button type="button" class="btn out" id="mh">'+ic('heart')+t('wlc')+'</button><button type="button" class="btn out" id="ms">'+ic('share')+t('shr')+'</button></div></div></div></div>';
  md.classList.add('on');lock(1);$('mx').onclick=closeAll;$('mx').focus();
+  md.querySelectorAll('[data-v3]').forEach(function(b){b.onclick=function(ev){ev.stopPropagation();MSV360.open({c:c,col:selCol,title:c.b+' '+c.m,onColor:function(k){selCol=k},cta:c.os?null:{label:MSV360.t('order'),fn:function(k){selCol=k;var ob=$('oqb');if(ob)ob.click()}}})}});
  function sync(){var p=pks[k];if(!c.os)$('no').href=wa(t('wc')+'\n• '+qn+'× '+c.b+' '+c.m+' — '+p.n+(p.p?' ('+fmt(p.p)+')':''));$('qv').textContent=qn;var g=$('gg');if(gOn(p)){g.dataset.e=p.g.end;g.dataset.x=gtxt(p.g)}else{delete g.dataset.e;g.textContent=''}tick()}
  function tick(){var g=$('gg');if(g&&g.dataset.e)g.textContent=fm(t('ge'),[g.dataset.x,cd(g.dataset.e-Date.now())])}
  md.querySelectorAll('input[name=pk]').forEach(function(r){r.onchange=function(){k=+r.value;md.querySelectorAll('.pkc').forEach(function(l,i){l.classList.toggle('sel',i===k)});sync()}});
@@ -1194,8 +1213,8 @@ function openP(c){lastF=document.activeElement;var ph=c.ph||[],pks=pkOf(c),k=0,q
  var mh=$('mh');mh.classList.toggle('on',wl.indexOf(cid(c))>-1);mh.onclick=function(){toggleW(c);mh.classList.toggle('on',wl.indexOf(cid(c))>-1);store()};
  $('ms').onclick=function(){var u=location.href.split('#')[0]+'#p='+encodeURIComponent(cid(c));if(navigator.share){navigator.share({title:c.b+' '+c.m,url:u}).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){say(t('cpd'))})}};
  md.querySelectorAll('[data-t]').forEach(function(x){x.onclick=function(){$('mi').src=ph[+x.dataset.t];md.querySelectorAll('[data-t]').forEach(function(y){y.classList.toggle('on',y===x)})}});
- $('oqb').onclick=function(){if(c.os){say(osMsg());return}var p=pks[k]||{};openOrder({kind:'scooter',name:c.b+' '+c.m,opt:p.n||'',p:+p.p||0,part:false,img:ph[0]||'',q:qn,colors:c.cl||[],link:location.href.split('#')[0]+'#p='+encodeURIComponent(cid(c))})};
-  var mi0=$('mi');if(mi0){mi0.style.cursor='zoom-in';mi0.onclick=function(){var cs=mi0.getAttribute('src'),ix=Math.max(0,ph.indexOf(cs));openLB(ph,c.b+' '+c.m,c.os?null:function(){var p=pks[k]||{};return{kind:'scooter',name:c.b+' '+c.m,opt:p.n||'',p:+p.p||0,part:false,img:ph[0]||'',q:qn,colors:c.cl||[],link:location.href.split('#')[0]+'#p='+encodeURIComponent(cid(c))}},ix)}}
+ $('oqb').onclick=function(){if(c.os){say(osMsg());return}var p=pks[k]||{};openOrder({kind:'scooter',name:c.b+' '+c.m,opt:p.n||'',p:+p.p||0,part:false,img:ph[0]||'',q:qn,colors:c.cl||[],col:selCol,link:location.href.split('#')[0]+'#p='+encodeURIComponent(cid(c))})};
+  var mi0=$('mi');if(mi0){mi0.style.cursor='zoom-in';mi0.onclick=function(){var cs=mi0.getAttribute('src'),ix=Math.max(0,ph.indexOf(cs));openLB(ph,c.b+' '+c.m,c.os?null:function(){var p=pks[k]||{};return{kind:'scooter',name:c.b+' '+c.m,opt:p.n||'',p:+p.p||0,part:false,img:ph[0]||'',q:qn,colors:c.cl||[],col:selCol,link:location.href.split('#')[0]+'#p='+encodeURIComponent(cid(c))}},ix)}}
   if(!pks.length){$('ad').classList.add('hide');$('no').classList.add('hide')}else sync();clearInterval(gt);gt=setInterval(tick,1000)}
 /* ---- store ---- */
 function card(c,i){var ph=(c.ph||[])[0],m=minP(c),b=document.createElement('div');b.tabIndex=0;b.setAttribute('role','button');b.setAttribute('aria-label',c.b+' '+c.m);b.className='card pc rv'+(c.os?' os':'');b.dataset.tilt='';b.style.setProperty('--d',(i%4)*70+'ms');var n=bwOf(c),pk=pkOf(c),star=pk.some(function(p){return p.s==1}),inW=wl.indexOf(cid(c))>-1;
@@ -1372,6 +1391,7 @@ function openOrder(it){if(it.os||(it.kind==='scooter'&&CAT.some(function(c){retu
  +(String(S.order_url||'').trim()?'<button type="button" class="btn lg blk out" id="oqsb">'+q3('تأكيد الطلب عبر الموقع','Confirmer via le site','Confirm on the website')+'</button>':'')
  +'</form></div>';
  oqEl.classList.add('on');document.body.classList.add('xo');lock(1);
+  if(it.col&&$('oqc')){var _o=$('oqc');for(var _i=0;_i<_o.options.length;_i++)if(_o.options[_i].value===it.col){_o.value=it.col;break}}
  function g(i){var e=$(i);return e?e.value.trim():''}
  function price(){var u=unitP();$('oqq').textContent=q;$('oqtt').textContent=u?fmt(u*q):t('od');$('oqp').textContent=u?(q>1?q+' × ':'')+fmt(u)+(it.part&&vipOn()?' · 👑 −'+PCT+'%':''):t('od')}
  function dsync(){var p=g('oqd')==='pickup';$('oqs0').classList.toggle('hide',p)}
@@ -1556,7 +1576,7 @@ function start(i){if(CAT[i]&&CAT[i].os)return;c=CAT[i];pks=(c.pk||[]).filter(fun
  var b0=grp('bat')[0];st={step:0,max:0,pk:pks.length?Math.max(0,pks.map(function(p){return p.s==1}).indexOf(true)):-1,col:(c.cl||[])[0]||'',acc:{},ctl:0,bat:b0?b0.id:'',dis:'',cnt:'',dl:'ship',w:'',img:0,asked:0,upg:0,dd:0,ok:0};if(vip>=0&&st.pk===vip)st.asked=1;frame(0)}
 function frame(k){ov.innerHTML='<div class="cfw">'+hd(nm(c))+'<div class="mini"><div class="im" id="stim"></div><div class="mi"><small id="stl"></small><div class="thm" id="thm"></div></div></div><div class="cfp"><div class="cfpt"><b id="cfs"></b><span id="cfn" dir="ltr"></span></div><div class="cfseg" id="cfseg"></div></div><div class="pnl" id="pnl"></div><div class="cfbar" id="cfbar"></div></div>';swipe(q('#pnl'));img();go(k||0)}
 function swipe(p){var x0=0,y0=0;p.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});p.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;if(Math.abs(dx)<90||Math.abs(dy)>Math.abs(dx)*.5)return;var fw=H.dir==='rtl'?dx>0:dx<0;if(fw){if(st.step<STEPS.length-1)next()}else if(st.step)go(st.step-1)},{passive:true})}
-function img(){var ph=c.ph||[],k=Math.min(st.img,Math.max(0,ph.length-1));q('#stim').innerHTML=ph.length?'<img decoding="async" src="'+esc(ph[k])+'" alt="'+esc(nm(c))+'">':'<b style="font-size:13px;color:var(--mu)">'+esc(c.b)+'</b>';q('#thm').innerHTML=ph.length>1?ph.slice(0,5).map(function(p,j){return'<button type="button" data-a="th" data-k="'+j+'" class="'+(j===k?'on':'')+'" aria-label="'+(j+1)+'"><img loading="lazy" decoding="async" src="'+esc(p)+'" alt=""></button>'}).join(''):''}
+function img(){var ph=c.ph||[],k=Math.min(st.img,Math.max(0,ph.length-1));var f0=(k===0&&window.MSV360)?MSV360.frames(c,st.col):null;q('#stim').innerHTML=(ph.length||f0)?'<img decoding="async" src="'+esc(f0?f0[0]:ph[k])+'" alt="'+esc(nm(c))+'">':'<b style="font-size:13px;color:var(--mu)">'+esc(c.b)+'</b>';q('#thm').innerHTML=ph.length>1?ph.slice(0,5).map(function(p,j){return'<button type="button" data-a="th" data-k="'+j+'" class="'+(j===k?'on':'')+'" aria-label="'+(j+1)+'"><img loading="lazy" decoding="async" src="'+esc(p)+'" alt=""></button>'}).join(''):''}
 /* option rows are native <input>s inside <label>s: the browser toggles them instantly, JS only updates the total */
 function oc(o,name,on,sq){return'<label class="oc'+(sq?' sq':'')+'"><input class="sr" type="'+(sq?'checkbox':'radio')+'" name="'+name+'" value="'+esc(o.id)+'"'+(on?' checked':'')+'><span class="ob"><i class="ck"></i><span class="ot">'+esc(ol(o))+'</span><em>'+(o.p>0?sg('+',o.p):t(X.free))+'</em></span></label>'}
 function ocn(name,on){return'<label class="oc"><input class="sr" type="radio" name="'+name+'" value=""'+(on?' checked':'')+'><span class="ob"><i class="ck"></i><span class="ot">'+t(X.no)+'</span><em></em></span></label>'}
@@ -1566,7 +1586,7 @@ function gfl(p){return(p.gl||[]).map(function(x){return'<li>🎁 '+esc(x.n)+' <e
 function pcard(val,name,price,list,badge,on){return'<label class="pc2"><input class="sr" type="radio" name="pk" value="'+val+'"'+(on?' checked':'')+'><span class="pcb"><span class="hd2"><i class="rd"></i><b>'+esc(name)+'</b>'+badge+'<span class="pp">'+price+'</span></span>'+(list?'<ul class="ft">'+list+'</ul>':'')+'</span></label>'}
 function panel(){var h='',k=st.step,last=STEPS.length-1;
  if(k===0){var cl=c.cl||[];
-  h=(cl.length?'<div class="cfh first">'+t(X.col)+' · <span id="coln">'+esc(colName(st.col))+'</span></div><div class="sws" role="radiogroup">'+cl.map(function(x){var n=CN[x]||[x,x,x,'#888'];return'<label class="sw" title="'+esc(t(n))+'"><input class="sr" type="radio" name="col" value="'+esc(x)+'"'+(x===st.col?' checked':'')+' aria-label="'+esc(t(n))+'"><i style="background:'+n[3]+'"></i></label>'}).join('')+'</div>':'')+'<div class="cfh'+(cl.length?'':' first')+'">'+t(X.pack)+'</div>'+
+  h=(cl.length?'<div class="cfh first">'+t(X.col)+' · <span id="coln">'+esc(colName(st.col))+'</span></div><div class="sws" role="radiogroup">'+cl.map(function(x){var n=CN[x]||[x,x,x,'#888'];return'<label class="sw" title="'+esc(t(n))+'"><input class="sr" type="radio" name="col" value="'+esc(x)+'"'+(x===st.col?' checked':'')+' aria-label="'+esc(t(n))+'"><i style="background:'+n[3]+'"></i></label>'}).join('')+'</div>':'')+(window.MSV360&&MSV360.has(c)?'<button type="button" class="btn out blk v3go" data-a="v3">🔄 '+MSV360.t('open')+'</button>':'')+'<div class="cfh'+(cl.length?'':' first')+'">'+t(X.pack)+'</div>'+
   (c.bo!==0?pcard(-1,t(X.bare),+c.bp>0?da(c.bp):t(X.ask),'<li><svg><use href="#i-check"/></svg>'+t(X.bard)+'</li>','',st.pk<0):'')+
   pks.map(function(p,j){return pcard(j,p.n,(+p.po>+p.p&&+p.p>0?'<s class="old">'+da(p.po)+'</s> ':'')+(p.p?da(p.p):t(X.ask)),gfl(p)+fl(p.d),(j===vip?'<span class="bg2 v">VIP</span>':'')+(p.s==1?'<span class="bg2">'+t(X.pop)+'</span>':''),j===st.pk)}).join('')+
   (grp('inc').length?'<div class="cfh">'+t(X.inc)+'</div>'+grp('inc').map(function(o){return'<div class="cfi"><svg><use href="#i-check"/></svg>'+esc(ol(o))+'</div>'}).join(''):'')}
@@ -1586,7 +1606,7 @@ function calc(){var p=pks[st.pk],base=st.pk<0?(+c.bp||0):(p&&p.p?+p.p:0),ex=[];O
  var exT=ex.reduce(function(a,o){return a+o.p},0),bonus=st.upg&&CF.up>0?+CF.up:0,sub=Math.max(0,base+exT-bonus),sp=shipOf(sub);return{p:p,base:base,ex:ex,exT:exT,bonus:bonus,sub:sub,sp:sp,tot:sub+(sp.v||0)}}
 function price(){var r=calc(),e=q('#cft'),o=q('#cford');if(e)e.textContent=da(r.tot);if(o)o.href=wa(r);return r}
 function sum(r){var s=q('#sm2');if(!s)return;r=r||calc();s.innerHTML='<div><span>'+t(X.sc)+(pn()?' · '+esc(pn()):'')+'</span><span>'+(r.base?da(r.base):t(X.ask))+'</span></div>'+r.ex.map(function(o){return'<div><span>'+esc(ol(o))+'</span><span>'+(o.p?sg('+',o.p):t(X.free))+'</span></div>'}).join('')+(r.bonus?'<div><span>'+t(X.v6)+'</span><span>'+sg('-',r.bonus)+'</span></div>':'')+'<div><span>'+t(X.sh)+'</span><span>'+(r.sp.v?sg('+',r.sp.v):r.sp.txt)+'</span></div>'+(r.base?'':'<div><span>'+t(X.nb)+'</span><span></span></div>')+'<div><span>'+t(X.fin)+'</span><span></span></div>'}
-function refresh(n){if(n==='col'){var e=q('#coln');if(e)e.textContent=colName(st.col)}var r=price();lab();if(st.step===STEPS.length-1)sum(r)}
+function refresh(n){if(n==='col'){var e=q('#coln');if(e)e.textContent=colName(st.col);img()}var r=price();lab();if(st.step===STEPS.length-1)sum(r)}
 /* ---- end-of-flow upsell: "same picks, better price" ---- */
 function nz(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\u0600-\u06ff ]+/g,' ').replace(/\s+/g,' ').trim()}
 function like(a,b){a=nz(a);b=nz(b);if(!a||!b)return false;if(a.length<3||b.length<3)return a===b;if(a.indexOf(b)>-1||b.indexOf(a)>-1)return true;var ta=a.split(' ').filter(function(w){return w.length>2}),tb=b.split(' ').filter(function(w){return w.length>2});if(!ta.length||!tb.length)return false;var hit=ta.filter(function(w){return tb.indexOf(w)>-1}).length;return hit/Math.min(ta.length,tb.length)>=.75}
@@ -1622,6 +1642,7 @@ ov.addEventListener('click',function(e){if(e.target===ov)return close_();var b=e
  else if(a==='next')next();
  else if(a==='seg'){var k=+b.dataset.s;if(k!==st.step&&k<=st.max)go(k)}
  else if(a==='th'){st.img=+b.dataset.k;img()}
+  else if(a==='v3'){MSV360.open({c:c,col:st.col,title:nm(c),onColor:function(k){st.col=k;var r=q('input[name=col][value="'+k+'"]');if(r)r.checked=true;refresh('col')},cta:{label:MSV360.t('use')}})}
  else if(a==='vup'){b.closest('.alr').remove();st.pk=vip;st.upg=1;go(1)}
  else if(a==='vkeep'){b.closest('.alr').remove();go(1)}
  else if(a==='eup')takeDeal(b.closest('.upc'));
@@ -1743,6 +1764,101 @@ var m=location.search.match(/[?&]sn=([^&]+)/);if(m)$('tl-sn').value=decodeURICom
 function boot(){ui();if($('tl-sn').value)detect()}if(document.readyState==='complete')boot();else addEventListener('load',boot);
 })();
 </script>
+<script>
+/* MS Scooter - 360° viewer (website only, not the passport).
+   Data (in data.js, per product of MS_CAT):  v3: { black:[url,url,...], red:[...], ... }
+   One WebP every 15-30° around the scooter, same camera height / background / zoom. First photo = front 3/4 view.
+   Photos are loaded only when the customer taps the 360° button. */
+(function(){
+var H=document.documentElement;
+var S={
+ open:['عرض 360° باللون الذي تختاره','Vue 360° dans la couleur de votre choix','360° view in the colour you pick'],
+ sub:['اسحب لتدوير السكوتر','Faites glisser pour tourner le scooter','Drag to rotate the scooter'],
+ col:['اللون','Couleur','Colour'],
+ load:['جاري تحميل الصور','Chargement des photos','Loading photos'],
+ nof:['عرض 360° غير متوفر بهذا اللون بعد.','La vue 360° n’est pas encore disponible dans cette couleur.','The 360° view is not available in this colour yet.'],
+ fail:['تعذّر تحميل الصور. تحقق من الاتصال.','Impossible de charger les photos. Vérifiez la connexion.','Could not load the photos. Check your connection.'],
+ order:['اطلب بهذا اللون','Commander dans cette couleur','Order in this colour'],
+ use:['اعتماد هذا اللون','Choisir cette couleur','Use this colour'],
+ close:['إغلاق','Fermer','Close'],
+ pp:['تشغيل / إيقاف الدوران','Lecture / pause','Play / pause']
+};
+var CN={white:['أبيض','Blanc','White','#f4f4f5'],black:['أسود','Noir','Black','#18181b'],red:['أحمر','Rouge','Red','#dc2626'],blue:['أزرق','Bleu','Blue','#2563eb'],grey:['رمادي','Gris','Grey','#9ca3af'],gray:['رمادي','Gris','Grey','#9ca3af'],green:['أخضر','Vert','Green','#16a34a'],yellow:['أصفر','Jaune','Yellow','#facc15'],orange:['برتقالي','Orange','Orange','#f97316']};
+function li(){var l=H.lang;return l==='fr'?1:l==='en'?2:0}
+function t(k){return S[k]?S[k][li()]:k}
+function esc(x){return String(x==null?'':x).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function ok(a){return Array.isArray(a)&&a.filter(Boolean).length>=2}
+function pick(v,k){if(!v||!k)return null;var a=v[k]||(k==='grey'?v.gray:k==='gray'?v.grey:null);return ok(a)?a.filter(Boolean):null}
+function frames(c,col){var v=c&&c.v3;if(!v)return null;if(Array.isArray(v))return ok(v)?v.filter(Boolean):null;
+ var a=pick(v,col);if(a)return a;if(!col||!(c.cl&&c.cl.length)){return ok(v['*'])?v['*'].filter(Boolean):null}return null}
+function has(c){var v=c&&c.v3;if(!v)return false;if(Array.isArray(v))return ok(v);return Object.keys(v).some(function(k){return ok(v[k])})}
+function chipsOf(c){var out=[],cl=(c.cl||[]).filter(Boolean);cl.forEach(function(k){if(out.indexOf(k)<0)out.push(k)});
+ if(c.v3&&!Array.isArray(c.v3))Object.keys(c.v3).forEach(function(k){if(k!=='*'&&ok(c.v3[k])&&out.indexOf(k)<0&&!(k==='gray'&&out.indexOf('grey')>-1)&&!(k==='grey'&&out.indexOf('gray')>-1))out.push(k)});return out}
+function cname(k){var n=CN[k];return n?n[li()]:k}
+
+/* ---- the turntable ---- */
+function mount(host,fr,o){o=o||{};
+ var N=fr.length,imgs=new Array(N),good=0,done=0,pos=(o.frac||0)*N,dragging=false,lx=0,lt=0,vel=0,raf=0,dead=false,ready=false,last=0,w=1,h=1,
+  dpr=Math.min(2,window.devicePixelRatio||1),blend=N<18,auto=!(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches),api={onFrame:null,onPlay:null};
+ host.innerHTML='<canvas></canvas><div class="v3ld"></div><div class="v3tag">360°</div><div class="v3hint"></div>';
+ var cv=host.querySelector('canvas'),ctx=cv.getContext('2d'),ld=host.querySelector('.v3ld'),hint=host.querySelector('.v3hint');hint.textContent=t('sub');
+ function near(i){for(var d=1;d<N;d++){var a=imgs[(i+d)%N],b=imgs[(i-d+N)%N];if(a)return a;if(b)return b}return null}
+ function put(im,al){if(!im||!im.naturalWidth)return;var s=Math.min(w/im.naturalWidth,h/im.naturalHeight)*.94,dw=im.naturalWidth*s,dh=im.naturalHeight*s;ctx.globalAlpha=al;ctx.drawImage(im,(w-dw)/2,(h-dh)/2,dw,dh)}
+ function draw(){if(dead||!ctx)return;ctx.globalAlpha=1;ctx.clearRect(0,0,w,h);var p=((pos%N)+N)%N,i=Math.floor(p),f=p-i,j=(i+1)%N;put(imgs[i]||near(i),1);if(blend&&f>.02)put(imgs[j]||near(j),f);ctx.globalAlpha=1;if(api.onFrame)api.onFrame(p/N)}
+ function size(){if(dead)return;var r=host.getBoundingClientRect();w=Math.max(1,Math.round(r.width*dpr));h=Math.max(1,Math.round(r.height*dpr));if(cv.width!==w)cv.width=w;if(cv.height!==h)cv.height=h;draw()}
+ function prog(){if(done<N&&good<N){ld.textContent=t('load')+' '+Math.round(done/N*100)+'%'}if(done>=N){ld.classList.add('v3off');if(good<3){ld.classList.remove('v3off');ld.textContent=t('fail');return}ready=true;if(auto)play(true)}}
+ function load(i){var im=new Image();im.decoding='async';im.onload=function(){if(dead)return;imgs[i]=im;good++;done++;if(good===1||i===0)draw();prog()};im.onerror=function(){if(dead)return;done++;prog()};im.src=fr[i]}
+ function loop(ts){raf=0;if(dead)return;var dt=last?Math.min(64,ts-last):16;last=ts;
+  if(auto&&!dragging){pos+=N*dt/9000}else if(!dragging&&Math.abs(vel)>.0002){pos+=vel*dt;vel*=Math.pow(.92,dt/16)}else if(!dragging){last=0;return}
+  draw();raf=requestAnimationFrame(loop)}
+ function kick(){if(!raf&&!dead){last=0;raf=requestAnimationFrame(loop)}}
+ function play(v){auto=!!v;if(auto)kick();if(api.onPlay)api.onPlay(auto)}
+ function pd(e){if(e.button>0)return;dragging=true;if(auto)play(false);vel=0;lx=e.clientX;lt=performance.now();host.classList.add('dg');hint.style.opacity=0;try{host.setPointerCapture(e.pointerId)}catch(x){}}
+ function pm(e){if(!dragging)return;var now=performance.now(),dx=e.clientX-lx,d=dx*N/Math.max(200,host.clientWidth*.9),dt=Math.max(1,now-lt);pos-=d;vel=.7*vel+.3*(-d/dt);lx=e.clientX;lt=now;draw()}
+ function pu(){if(!dragging)return;dragging=false;host.classList.remove('dg');if(performance.now()-lt>90)vel=0;if(Math.abs(vel)>.0002)kick()}
+ function kd(e){var k=e.key;if(k==='ArrowLeft'||k==='ArrowRight'){e.preventDefault();if(auto)play(false);pos+=(k==='ArrowRight'?1:-1);draw()}}
+ host.addEventListener('pointerdown',pd);host.addEventListener('pointermove',pm);host.addEventListener('pointerup',pu);host.addEventListener('pointercancel',pu);host.addEventListener('keydown',kd);
+ var ro=null;if(window.ResizeObserver){ro=new ResizeObserver(size);ro.observe(host)}else window.addEventListener('resize',size);
+ var ht=setTimeout(function(){hint.style.opacity=0},5000);
+ size();load(0);for(var i=1;i<N;i++)load(i);prog();
+ api.destroy=function(){dead=true;clearTimeout(ht);if(raf)cancelAnimationFrame(raf);if(ro)ro.disconnect();else window.removeEventListener('resize',size);host.removeEventListener('pointerdown',pd);host.removeEventListener('pointermove',pm);host.removeEventListener('pointerup',pu);host.removeEventListener('pointercancel',pu);host.removeEventListener('keydown',kd);host.classList.remove('dg');host.innerHTML=''};
+ api.frac=function(){return(((pos%N)+N)%N)/N};api.setFrac=function(f){if(auto)play(false);pos=f*N;draw()};api.step=function(d){if(auto)play(false);pos+=d;draw()};api.toggle=function(){play(!auto)};api.playing=function(){return auto};
+ return api}
+
+/* ---- the sheet: big viewer + colour chips ---- */
+function open(o){var c=o.c;if(!c||!has(c))return;var chips=chipsOf(c),prev=document.activeElement,cur='',v=null,ov=document.createElement('div');
+ if(o.col&&(chips.indexOf(o.col)>-1||!chips.length))cur=o.col;else{for(var i=0;i<chips.length;i++)if(frames(c,chips[i])){cur=chips[i];break}}
+ ov.className='v3m';ov.setAttribute('role','dialog');ov.setAttribute('aria-modal','true');ov.setAttribute('aria-label','360°');
+ ov.innerHTML='<div class="v3b"><div class="v3h"><div><b>'+esc(o.title||(c.b+' '+c.m))+'</b><small>'+esc(t('sub'))+'</small></div><button type="button" class="ib" data-v="x" aria-label="'+esc(t('close'))+'"><svg width="20" height="20"><use href="#i-x"/></svg></button></div>'
+ +'<div class="v3s" tabindex="0" aria-label="360°"></div>'
+ +'<div class="v3ctl" dir="ltr"><button type="button" class="ib" data-v="p" aria-label="‹">‹</button><input type="range" class="v3r" min="0" max="359" value="0" aria-label="360°"><button type="button" class="ib" data-v="n" aria-label="›">›</button><button type="button" class="ib" data-v="pl" aria-label="'+esc(t('pp'))+'">⏸</button></div>'
+ +'<p class="v3nf v3off" role="status"></p>'
+ +(chips.length?'<div class="v3cl"><small>'+esc(t('col'))+' · <b class="v3cn"></b></small><div class="v3sw" role="radiogroup" aria-label="'+esc(t('col'))+'">'+chips.map(function(k){var n=CN[k];return'<button type="button" role="radio" aria-checked="false" data-k="'+esc(k)+'" class="v3k'+(frames(c,k)?'':' nf')+'"><i style="background:'+(n?n[3]:'#9ca3af')+'"></i><span>'+esc(cname(k))+'</span></button>'}).join('')+'</div></div>':'')
+ +(o.cta?'<button type="button" class="btn lg blk" data-v="cta">'+esc(o.cta.label)+'</button>':'')+'</div>';
+ document.body.appendChild(ov);
+ var st=ov.querySelector('.v3s'),ctl=ov.querySelector('.v3ctl'),rg=ov.querySelector('.v3r'),pl=ov.querySelector('[data-v=pl]'),nf=ov.querySelector('.v3nf');
+ function show(col,frac){cur=col;if(v){v.destroy();v=null}
+  [].forEach.call(ov.querySelectorAll('.v3k'),function(b){var on=b.dataset.k===col;b.setAttribute('aria-checked',on);b.classList.toggle('on',on)});
+  var cn=ov.querySelector('.v3cn');if(cn)cn.textContent=col?cname(col):'';
+  var f=frames(c,col);
+  if(f){nf.classList.add('v3off');ctl.classList.remove('v3off');v=mount(st,f,{frac:frac||0});
+   v.onFrame=function(x){rg.value=String(Math.round(x*359.99))};v.onPlay=function(p){pl.textContent=p?'⏸':'▶'};pl.textContent=v.playing()?'⏸':'▶'}
+  else{ctl.classList.add('v3off');st.innerHTML=(c.ph&&c.ph[0]?'<img class="v3still" src="'+esc(c.ph[0])+'" alt="">':'')+'<div class="v3tag">360°</div>';nf.textContent=t('nof');nf.classList.remove('v3off')}}
+ function close(){if(v){v.destroy();v=null}window.removeEventListener('keydown',kd,true);ov.remove();if(prev&&prev.focus)try{prev.focus()}catch(e){}}
+ function kd(e){if(e.key==='Escape'){e.stopPropagation();e.preventDefault();close();return}
+  if(e.key==='Tab'){var f=[].filter.call(ov.querySelectorAll('button:not([disabled]),input,[tabindex="0"]'),function(x){return x.offsetParent!==null});if(!f.length)return;var a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}}
+ window.addEventListener('keydown',kd,true);
+ ov.addEventListener('click',function(e){if(e.target===ov)return close();var b=e.target.closest('[data-v],.v3k');if(!b)return;
+  if(b.classList.contains('v3k')){var fr=v?v.frac():0;show(b.dataset.k,fr);if(o.onColor)o.onColor(b.dataset.k);return}
+  var a=b.dataset.v;if(a==='x')close();else if(a==='p'&&v)v.step(-1);else if(a==='n'&&v)v.step(1);else if(a==='pl'&&v)v.toggle();else if(a==='cta'){var k=cur;close();if(o.cta&&o.cta.fn)o.cta.fn(k)}});
+ rg.addEventListener('input',function(){if(v)v.setFrac(+rg.value/360)});
+ show(cur,0);var x=ov.querySelector('[data-v=x]');if(x)x.focus()}
+
+window.MSV360={has:has,frames:frames,open:open,mount:mount,t:t,
+ btn:function(c){return has(c)?'<button type="button" class="btn out blk v3go" data-v3="1">🔄 '+esc(t('open'))+'</button>':''},
+ chip:function(c){return has(c)?'<button type="button" class="v3chip" data-v3="1" aria-label="'+esc(t('open'))+'">360°</button>':''}};
+})();
+</script>
 <script>(function(){var sel='.ms-lookup,#tools .card,.bat .card,.tl-c,.ptc',f=0;
 function mark(){document.querySelectorAll(sel).forEach(function(e){e.classList.add('sp')})}
 mark();new MutationObserver(function(){cancelAnimationFrame(f);f=requestAnimationFrame(mark)}).observe(document.body,{childList:true,subtree:true});
@@ -1820,6 +1936,13 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 @media(max-width:400px){.msp-i1{grid-template-columns:96px 1fr}.msp-in{padding:14px 10px}}\
 @media print{.msp-scan{display:none}.msp-pg.off{display:none}}@media(prefers-reduced-motion:reduce){.msp-scan,.msp-bdg i{animation:none}.msp-pg{transition:none}}';
 
+  CSS += '.msp-sc{position:relative;margin:0 0 10px;border:1.5px solid #1f293733;border-radius:12px;overflow:hidden;aspect-ratio:16/10;background:radial-gradient(120% 100% at 50% 0%,#fff,#e3e9f1)}' +
+    '.msp-sc>img.ph{position:absolute;inset:0;width:100%;height:100%;box-sizing:border-box;padding:9% 6% 15%;object-fit:contain;filter:drop-shadow(0 10px 10px #0003)}' +
+    '.msp-sc .lgb,.msp-sc .wm{position:absolute;inset-block-start:8px;height:30px;display:grid;place-items:center;padding:3px 8px;border-radius:9px;background:#fffe;border:1px solid #1f293726}' +
+    '.msp-sc .lgb{inset-inline-start:8px}.msp-sc .wm{inset-inline-end:8px}.msp-sc .lgb img,.msp-sc .wm img{display:block;height:100%;width:auto;max-width:72px;object-fit:contain}' +
+    '.msp-sc .cap{position:absolute;inset:auto 0 0;padding:18px 11px 7px;background:linear-gradient(transparent,#1f2937e6);color:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}' +
+    '.msp-sc .cap b{font-size:13.5px;font-weight:900;overflow-wrap:anywhere}.msp-sc .cap small{font-size:10.5px;font-weight:700;opacity:.88;text-align:end}';
+
   CSS += '.msp-dots{color:#9ca3af;letter-spacing:.12em}.msp-f b bdi{unicode-bidi:isolate}' +
     '.msp-photo .lkb{position:absolute;inset-inline-start:6px;inset-block-end:6px;width:26px;height:26px;border-radius:50%;background:#1f2937;color:#fff;display:grid;place-items:center}.msp-photo .lkb svg{width:14px;height:14px}' +
     '.msp-rc{margin-top:12px;padding:11px;border-radius:12px;border:1.5px solid #b4975a;background:#fffaf0}.msp-rc .rt{display:flex;gap:10px;align-items:center}.msp-rc .ri{width:36px;height:36px;border-radius:10px;background:#1f2937;color:#fff;display:grid;place-items:center;flex:none}.msp-rc .ri svg{width:19px;height:19px}.msp-rc b{display:block;font-size:13.5px}.msp-rc small{display:block;font-size:11.5px;color:#6b5b3e}.msp-rc .rb{display:flex;gap:6px;margin-top:9px;flex-wrap:wrap}.msp-rc button{flex:1 1 90px;border:0;border-radius:9px;padding:9px 8px;background:#dc2626;color:#fff;font:inherit;font-weight:800;font-size:12.5px;cursor:pointer}.msp-rc button.alt{background:#1f2937}' +
@@ -1828,7 +1951,26 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     '.msp-rvs{overflow:auto;padding:12px;background:#e5e7eb;flex:1}.msp-rv.dark .msp-rvs{background:#09090b}.msp-sheet{width:100%;max-width:560px;margin:0 auto;aspect-ratio:595.5/842.25;background:#fff;box-shadow:0 2px 12px #0004;direction:ltr;unicode-bidi:isolate}.msp-sheet svg{direction:ltr}.msp-rvl{margin:0;padding:40px 10px;text-align:center;color:#555;font-weight:700;font-size:14px}' +
     '.msp-rvf{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #e4e4e7}.msp-rvf button{flex:1;border:0;border-radius:11px;padding:11px 8px;font:inherit;font-weight:800;font-size:13.5px;cursor:pointer;background:#dc2626;color:#fff}.msp-rvf button.alt{background:#1f2937}';
 
-  CSS += '.msp-stp{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:5px;counter-reset:s}.msp-stp li{counter-increment:s;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:#6b5b3e}.msp-stp li:before{content:counter(s);flex:none;width:20px;height:20px;border-radius:50%;background:#d9cfb4;color:#1f2937;display:grid;place-items:center;font-size:11px;font-weight:900}.msp-stp li.on{color:#1f2937;font-weight:900}.msp-stp li.on:before{background:#1f2937;color:#fff}.msp-stp li.dn:before{content:"✓";background:#15803d;color:#fff}' +
+  CSS += '.msp-pp.id{position:relative;display:flex;flex-direction:column;min-height:0;padding:0;overflow:hidden;color:#14213d;border:1px solid #aebccb;border-radius:12px;background:linear-gradient(115deg,#f2ecd6 0%,#e4eff4 42%,#f1e6ee 72%,#e9efd9 100%);box-shadow:0 1px 0 #fff8 inset,0 20px 40px -24px #0007}' +
+    '.msp-pp.id:before{display:block;opacity:1;content:"";position:absolute;inset:0;pointer-events:none;background:repeating-radial-gradient(circle at 18% 28%,transparent 0 5px,#1d4ed81c 5px 5.7px),repeating-radial-gradient(circle at 82% 70%,transparent 0 6px,#be123c14 6px 6.7px),repeating-linear-gradient(115deg,#0f766e10 0 1px,transparent 1px 7px)}' +
+    '.msp-pp.id:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 35%,#ffffff66 47%,transparent 58%);background-size:260% 100%;animation:msp-gl 6s ease-in-out infinite}@keyframes msp-gl{from{background-position:140% 0}to{background-position:-140% 0}}' +
+    '.msp-pp.id>*{position:relative;z-index:1}.msp-pp.id .wm{position:absolute;z-index:0;inset-inline-end:50%;transform:translateX(50%);inset-block-start:38%;width:62%;opacity:.07;filter:grayscale(1);pointer-events:none}' +
+    '.msp-pp.id .pp-h{display:flex;align-items:center;gap:11px;padding:13px 14px 10px;border-bottom:1.5px solid #14213d40}' +
+    '.msp-pp.id .lg2{width:46px;height:46px;flex:none;border-radius:50%;background:#fffc;border:1.5px solid #14213d55;display:grid;place-items:center;padding:6px}.msp-pp.id .lg2 img{max-width:100%;max-height:100%;display:block}.msp-pp.id .lg2 span{font-size:22px;font-weight:900;color:#9f1239}' +
+    '.msp-pp.id .tt b{display:block;font-size:15px;font-weight:900;letter-spacing:.2em;color:#1e2a5a}.msp-pp.id .tt small{display:block;font-size:10.5px;font-weight:700;color:#4b5d83;margin-top:1px}' +
+    '.msp-pp.id .pp-ty{margin-inline-start:auto;font:900 34px/1 Georgia,serif;color:#9f1239;opacity:.85}' +
+    '.msp-pp.id .pp-r3{display:grid;grid-template-columns:.6fr .8fr 1.6fr;gap:10px;padding:9px 14px 0}' +
+    '.msp-pp.id .pp-m{display:flex;gap:13px;padding:10px 14px 4px;align-items:flex-start}' +
+    '.msp-pp.id .msp-photo{width:100px;flex:none;aspect-ratio:3/4;border:1.5px solid #14213d66;border-radius:3px;box-shadow:0 0 0 3px #fff8;background:linear-gradient(#dbe7f7,#a9c1e6)}.msp-pp.id .msp-photo.f{background:linear-gradient(#fbe3f0,#efb4d3)}.msp-pp.id .msp-photo.n{background:linear-gradient(#eceff3,#c5ccd6)}' +
+    '.msp-pp.id .msp-photo:after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:color-dodge;opacity:.5;background:linear-gradient(120deg,transparent 20%,#a5f3fc 40%,#f0abfc 55%,#fde68a 70%,transparent 85%);background-size:250% 100%;animation:msp-ho 5s linear infinite}@keyframes msp-ho{from{background-position:130% 0}to{background-position:-130% 0}}' +
+    '.msp-pp.id .pp-f{display:grid;gap:7px;min-width:0;flex:1}.msp-pp.id .pp-x{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;padding:8px 14px 8px;flex:1;align-content:space-evenly}.msp-pp.id .pp-x .pf:last-child:nth-child(odd){grid-column:1/-1}' +
+    '.msp-pp.id .pf{min-width:0;border-bottom:1px dotted #14213d4d;padding-bottom:3px}.msp-pp.id .pf small{display:block;font-size:9px;font-weight:800;letter-spacing:.06em;color:#4b5d83;text-transform:uppercase}.msp-pp.id .pf small i{font-style:italic;font-weight:600;text-transform:none;letter-spacing:0}' +
+    '.msp-pp.id .pf b{display:block;font-size:14px;font-weight:800;color:#0f172a;letter-spacing:.03em;text-transform:uppercase;overflow-wrap:anywhere;min-height:0}.msp-pp.id .pf.big b{font-size:19px;line-height:1.15}.msp-pp.id .pf b .msp-dots{color:#7f8cab}' +
+    '.msp-pp.id .msp-ul,.msp-pp.id .msp-fpd{margin:4px 14px 12px;border-color:#9f1239aa;background:#fffaf0cc}.msp-pp.id .msp-ul button{background:#1e2a5a}' +
+    '.msp-pp.id .msp-mrz{margin:0;padding:9px 12px 11px;border-top:1px solid #14213d33;background:#fffd;color:#1f2937;opacity:1;font-size:10px;letter-spacing:0;word-break:normal;white-space:nowrap;overflow:hidden}' +
+    '@media(prefers-reduced-motion:reduce){.msp-pp.id:after,.msp-pp.id .msp-photo:after{animation:none}}' +
+    '.msp-sheet{cursor:zoom-in;transition:width .25s}.msp-sheet.zm{max-width:none;width:230%;cursor:zoom-out}.msp-rt3 .sheet{cursor:zoom-in}.msp-rvs{-webkit-overflow-scrolling:touch}' +
+    '.msp-stp{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:5px;counter-reset:s}.msp-stp li{counter-increment:s;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:#6b5b3e}.msp-stp li:before{content:counter(s);flex:none;width:20px;height:20px;border-radius:50%;background:#d9cfb4;color:#1f2937;display:grid;place-items:center;font-size:11px;font-weight:900}.msp-stp li.on{color:#1f2937;font-weight:900}.msp-stp li.on:before{background:#1f2937;color:#fff}.msp-stp li.dn:before{content:"✓";background:#15803d;color:#fff}' +
     '.msp-fpb:not(.hold):not(.done){animation:msp-pl 1.6s ease-out infinite}@keyframes msp-pl{0%{box-shadow:0 0 0 0 #38bdf8aa}100%{box-shadow:0 0 0 18px #38bdf800}}.msp-hand{display:block;font-size:26px;margin-top:6px;animation:msp-hd 1.2s ease-in-out infinite}@keyframes msp-hd{50%{transform:translateY(-6px)}}.msp-fpb.hold~.msp-hand,.msp-fpb.done~.msp-hand{display:none}' +
     '.msp-ul input::placeholder{letter-spacing:0;text-transform:none;font-family:Cairo,system-ui,sans-serif;font-weight:700;font-size:13px}.msp-f2 .msp-f b{font-size:13.5px}' +
     '.msp-fpd{margin-top:12px;padding:14px 11px 12px;border-radius:12px;border:1.5px solid #b4975a;background:#fffaf0;text-align:center}.msp-fpd b{display:block;font-size:13.5px}.msp-fpd p{margin:3px 0 10px;font-size:12px;color:#6b5b3e}' +
@@ -1856,13 +1998,13 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   };
 
   var T = {
-    ar: { s1: 'اكتب رقم وثيقة الهوية الكامل', s2: 'اضغط «فتح»', s3: 'ضع إصبعك على البصمة', fph: 'اضغط مطولاً بالفأرة أو بإصبعك', t: 'جواز السكوتر', sub: 'MS Scooter · السجل الرسمي', sec: 'موثّق', alert: 'تنبيه', chk: 'قيد التحقق', p1: 'الهوية', p2: 'التأشيرة', p1t: 'صفحة الهوية', p2t: 'تأشيرة السكوتر', sn: 'اللقب', gn: 'الاسم', sx: 'الجنس', sxm: 'ذكر', sxf: 'أنثى', bd: 'تاريخ الميلاد', pob: 'مكان الميلاد', wil: 'الولاية', idn: 'رقم وثيقة الهوية', iss: 'تاريخ الإصدار', pno: 'رقم الجواز', lkT: 'الهوية محمية', lkP: 'أدخل رقم وثيقة الهوية الكامل لفتح الجواز كاملاً ونسخة الوصل.', p3: 'الوصل', p3t: 'نسخة الوصل', fpT: 'ضع إصبعك على البصمة', fpH: 'اضغط مطولاً على البصمة حتى تكتمل الدائرة', fpS: 'جارٍ المسح…', fpOk: 'تم التحقق من الهوية', idph: 'رقم وثيقة الهوية الكامل', rcl: 'الوصل مرتبط بالهوية', rcg: 'افتح الهوية أولاً بإدخال رقم وثيقة الهوية الكامل.', rco: 'فتح الهوية', rpdf: 'تحميل PDF', rimg: 'تحميل صورة', rpe: 'تعذّر إنشاء الملف، حاول مرة أخرى.',  un: 'فتح', bad: 'رمز غير صحيح', noid: 'لم تُسجَّل هوية المالك بعد.', nocr: 'تعذّر الفك : يلزم HTTPS.', own: 'المالك', loading: 'جارٍ الفتح…', rct: 'نسخة الوصل', rcs: 'نسخة من وصل الشراء الخاص بك', rcv: 'عرض الوصل', rcd: 'تحميل صورة', rcpr: 'PDF / طباعة', rce: 'تعذّر عرض الوصل، حاول لاحقاً.', cls: 'إغلاق',
+    ar: { xp: 'تاريخ الانتهاء', au: 'الجهة المصدرة', rno: 'رقم الوصل', rtt: 'وصل شراء', rdt: 'تاريخ الشراء', rcn: 'نسخة للاطلاع · MS Scooter', zm: 'اضغط على الوصل للتكبير', s1: 'اكتب رقم وثيقة الهوية الكامل', s2: 'اضغط «فتح»', s3: 'ضع إصبعك على البصمة', fph: 'اضغط مطولاً بالفأرة أو بإصبعك', t: 'جواز السكوتر', sub: 'MS Scooter · السجل الرسمي', sec: 'موثّق', alert: 'تنبيه', chk: 'قيد التحقق', p1: 'الهوية', p2: 'التأشيرة', p1t: 'صفحة الهوية', p2t: 'تأشيرة السكوتر', sn: 'اللقب', gn: 'الاسم', sx: 'الجنس', sxm: 'ذكر', sxf: 'أنثى', bd: 'تاريخ الميلاد', pob: 'مكان الميلاد', wil: 'الولاية', idn: 'رقم وثيقة الهوية', iss: 'تاريخ الإصدار', pno: 'رقم الجواز', lkT: 'الهوية محمية', lkP: 'أدخل رقم وثيقة الهوية الكامل لفتح الجواز كاملاً ونسخة الوصل.', p3: 'الوصل', p3t: 'نسخة الوصل', fpT: 'ضع إصبعك على البصمة', fpH: 'اضغط مطولاً على البصمة حتى تكتمل الدائرة', fpS: 'جارٍ المسح…', fpOk: 'تم التحقق من الهوية', idph: 'رقم وثيقة الهوية الكامل', rcl: 'الوصل مرتبط بالهوية', rcg: 'افتح الهوية أولاً بإدخال رقم وثيقة الهوية الكامل.', rco: 'فتح الهوية', rpdf: 'تحميل PDF', rimg: 'تحميل صورة', rpe: 'تعذّر إنشاء الملف، حاول مرة أخرى.',  un: 'فتح', bad: 'رمز غير صحيح', noid: 'لم تُسجَّل هوية المالك في قاعدة البيانات لهذا السكوتر بعد.', nocr: 'تعذّر الفك : يلزم HTTPS.', own: 'المالك', loading: 'جارٍ الفتح…', rct: 'نسخة الوصل', rcs: 'نسخة من وصل الشراء الخاص بك', rcv: 'عرض الوصل', rcd: 'تحميل صورة', rcpr: 'PDF / طباعة', rce: 'تعذّر عرض الوصل، حاول لاحقاً.', cls: 'إغلاق',
       sold: 'تم البيع', warr: 'الضمان', mo: 'أشهر', mo2: 'شهراً', act: 'ساري', exp: 'منتهي', left: 'يوم', svc: 'الورشة', none: 'لا إصلاحات', rep: 'تدخل', now: 'قيد الإصلاح', veh: 'المركبة', brand: 'الماركة', model: 'الطراز', color: 'اللون', ser: 'الرقم التسلسلي', km: 'المسافة', orig: 'المالك الأصلي', tr: 'انتقلت الملكية', stolen: 'مسروق', disp: 'قيد التحقق', ext: 'مسجّل', visa: 'تأشيرة رقم',
       ok: 'جواز أصلي : السكوتر مسجّل لدى MS Scooter', vstolen: 'مُبلَّغ عنه كمسروق : لا تشتريه واتصل بنا', vdisp: 'الملكية قيد التحقق : انتبه قبل الشراء', nf: 'لم نجد هذا الرقم التسلسلي', nfp: 'تحقق من الرقم المكتوب على الوصل أو على الهيكل ثم أعد المحاولة.', priv: 'الهوية مشفّرة ولا تظهر إلا برمز المالك.', loc: 'ar-DZ-u-nu-latn' },
-    fr: { s1: 'Saisissez le n° complet', s2: 'Appuyez sur « Ouvrir »', s3: 'Posez le doigt sur l’empreinte', fph: 'Maintenez avec la souris ou le doigt', t: 'Passeport du scooter', sub: 'MS Scooter · Registre officiel', sec: 'Authentique', alert: 'ALERTE', chk: 'À vérifier', p1: 'Identité', p2: 'Visa', p1t: 'Page d’identité', p2t: 'Visa du scooter', sn: 'Nom', gn: 'Prénom(s)', sx: 'Sexe', sxm: 'Masculin', sxf: 'Féminin', bd: 'Date de naissance', pob: 'Lieu de naissance', wil: 'Wilaya', idn: 'N° pièce d’identité', iss: 'Date d’émission', pno: 'N° de passeport', lkT: 'Identité protégée', lkP: 'Saisissez le n° complet de votre pièce d’identité pour ouvrir le passeport complet et la copie du reçu.', p3: 'Reçu', p3t: 'Copie du reçu', fpT: 'Posez votre doigt sur l’empreinte', fpH: 'Maintenez appuyé jusqu’à ce que le cercle soit complet', fpS: 'Lecture…', fpOk: 'Identité vérifiée', idph: 'N° complet de la pièce d’identité', rcl: 'Le reçu est lié à l’identité', rcg: 'Ouvrez d’abord l’identité avec le n° complet de la pièce d’identité.', rco: 'Ouvrir l’identité', rpdf: 'Télécharger le PDF', rimg: 'Télécharger l’image', rpe: 'Impossible de créer le fichier, réessayez.',  un: 'Ouvrir', bad: 'Code incorrect', noid: 'Identité du propriétaire non enregistrée.', nocr: 'Déchiffrement impossible : HTTPS requis.', own: 'Propriétaire', loading: 'Ouverture…', rct: 'Copie du reçu', rcs: 'Copie de votre reçu d’achat', rcv: 'Voir le reçu', rcd: 'Télécharger l’image', rcpr: 'PDF / Imprimer', rce: 'Impossible d’afficher le reçu, réessayez plus tard.', cls: 'Fermer',
+    fr: { xp: 'Date d’expiration', au: 'Autorité', rno: 'N° du reçu', rtt: 'Reçu d’achat', rdt: 'Date d’achat', rcn: 'Copie pour information · MS Scooter', zm: 'Touchez le reçu pour agrandir', s1: 'Saisissez le n° complet', s2: 'Appuyez sur « Ouvrir »', s3: 'Posez le doigt sur l’empreinte', fph: 'Maintenez avec la souris ou le doigt', t: 'Passeport du scooter', sub: 'MS Scooter · Registre officiel', sec: 'Authentique', alert: 'ALERTE', chk: 'À vérifier', p1: 'Identité', p2: 'Visa', p1t: 'Page d’identité', p2t: 'Visa du scooter', sn: 'Nom', gn: 'Prénom(s)', sx: 'Sexe', sxm: 'Masculin', sxf: 'Féminin', bd: 'Date de naissance', pob: 'Lieu de naissance', wil: 'Wilaya', idn: 'N° pièce d’identité', iss: 'Date d’émission', pno: 'N° de passeport', lkT: 'Identité protégée', lkP: 'Saisissez le n° complet de votre pièce d’identité pour ouvrir le passeport complet et la copie du reçu.', p3: 'Reçu', p3t: 'Copie du reçu', fpT: 'Posez votre doigt sur l’empreinte', fpH: 'Maintenez appuyé jusqu’à ce que le cercle soit complet', fpS: 'Lecture…', fpOk: 'Identité vérifiée', idph: 'N° complet de la pièce d’identité', rcl: 'Le reçu est lié à l’identité', rcg: 'Ouvrez d’abord l’identité avec le n° complet de la pièce d’identité.', rco: 'Ouvrir l’identité', rpdf: 'Télécharger le PDF', rimg: 'Télécharger l’image', rpe: 'Impossible de créer le fichier, réessayez.',  un: 'Ouvrir', bad: 'Code incorrect', noid: 'Identité du propriétaire non enregistrée.', nocr: 'Déchiffrement impossible : HTTPS requis.', own: 'Propriétaire', loading: 'Ouverture…', rct: 'Copie du reçu', rcs: 'Copie de votre reçu d’achat', rcv: 'Voir le reçu', rcd: 'Télécharger l’image', rcpr: 'PDF / Imprimer', rce: 'Impossible d’afficher le reçu, réessayez plus tard.', cls: 'Fermer',
       sold: 'VENDU', warr: 'GARANTIE', mo: 'mois', mo2: 'mois', act: 'ACTIVE', exp: 'EXPIRÉE', left: 'j', svc: 'ATELIER', none: 'AUCUNE RÉPARATION', rep: 'INTERVENTION(S)', now: 'EN RÉPARATION', veh: 'VÉHICULE', brand: 'Marque', model: 'Modèle', color: 'Couleur', ser: 'N° série', km: 'Km', orig: 'PROPRIÉTAIRE D’ORIGINE', tr: 'TRANSFÉRÉ', stolen: 'DÉCLARÉ VOLÉ', disp: 'EN LITIGE', ext: 'ENREGISTRÉ', visa: 'VISA N°',
       ok: 'Passeport authentique : scooter enregistré chez MS Scooter', vstolen: 'DÉCLARÉ VOLÉ : ne l’achetez pas et contactez-nous', vdisp: 'Propriété en cours de vérification : prudence avant l’achat', nf: 'Numéro de série introuvable', nfp: 'Vérifiez le numéro inscrit sur le reçu ou sur le châssis, puis réessayez.', priv: 'L’identité est chiffrée : visible seulement avec le code du propriétaire.', loc: 'fr-FR' },
-    en: { s1: 'Type the full ID number', s2: 'Press “Open”', s3: 'Place your finger on the print', fph: 'Hold with the mouse or your finger', t: 'Scooter Passport', sub: 'MS Scooter · Official registry', sec: 'Verified', alert: 'ALERT', chk: 'Check', p1: 'Identity', p2: 'Visa', p1t: 'Identity page', p2t: 'Scooter visa', sn: 'Surname', gn: 'Given names', sx: 'Sex', sxm: 'Male', sxf: 'Female', bd: 'Date of birth', pob: 'Place of birth', wil: 'Wilaya', idn: 'ID document no.', iss: 'Date of issue', pno: 'Passport no.', lkT: 'Identity protected', lkP: 'Enter your full ID document number to open the complete passport and the receipt copy.', p3: 'Receipt', p3t: 'Receipt copy', fpT: 'Place your finger on the print', fpH: 'Press and hold until the circle is complete', fpS: 'Scanning…', fpOk: 'Identity verified', idph: 'Full ID document number', rcl: 'Receipt is tied to the identity', rcg: 'Open the identity first with the full ID document number.', rco: 'Open identity', rpdf: 'Download PDF', rimg: 'Download image', rpe: 'Could not create the file, try again.',  un: 'Open', bad: 'Wrong code', noid: 'Owner identity not registered yet.', nocr: 'Cannot decrypt: HTTPS required.', own: 'Owner', loading: 'Opening…', rct: 'Receipt copy', rcs: 'A copy of your purchase receipt', rcv: 'View receipt', rcd: 'Download image', rcpr: 'PDF / Print', rce: 'Could not display the receipt, try again later.', cls: 'Close',
+    en: { xp: 'Date of expiry', au: 'Authority', rno: 'Receipt no.', rtt: 'Purchase receipt', rdt: 'Purchase date', rcn: 'Information copy · MS Scooter', zm: 'Tap the receipt to zoom', s1: 'Type the full ID number', s2: 'Press “Open”', s3: 'Place your finger on the print', fph: 'Hold with the mouse or your finger', t: 'Scooter Passport', sub: 'MS Scooter · Official registry', sec: 'Verified', alert: 'ALERT', chk: 'Check', p1: 'Identity', p2: 'Visa', p1t: 'Identity page', p2t: 'Scooter visa', sn: 'Surname', gn: 'Given names', sx: 'Sex', sxm: 'Male', sxf: 'Female', bd: 'Date of birth', pob: 'Place of birth', wil: 'Wilaya', idn: 'ID document no.', iss: 'Date of issue', pno: 'Passport no.', lkT: 'Identity protected', lkP: 'Enter your full ID document number to open the complete passport and the receipt copy.', p3: 'Receipt', p3t: 'Receipt copy', fpT: 'Place your finger on the print', fpH: 'Press and hold until the circle is complete', fpS: 'Scanning…', fpOk: 'Identity verified', idph: 'Full ID document number', rcl: 'Receipt is tied to the identity', rcg: 'Open the identity first with the full ID document number.', rco: 'Open identity', rpdf: 'Download PDF', rimg: 'Download image', rpe: 'Could not create the file, try again.',  un: 'Open', bad: 'Wrong code', noid: 'Owner identity not registered yet.', nocr: 'Cannot decrypt: HTTPS required.', own: 'Owner', loading: 'Opening…', rct: 'Receipt copy', rcs: 'A copy of your purchase receipt', rcv: 'View receipt', rcd: 'Download image', rcpr: 'PDF / Print', rce: 'Could not display the receipt, try again later.', cls: 'Close',
       sold: 'SOLD', warr: 'WARRANTY', mo: 'months', mo2: 'months', act: 'ACTIVE', exp: 'EXPIRED', left: 'd', svc: 'SERVICE', none: 'NO REPAIRS', rep: 'VISIT(S)', now: 'IN REPAIR', veh: 'VEHICLE', brand: 'Brand', model: 'Model', color: 'Colour', ser: 'Serial no.', km: 'Km', orig: 'ORIGINAL OWNER', tr: 'TRANSFERRED', stolen: 'REPORTED STOLEN', disp: 'UNDER REVIEW', ext: 'REGISTERED', visa: 'VISA NO.',
       ok: 'Authentic passport : scooter registered with MS Scooter', vstolen: 'REPORTED STOLEN : do not buy it, contact us', vdisp: 'Ownership under verification : be careful before buying', nf: 'Serial number not found', nfp: 'Check the number on the receipt or on the frame, then try again.', priv: 'Identity is encrypted: visible only with the owner’s code.', loc: 'en-GB' }
   };
@@ -1882,6 +2024,28 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   function css() { if (document.getElementById('msp-css')) return; var s = document.createElement('style'); s.id = 'msp-css'; s.textContent = CSS; document.head.appendChild(s); }
   function find(serial) { var n = norm(serial); if (!n) return null; return (window.MS_DATA || []).filter(function (x) { return norm(x.s) === n; })[0] || null; }
   function repOf(serial) { var n = norm(serial); return (window.MS_REP || []).filter(function (x) { return norm(x.s) === n; })[0] || null; }
+
+  /* ---- scooter photo (page 2): taken from the product catalogue (MS_CAT). STRICT match on brand + model, otherwise no photo at all (never a wrong scooter). ---- */
+  var CKEY = { white: ['white', 'blanc', 'ابيض'], black: ['black', 'noir', 'اسود'], red: ['red', 'rouge', 'احمر'], blue: ['blue', 'bleu', 'ازرق'], grey: ['grey', 'gray', 'gris', 'رمادي'], green: ['green', 'vert', 'اخضر'], yellow: ['yellow', 'jaune', 'اصفر'], orange: ['orange', 'برتقالي'] };
+  function cnorm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u065f\u0670]/g, '').replace(/[أإآٱ]/g, 'ا').replace(/[^a-z\u0600-\u06ff]/g, ''); }
+  function colKey(s) { var n = cnorm(s); if (!n) return ''; var hit = []; Object.keys(CKEY).forEach(function (k) { if (CKEY[k].some(function (w) { w = cnorm(w); return n === w || n.indexOf(w) > -1; })) hit.push(k); }); return hit.length === 1 ? hit[0] : ''; }
+  function mkey(brand, model) { var b = norm(brand), m = norm(model); if (b && m.indexOf(b) === 0 && m.length > b.length) m = m.slice(b.length); return b + '|' + m; }
+  function catFor(e) {
+    var C = window.MS_CAT || [], k = mkey(e.b, e.m); if (!C.length || k.length < 3 || k.charAt(0) === '|' || k.slice(-1) === '|') return null;
+    var hit = C.filter(function (c) { return mkey(c.b, c.m) === k; }); return hit[0] || null;
+  }
+  function scooterCard(e, lg) {
+    var c = catFor(e); if (!c) return '';
+    var ph = (c.ph || []).filter(Boolean), v = c.v3, k = colKey(e.c), cols = (c.cl || []).filter(Boolean), src = '', exact = false, arr = null;
+    if (v && !Array.isArray(v) && k) arr = v[k] || (k === 'grey' ? v.gray : k === 'gray' ? v.grey : null);
+    if (arr && arr[0]) { src = arr[0]; exact = true; }
+    else if (ph[0]) { src = ph[0]; exact = cols.length < 2; }
+    if (!src) return '';
+    var NOTE = { ar: 'صورة توضيحية للطراز', fr: 'Photo illustrative du modèle', en: 'Illustrative photo of the model' };
+    return '<div class="msp-sc"><img class="ph" src="' + esc(src) + '" alt="' + esc(((e.b || '') + ' ' + (e.m || '')).trim()) + '" decoding="async">' +
+      '<span class="lgb"><img src="brand-' + esc(slug(e.b)) + '.webp" alt=""></span><span class="wm"><img src="logo.webp" alt="MS Scooter"></span>' +
+      '<div class="cap"><b>' + esc(((e.b || '') + ' ' + (e.m || '')).trim()) + (e.v ? ' · VIP' : '') + '</b><small>' + esc(exact ? (e.c || '') : NOTE[lg]) + '</small></div></div>';
+  }
 
   /* ---- decrypt (same scheme as the app's seal(): PBKDF2-SHA256 40000 it -> 64 bytes ; HMAC-SHA256 stream cipher ; HMAC tag) ---- */
   function u8(h) { var u = new Uint8Array(h.length / 2); for (var i = 0; i < u.length; i++) u[i] = parseInt(h.substr(2 * i, 2), 16); return u; }
@@ -1913,8 +2077,8 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   function ck(s) { var w = [7, 3, 1], t = 0; for (var i = 0; i < s.length; i++) { var c = s.charAt(i), v = c === '<' ? 0 : /\d/.test(c) ? +c : c.charCodeAt(0) - 55; t += v * w[i % 3]; } return t % 10; }
   function ymd(d) { return d ? String(d.getFullYear()).slice(2) + ('0' + (d.getMonth() + 1)).slice(-2) + ('0' + d.getDate()).slice(-2) : '<<<<<<'; }
   function mrz(e, id, wEnd) {
-    var l1 = 'P<DZA' + mz(id ? (id.ln + '<<' + String(id.fn).replace(/ /g, '<')) : '', 39), s9 = mz(e.s, 9), bd = id ? ymd(pd(id.bd)) : '<<<<<<', ex = ymd(wEnd);
-    var l2 = s9 + ck(s9) + 'DZA' + bd + ck(bd) + (id && id.sex ? id.sex.toUpperCase() : '<') + ex + ck(ex) + mz(e.b + e.m, 16);
+    var l1 = 'P<MSS' + mz(id ? (id.ln + '<<' + String(id.fn).replace(/ /g, '<')) : '', 39), s9 = mz(e.s, 9), bd = id ? ymd(pd(id.bd)) : '<<<<<<', ex = ymd(wEnd);
+    var l2 = s9 + ck(s9) + 'MSS' + bd + ck(bd) + (id && id.sex ? id.sex.toUpperCase() : '<') + ex + ck(ex) + mz(e.b + e.m, 16);
     return esc(l1) + '<br>' + esc(l2.slice(0, 44));
   }
 
@@ -1973,7 +2137,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   }
   function openRcp(rcp, act) {
     if (!rcp) return;
-    var lg = lang(), L = T[lg], name = 'MS-Scooter-' + String((rcp.d && (rcp.d.rno || rcp.d.serial)) || 'recu').replace(/[^A-Za-z0-9_-]+/g, '');
+    var lg = lang(), L = T[lg], name = 'MS-Scooter-' + String(rcp.name || (rcp.d && (rcp.d.rno || rcp.d.serial)) || 'recu').replace(/[^A-Za-z0-9_-]+/g, '');
     var ov = document.createElement('div'); ov.className = 'msp-rv' + (dark() ? ' dark' : ''); ov.setAttribute('dir', lg === 'ar' ? 'rtl' : 'ltr'); ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true');
     ov.innerHTML = '<div class="msp-rvb"><div class="msp-rvh"><b>' + esc(L.rct) + '</b><button type="button" class="x" data-a="x" aria-label="' + esc(L.cls) + '">✕</button></div><div class="msp-rvs"><div class="msp-sheet"><p class="msp-rvl">' + esc(L.loading) + '</p></div></div><div class="msp-rvf"><button type="button" data-a="d">' + esc(L.rcd) + '</button><button type="button" data-a="p" class="alt">' + esc(L.rcpr) + '</button></div></div>';
     document.body.appendChild(ov);
@@ -1987,11 +2151,10 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
       if (a === 'p') printSheet(sheet, name);
       else if (a === 'd') { busy = true; savePng(sheet, name).catch(function () { printSheet(sheet, name); }).then(function () { busy = false; }); }
     }
-    ov.onclick = function (e) { var a = e.target.getAttribute && e.target.getAttribute('data-a'); if (e.target === ov || a === 'x') { close(); return; } if (a) run(a); };
-    needRc().then(function () {
-      window.MSReceipt.render(sheet, rcp.d, { copy: true, qrUrl: rcp.q }); ready = true;
-      if (act === 'd' || act === 'p') setTimeout(function () { run(act); }, 800);
-    }).catch(function () { sheet.innerHTML = '<p class="msp-rvl">' + esc(L.rce) + '</p>'; });
+    ov.onclick = function (e) { if (e.target.closest && e.target.closest('.msp-sheet') && ready) { sheet.classList.toggle('zm'); return; } var a = e.target.getAttribute && e.target.getAttribute('data-a'); if (e.target === ov || a === 'x') { close(); return; } if (a) run(a); };
+    (rcp.d ? needRc().then(function () { window.MSReceipt.render(sheet, rcp.d, { copy: true, qrUrl: rcp.q }); }) : Promise.reject(0)).catch(function () { sheet.innerHTML = rcp.fb(); }).then(function () {
+      ready = true; if (act === 'd' || act === 'p') setTimeout(function () { run(act); }, 800);
+    });
   }
 
   /* ---- direct PDF : the receipt sheet -> JPEG -> single-page A4 PDF (no library) ---- */
@@ -2034,12 +2197,13 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   }
   /* receipt tab : inline preview + PDF / image download */
   function mountRc(host, rcp, L) {
-    var name = 'MS-Scooter-' + String((rcp.d && (rcp.d.rno || rcp.d.serial)) || 'recu').replace(/[^A-Za-z0-9_-]+/g, '');
-    host.innerHTML = '<div class="msp-rt3"><div class="hd"><span class="ri">' + SV.doc + '</span><div><b>' + esc(L.rct) + '</b><small>' + esc(L.rcs) + '</small></div></div><div class="sheet"><p class="msp-rvl">' + esc(L.loading) + '</p></div><div class="rb"><button type="button" data-a="pdf" disabled>' + esc(L.rpdf) + '</button><button type="button" data-a="png" class="alt" disabled>' + esc(L.rimg) + '</button></div></div>';
+    var name = 'MS-Scooter-' + String(rcp.name || (rcp.d && (rcp.d.rno || rcp.d.serial)) || 'recu').replace(/[^A-Za-z0-9_-]+/g, '');
+    host.innerHTML = '<div class="msp-rt3"><div class="hd"><span class="ri">' + SV.doc + '</span><div><b>' + esc(L.rct) + '</b><small>' + esc(L.rcs) + '</small></div></div><div class="sheet"><p class="msp-rvl">' + esc(L.loading) + '</p></div><small style="text-align:center;color:#6b5b3e;font-size:11.5px;font-weight:700">' + esc(L.zm) + '</small><div class="rb"><button type="button" data-a="pdf" disabled>' + esc(L.rpdf) + '</button><button type="button" data-a="png" class="alt" disabled>' + esc(L.rimg) + '</button></div></div>';
     var sheet = host.querySelector('.sheet'), btns = host.querySelectorAll('button'), busy = false;
     function en(v) { [].forEach.call(btns, function (b) { b.disabled = !v; }); }
-    needRc().then(function () { window.MSReceipt.render(sheet, rcp.d, { copy: true, qrUrl: rcp.q }); en(true); }).catch(function () { sheet.innerHTML = '<p class="msp-rvl">' + esc(L.rce) + '</p>'; });
+    (rcp.d ? needRc().then(function () { window.MSReceipt.render(sheet, rcp.d, { copy: true, qrUrl: rcp.q }); }) : Promise.reject(0)).catch(function () { sheet.innerHTML = rcp.fb(); }).then(function () { en(true); });
     host.onclick = function (ev) {
+      if (ev.target.closest && ev.target.closest('.sheet') && sheet.querySelector('svg')) { openRcp(rcp); return; }
       var a = ev.target.getAttribute && ev.target.getAttribute('data-a'); if (!a || busy) return; busy = true; en(false);
       (a === 'pdf' ? savePdf(sheet, name) : savePng(sheet, name)).catch(function () { printSheet(sheet, name); }).then(function () { busy = false; en(true); });
     };
@@ -2054,6 +2218,21 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     var d = pd(e.d), w = +e.w || 0, end = d && w > 0 ? addM(d, w) : null, now = new Date(), left = end ? Math.ceil((end - now) / 864e5) : 0, active = end && left > 0;
     var r = repOf(e.s), n = r ? +r.v || 0 : 0, rot = function (k) { return ((hash(e.s + k) % 13) - 6) + 'deg'; };
     var city = (window.MS_SITE && (MS_SITE.city || MS_SITE.ci)) || '';
+
+    /* receipt copy built from MS_DATA only (no ID, no code) : used when no full receipt data is published */
+    function fbRc() {
+      var rtl = lg === 'ar', W = 595, H = 842, X1 = rtl ? W - 48 : 48, X2 = rtl ? 48 : W - 48, dir = rtl ? 'rtl' : 'ltr', an = rtl ? 'end' : 'start';
+      var rows = [[L.rno, e.r || e.s], [L.rdt, d ? fd(d, L) : '—'], [L.own, e.n || '—'], [L.brand, e.b], [L.model, (e.m || '') + (e.v ? ' · VIP' : '')]];
+      if (e.c) rows.push([L.color, e.c]); rows.push([L.ser, e.s]); if (e.k) rows.push([L.km, e.k + ' km']);
+      rows.push([L.warr, w ? w + ' ' + (lg === 'ar' && w > 10 ? L.mo2 : L.mo) + (end ? ' · ' + sd(end) : '') : '—']);
+      var y = 178, g = '';
+      rows.forEach(function (r0) { g += '<text x="' + X1 + '" y="' + y + '" font-size="12.5" font-weight="700" fill="#71717a" text-anchor="' + an + '">' + esc(r0[0]) + '</text><text x="' + X1 + '" y="' + (y + 25) + '" font-size="19" font-weight="900" fill="#09090b" text-anchor="' + an + '">' + esc(r0[1]) + '</text><line x1="48" y1="' + (y + 38) + '" x2="' + (W - 48) + '" y2="' + (y + 38) + '" stroke="#e4e4e7"/>'; y += 56; });
+      var bc = barcode(e.s).replace('<svg class="msp-bc"', '<svg x="' + ((W - 240) / 2) + '" y="' + (H - 140) + '" width="240" height="44"');
+      return '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg" direction="ltr" font-family="Cairo,system-ui,sans-serif"><rect width="' + W + '" height="' + H + '" fill="#fff"/><rect width="' + W + '" height="124" fill="#dc2626"/>' +
+        '<text x="' + X1 + '" y="62" font-size="34" font-weight="900" fill="#fff" direction="ltr" text-anchor="' + (rtl ? 'end' : 'start') + '">MS Scooter</text><text x="' + X1 + '" y="98" font-size="17" font-weight="700" fill="#fff" fill-opacity=".9" text-anchor="' + an + '">' + esc(L.rtt) + (city ? ' · ' + esc(city) : '') + '</text>' +
+        '<text x="' + W / 2 + '" y="' + (H / 2 + 60) + '" font-size="120" font-weight="900" fill="#09090b" fill-opacity=".04" text-anchor="middle" transform="rotate(-30 ' + W / 2 + ' ' + (H / 2) + ')" direction="ltr">COPY</text>' +
+        g + bc + '<text x="' + W / 2 + '" y="' + (H - 70) + '" font-size="13" font-weight="800" fill="#52525b" text-anchor="middle" direction="ltr">' + esc(e.s) + '</text><text x="' + W / 2 + '" y="' + (H - 40) + '" font-size="12" font-weight="700" fill="#a1a1aa" text-anchor="middle">' + esc(L.rcn) + '</text></svg>';
+    }
 
     /* page 2 : visa */
     var stamps = '';
@@ -2070,31 +2249,43 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
       (e.c ? '<div class="row"><span>' + esc(L.color) + '</span><span>' + esc(e.c) + '</span></div>' : '') + '<div class="row"><span>' + esc(L.ser) + '</span><span>' + esc(e.s) + '</span></div>' + (e.k ? '<div class="row"><span>' + esc(L.km) + '</span><span>' + esc(e.k) + ' km</span></div>' : '') + '</div></div>';
     stamps += '<div class="pst" style="--r:' + rot('f') + ';--k:#7c3aed"><div class="pst-logo"><img src="brand-' + esc(slug(e.b)) + '.webp" alt="" onerror="this.parentNode.innerHTML=\'<span>' + esc((e.b || '?').charAt(0).toUpperCase()) + '</span>\'"></div></div>';
     if (e.v) stamps += '<div class="pst" style="--r:' + rot('g') + ';--k:#b45309"><div class="pst-big">★ VIP ★</div></div>';
-    var page2 = '<div class="msp-pp msp-visa"><div class="msp-ph"><b>' + esc(L.p2t) + '</b><small>' + esc(L.sub) + '</small></div><div class="msp-st">' + stamps + '</div>' +
+    var page2 = '<div class="msp-pp msp-visa"><div class="msp-ph"><b>' + esc(L.p2t) + '</b><small>' + esc(L.sub) + '</small></div>' + scooterCard(e, lg) + '<div class="msp-st">' + stamps + '</div>' +
       '<div class="msp-vn"><span>' + esc(L.visa) + ' ' + esc(e.r || e.s) + '</span>' + barcode(e.s) + '</div></div>';
 
+    function ulHtml(msg) {
+      return r ? '<div class="msp-ul"><b>' + SV.lock.replace('<svg', '<svg width="16" height="16"') + esc(L.lkT) + '</b><p>' + esc(L.lkP) + '</p><form><input maxlength="24" placeholder="' + esc(L.idph) + '" autocomplete="off" spellcheck="false" inputmode="text" aria-label="' + esc(L.idph) + '"><button>' + esc(L.un) + '</button></form><div class="er">' + esc(msg || '') + '</div></div>' : '<div class="msp-ul"><p style="margin:0">' + esc(L.noid) + '</p></div>';
+    }
     /* page 1 : identity (locked until the owner's code opens MS_REP) */
     function page1(id, locked, msg, rcp) {
       var HN = r && r.h || null, sexK = id ? id.sex : (HN && HN.sx) || '', sexC = sexK === 'f' ? 'f' : 'm';
       var half = function (w) { var q = Array.from(String(w)), k = q.length > 1 ? Math.ceil(q.length / 2) : 0; return q.slice(0, k).join('') + new Array(q.length - k + 1).join('•'); };
       /* locked : only the half-masked hint published next to the encrypted blob (never the full value) ; unlocked : the real value */
+      var h2 = function (w) { w = w == null ? '' : String(w); return !w || w.indexOf('•') > -1 ? w : half(w); };
       var fld = function (lab, val, ltr, hint) {
-        var inner = !locked ? (val ? esc(val) : '—') : hint ? '<bdi>' + esc(hint).replace(/•+/g, function (m) { return '<span class="msp-dots">' + m + '</span>'; }) + '</bdi>' : '••••••••';
-        return '<div class="msp-f"><small>' + esc(lab) + '</small><b' + (locked && !hint ? ' class="lkd"' : '') + (ltr ? ' style="direction:ltr;unicode-bidi:isolate;text-align:start"' : '') + '>' + inner + '</b></div>';
+        var inner = !locked ? (val ? esc(val) : '—') : hint ? '<bdi>' + esc(hint).replace(/•+/g, function (m) { return '<span class="msp-dots">' + m + '</span>'; }) + '</bdi>' : (r ? '••••••••' : '—');
+        return '<div class="msp-f"><small>' + esc(lab) + '</small><b' + (locked && !hint && r ? ' class="lkd"' : '') + (ltr ? ' style="direction:ltr;unicode-bidi:isolate;text-align:start"' : '') + '>' + inner + '</b></div>';
       };
       var bdT = id && pd(id.bd) ? fd(pd(id.bd), L) : '';
       var sexT = id ? (id.sex === 'm' ? L.sxm : id.sex === 'f' ? L.sxf : '') : '';
       var idT = id ? (id.idn ? String(id.idn) : id.idl ? '•••••••' + id.idl : '') : '', idH = HN && HN.idl ? '•••••••••••' + String(HN.idl).slice(-3) : '';
-      var stp = function (n) { return '<ol class="msp-stp">' + [L.s1, L.s2, L.s3].map(function (t, i) { return '<li class="' + (i + 1 < n ? 'dn' : i + 1 === n ? 'on' : '') + '">' + esc(t) + '</li>'; }).join('') + '</ol>'; }; window.__stp = stp;
       var form = '';
-      if (locked) form = r ? '<div class="msp-ul"><b>' + SV.lock.replace('<svg', '<svg width="16" height="16"') + esc(L.lkT) + '</b><p>' + esc(L.lkP) + '</p>' + stp(1) + '<form><input maxlength="24" placeholder="' + esc(L.idph) + '" autocomplete="off" spellcheck="false" inputmode="text" aria-label="' + esc(L.idph) + '"><button>' + esc(L.un) + '</button></form><div class="er">' + esc(msg || '') + '</div></div>' : '<div class="msp-ul"><p style="margin:0">' + esc(L.noid) + '</p></div>';
+      if (locked) form = ulHtml(msg);
       else if (!id) form = '<div class="msp-ul"><p style="margin:0">' + esc(L.noid) + '</p></div>';
       var rc = false && rcp ? '<div class="msp-rc"><div class="rt"><span class="ri">' + SV.doc + '</span><div><b>' + esc(L.rct) + '</b><small>' + esc(L.rcs) + '</small></div></div><div class="rb"><button type="button" data-a="v">' + esc(L.rcv) + '</button><button type="button" data-a="d" class="alt">' + esc(L.rcd) + '</button><button type="button" data-a="p" class="alt">' + esc(L.rcpr) + '</button></div></div>' : '';
-      return '<div class="msp-pp"><div class="msp-ph"><b>' + esc(L.p1t) + '</b><small>' + esc(L.sub) + '</small></div>' +
-        '<div class="msp-i1"><div class="msp-photo ' + sexC + '">' + (sexC === 'f' ? SV.wom : SV.man) + (locked ? '<span class="lkb">' + SV.lock + '</span>' : (id && id.sex ? '<span class="sx">' + (sexC === 'm' ? 'M' : 'F') + '</span>' : '')) + '</div>' +
-        '<div class="msp-fl">' + fld(L.sn, id && id.ln, 0, HN && HN.ln) + fld(L.gn, id && id.fn, 0, HN && HN.fn) + fld(L.sx, sexT, 0, HN && HN.sx ? (HN.sx === 'f' ? L.sxf : L.sxm) : '') + fld(L.bd, bdT, locked, HN && HN.bd) + fld(L.pob, id && id.pob, 0, HN && HN.pob) + '</div></div>' +
-        '<div class="msp-f2">' + fld(L.wil, id && id.wil, 0, HN && HN.wil) + fld(L.idn, idT, 1, idH) + '<div class="msp-f"><small>' + esc(L.iss) + '</small><b>' + (d ? esc(fd(d, L)) : '—') + '</b></div><div class="msp-f"><small>' + esc(L.pno) + '</small><b style="direction:ltr;unicode-bidi:isolate">' + esc(e.s) + '</b></div></div>' +
-        (locked ? '<div class="msp-f" style="margin-top:8px"><small>' + esc(L.own) + '</small><b style="direction:ltr;unicode-bidi:isolate">' + esc(e.n || '—') + '</b></div>' : '') + form + rc +
+      var EN = { sn: 'Surname', gn: 'Given names', sx: 'Sex', bd: 'Date of birth', pob: 'Place of birth', wil: 'Wilaya', idn: 'ID document no.', iss: 'Date of issue', xp: 'Date of expiry', veh: 'Vehicle', color: 'Colour', km: 'Km', pno: 'Passport no.', rno: 'Receipt no.', own: 'Owner', au: 'Authority', ty: 'Type', cd: 'Code' };
+      var cell = function (k, v, ltr, big) { return v ? '<div class="pf' + (big ? ' big' : '') + '"><small>' + esc(L[k] || EN[k]) + (lg === 'en' ? '' : ' <i>/ ' + EN[k] + '</i>') + '</small><b' + (ltr ? ' style="direction:ltr;unicode-bidi:isolate;text-align:start"' : '') + '>' + esc(v).replace(/•+/g, function (m) { return '<span class="msp-dots">' + m + '</span>'; }) + '</b></div>' : ''; };
+      var X = locked ? { ln: h2(HN && HN.ln), fn: h2(HN && HN.fn), sx: HN && HN.sx ? h2(HN.sx === 'f' ? L.sxf : L.sxm) : '', bd: h2(HN && HN.bd), pob: h2(HN && HN.pob), wil: h2(HN && HN.wil), idn: idH }
+                      : { ln: id && id.ln, fn: id && id.fn, sx: sexT, bd: bdT, pob: id && id.pob, wil: id && id.wil, idn: idT };
+      var wtxt = end ? fd(end, L) : '';
+      var hasId = !!(X.ln || X.fn), sxk = id ? id.sex : (HN && HN.sx) || '';
+      var photoC = sxk === 'f' ? 'f' : sxk === 'm' ? 'm' : 'n', vehT = ((e.b || '') + ' ' + (e.m || '') + (e.v ? ' · VIP' : '')).trim();
+      var main = hasId ? cell('sn', X.ln, 0, 1) + cell('gn', X.fn, 0, 1) + cell('sx', X.sx) + cell('bd', X.bd, locked) + cell('pob', X.pob) : cell('veh', vehT, 0, 1) + cell('own', e.n, 1) + cell('color', e.c) + cell('km', e.k ? e.k + ' km' : '');
+      var xtra = cell('wil', X.wil) + cell('idn', X.idn, 1) + cell('iss', d ? fd(d, L) : '') + cell('xp', wtxt) + (hasId ? cell('veh', vehT) + cell('color', e.c) + cell('km', e.k ? e.k + ' km' : '') + cell('own', e.n, 1) : '') + cell('rno', e.r, 1) + cell('au', 'MS SCOOTER' + (city ? ' · ' + String(city).toUpperCase() : ''), 1);
+      var logoI = function (cls) { return '<img ' + (cls ? 'class="' + cls + '" ' : '') + 'src="brand-' + esc(slug(e.b)) + '.webp" alt="" onerror="' + (cls ? 'this.remove()' : 'this.parentNode.innerHTML=\'<span>' + esc((e.b || '?').charAt(0).toUpperCase()) + '</span>\'') + '">'; };
+      return '<div class="msp-pp id"><div class="pp-h"><span class="lg2">' + logoI() + '</span><div class="tt"><b>SCOOTER PASSPORT</b><small>' + esc(L.t) + ' · ' + esc(vehT) + '</small></div><span class="pp-ty">P</span></div>' + logoI('wm') +
+        '<div class="pp-r3">' + cell('ty', 'P', 1) + cell('cd', 'MSS', 1) + cell('pno', e.s, 1) + '</div>' +
+        '<div class="pp-m"><div class="msp-photo ' + photoC + '">' + (photoC === 'f' ? SV.wom : photoC === 'm' ? SV.man : SV.neu) + (locked && hasId ? '<span class="lkb">' + SV.lock + '</span>' : (id && id.sex ? '<span class="sx">' + (sxk === 'm' ? 'M' : 'F') + '</span>' : '')) + '</div><div class="pp-f">' + main + '</div></div>' +
+        '<div class="pp-x">' + xtra + '</div>' + (locked && r ? form : '') +
         '<div class="msp-mrz">' + mrz(e, id, end) + '</div></div>';
     }
     var verdict = st === 'v' ? ['bad', SV.bad, L.vstolen] : st === 'l' ? ['warn', SV.bad, L.vdisp] : ['ok', SV.ok, L.ok], page = opt.page === 2 ? 2 : 1;
@@ -2105,46 +2296,52 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
       '<div class="msp-book"><div class="msp-pg" data-pg="1"></div><div class="msp-pg off" data-pg="2">' + page2 + '</div><div class="msp-pg off" data-pg="3"><div class="msp-pp"><div class="msp-ph"><b>' + esc(L.p3t) + '</b><small>' + esc(L.sub) + '</small></div><div class="p3"></div></div></div></div>' +
       '<div class="msp-v ' + verdict[0] + '">' + verdict[1] + '<span>' + esc(verdict[2]) + '</span></div><p class="msp-ft">' + esc(L.priv) + '</p></div></div></div>';
 
+    [].forEach.call(el.querySelectorAll('.msp-sc img'), function (im) { im.addEventListener('error', function () { if (im.classList.contains('ph')) { var sc = im.closest('.msp-sc'); if (sc) sc.remove(); } else im.remove(); }); });
     var p1 = el.querySelector('[data-pg="1"]'), p3 = el.querySelector('.p3'), pgs = el.querySelectorAll('.msp-pg'), tabs = el.querySelectorAll('.msp-tabs button'), cur = 1, st3 = { locked: true, rcp: null, done: false };
-    function mount3() {
-      if (st3.done) return; st3.done = true;
-      if (st3.locked) { p3.innerHTML = '<div class="msp-rtl"><span class="lk">' + SV.lock + '</span><b>' + esc(L.rcl) + '</b><p>' + esc(L.rcg) + '</p><button type="button">' + esc(L.rco) + '</button></div>'; p3.querySelector('button').onclick = function () { go(1); var i = p1.querySelector('input'); if (i) i.focus(); }; }
-      else if (st3.rcp) mountRc(p3, st3.rcp, L);
-      else p3.innerHTML = '<div class="msp-rtl"><p>' + esc(L.rce) + '</p></div>';
+    function rcSrc() {
+      var dd = function (x) { return x ? ('0' + x.getDate()).slice(-2) + '/' + ('0' + (x.getMonth() + 1)).slice(-2) + '/' + x.getFullYear() : ''; };
+      var pub = { d: { rno: e.r, name: e.n, brand: e.b, model: e.m, serial: e.s, km: e.k ? String(e.k) : '', color: e.c, date: dd(d) }, q: location.href.split(/[?#]/)[0].replace(/[^\/]*$/, '') + '?s=' + encodeURIComponent(e.s) };
+      var real = st3.rcp || pub, o = { d: real.d, q: real.q };
+      o.fb = fbRc; o.name = String(e.r || e.s).replace(/[^A-Za-z0-9_-]+/g, ''); return o;
     }
+    function mount3() { if (st3.done) return; st3.done = true; mountRc(p3, rcSrc(), L); }
     function go(n) { cur = +n; [].forEach.call(pgs, function (p) { p.classList.toggle('off', p.getAttribute('data-pg') != n); }); [].forEach.call(tabs, function (t) { t.classList.toggle('on', t.getAttribute('data-p') == n); }); if (+n === 3) mount3(); }
     function tryOpen(v) {
       var first = r && r.ik ? openBlob(v, r.ik) : Promise.resolve(null);
       return first.then(function (o) { if (o) return { o: o, byId: true, code: v }; return openBlob(v, r).then(function (o2) { return o2 ? { o: o2, code: v } : null; }); });
     }
     /* after the ID is accepted : hold-to-scan fingerprint, then the full passport opens */
-    function fpStage(res) {
-      var ul = p1.querySelector('.msp-ul'); if (!ul) return;
+    function reveal(res) { var o = res.o, id = o.id || null; if (id && res.byId && !id.idn) { id = JSON.parse(JSON.stringify(id)); id.idn = ncode(res.code); } draw(id, false, '', o.rcp || null); }
+    function fpStage(root, res) {
+      var ul = root.querySelector('.msp-ul'); if (!ul) return;
       ul.className = 'msp-fpd';
-      ul.innerHTML = '<b>' + esc(L.fpT) + '</b>' + window.__stp(3) + '<p>' + esc(L.fph) + '</p><button type="button" class="msp-fpb" aria-label="' + esc(L.fpT) + '"><svg class="rg" viewBox="0 0 116 116"><circle class="t" cx="58" cy="58" r="54"/><circle class="f" cx="58" cy="58" r="54"/></svg>' + SV.fp.replace('<svg', '<svg class="ic"') + '<i class="sl"></i></button><span class="msp-hand" aria-hidden="true">👆</span><div class="st"></div>';
+      ul.innerHTML = '<b>' + esc(L.fpT) + '</b><p>' + esc(L.fph) + '</p><button type="button" class="msp-fpb" aria-label="' + esc(L.fpT) + '"><svg class="rg" viewBox="0 0 116 116"><circle class="t" cx="58" cy="58" r="54"/><circle class="f" cx="58" cy="58" r="54"/></svg>' + SV.fp.replace('<svg', '<svg class="ic"') + '<i class="sl"></i></button><span class="msp-hand" aria-hidden="true">👆</span><div class="st"></div>';
       var btn = ul.querySelector('button'), st = ul.querySelector('.st'), tm = 0, fin = false;
       function start(ev) { if (fin) return; if (ev && ev.preventDefault) ev.preventDefault(); btn.classList.add('hold'); st.textContent = L.fpS; clearTimeout(tm); tm = setTimeout(done, 1200); }
       function stop() { if (fin) return; clearTimeout(tm); btn.classList.remove('hold'); st.textContent = ''; }
       function done() {
         fin = true; btn.classList.remove('hold'); btn.classList.add('done'); st.className = 'st ok'; st.textContent = L.fpOk; try { if (navigator.vibrate) navigator.vibrate(40); } catch (x) {}
-        setTimeout(function () { var o = res.o, id = o.id || null; if (id && res.byId && !id.idn) { id = JSON.parse(JSON.stringify(id)); id.idn = ncode(res.code); } draw(id, false, '', o.rcp || null); }, 750);
+        setTimeout(function () { reveal(res); }, 750);
       }
       btn.addEventListener('pointerdown', start); ['pointerup', 'pointerleave', 'pointercancel'].forEach(function (k) { btn.addEventListener(k, stop); });
       btn.addEventListener('contextmenu', function (ev) { ev.preventDefault(); });
       btn.addEventListener('keydown', function (ev) { if ((ev.key === ' ' || ev.key === 'Enter') && !ev.repeat) start(ev); }); btn.addEventListener('keyup', stop); btn.addEventListener('blur', stop);
       btn.focus();
     }
-    function draw(id, locked, msg, rcp) {
-      p1.innerHTML = page1(id, locked, msg, rcp);
-      st3.locked = locked; st3.rcp = rcp; st3.done = false; p3.innerHTML = ''; if (cur === 3) mount3();
-      var f = p1.querySelector('form'); if (!f) return;
+    function bindUnlock(root) {
+      var f = root.querySelector('form'); if (!f) return;
       f.onsubmit = function (ev) {
-        ev.preventDefault(); var inp = f.querySelector('input'), er = p1.querySelector('.er'), v = inp.value; if (ncode(v).length < 6) { er.textContent = L.bad; return; }
+        ev.preventDefault(); var inp = f.querySelector('input'), er = root.querySelector('.er'), v = inp.value; if (ncode(v).length < 6) { er.textContent = L.bad; return; }
         er.textContent = L.loading;
-        tryOpen(v).then(function (res) { if (!res) { er.textContent = L.bad; return; } fpStage(res); }).catch(function (x) { er.textContent = x && x.message === 'nocrypto' ? L.nocr : L.bad; });
+        tryOpen(v).then(function (res) { if (!res) { er.textContent = L.bad; return; } fpStage(root, res); }).catch(function (x) { er.textContent = x && x.message === 'nocrypto' ? L.nocr : L.bad; });
       };
     }
-    draw(null, true);
+    function draw(id, locked, msg, rcp) {
+      p1.innerHTML = page1(id, locked, msg, rcp);
+      st3.locked = locked; if (rcp) { st3.rcp = rcp; st3.done = false; p3.innerHTML = ''; mount3(); }
+      bindUnlock(p1);
+    }
+    draw(null, true); mount3();
     [].forEach.call(tabs, function (t) { t.onclick = function () { go(t.getAttribute('data-p')); }; });
     var sx = 0; el.addEventListener('touchstart', function (ev) { sx = ev.touches[0].clientX; }, { passive: true });
     el.addEventListener('touchend', function (ev) { var dx = ev.changedTouches[0].clientX - sx; if (Math.abs(dx) > 70 && !/INPUT|BUTTON/.test((ev.target || {}).tagName || '')) go(Math.max(1, Math.min(3, cur + ((dx < 0) === (lg !== 'ar') ? 1 : -1)))); }, { passive: true });
