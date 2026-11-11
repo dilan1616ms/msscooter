@@ -69,7 +69,26 @@
     '.msp-rvs{overflow:auto;padding:12px;background:#e5e7eb;flex:1}.msp-rv.dark .msp-rvs{background:#09090b}.msp-sheet{width:100%;max-width:560px;margin:0 auto;aspect-ratio:595.5/842.25;background:#fff;box-shadow:0 2px 12px #0004;direction:ltr;unicode-bidi:isolate}.msp-sheet svg{direction:ltr}.msp-rvl{margin:0;padding:40px 10px;text-align:center;color:#555;font-weight:700;font-size:14px}' +
     '.msp-rvf{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #e4e4e7}.msp-rvf button{flex:1;border:0;border-radius:11px;padding:11px 8px;font:inherit;font-weight:800;font-size:13.5px;cursor:pointer;background:#dc2626;color:#fff}.msp-rvf button.alt{background:#1f2937}';
 
-  CSS += '.msp-stp{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:5px;counter-reset:s}.msp-stp li{counter-increment:s;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:#6b5b3e}.msp-stp li:before{content:counter(s);flex:none;width:20px;height:20px;border-radius:50%;background:#d9cfb4;color:#1f2937;display:grid;place-items:center;font-size:11px;font-weight:900}.msp-stp li.on{color:#1f2937;font-weight:900}.msp-stp li.on:before{background:#1f2937;color:#fff}.msp-stp li.dn:before{content:"✓";background:#15803d;color:#fff}' +
+  CSS += '.msp-pp.id{position:relative;display:flex;flex-direction:column;min-height:0;padding:0;overflow:hidden;color:#14213d;border:1px solid #aebccb;border-radius:12px;background:linear-gradient(115deg,#f2ecd6 0%,#e4eff4 42%,#f1e6ee 72%,#e9efd9 100%);box-shadow:0 1px 0 #fff8 inset,0 20px 40px -24px #0007}' +
+    '.msp-pp.id:before{display:block;opacity:1;content:"";position:absolute;inset:0;pointer-events:none;background:repeating-radial-gradient(circle at 18% 28%,transparent 0 5px,#1d4ed81c 5px 5.7px),repeating-radial-gradient(circle at 82% 70%,transparent 0 6px,#be123c14 6px 6.7px),repeating-linear-gradient(115deg,#0f766e10 0 1px,transparent 1px 7px)}' +
+    '.msp-pp.id:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 35%,#ffffff66 47%,transparent 58%);background-size:260% 100%;animation:msp-gl 6s ease-in-out infinite}@keyframes msp-gl{from{background-position:140% 0}to{background-position:-140% 0}}' +
+    '.msp-pp.id>*{position:relative;z-index:1}.msp-pp.id .wm{position:absolute;z-index:0;inset-inline-end:50%;transform:translateX(50%);inset-block-start:38%;width:62%;opacity:.07;filter:grayscale(1);pointer-events:none}' +
+    '.msp-pp.id .pp-h{display:flex;align-items:center;gap:11px;padding:13px 14px 10px;border-bottom:1.5px solid #14213d40}' +
+    '.msp-pp.id .lg2{width:46px;height:46px;flex:none;border-radius:50%;background:#fffc;border:1.5px solid #14213d55;display:grid;place-items:center;padding:6px}.msp-pp.id .lg2 img{max-width:100%;max-height:100%;display:block}.msp-pp.id .lg2 span{font-size:22px;font-weight:900;color:#9f1239}' +
+    '.msp-pp.id .tt b{display:block;font-size:15px;font-weight:900;letter-spacing:.2em;color:#1e2a5a}.msp-pp.id .tt small{display:block;font-size:10.5px;font-weight:700;color:#4b5d83;margin-top:1px}' +
+    '.msp-pp.id .pp-ty{margin-inline-start:auto;font:900 34px/1 Georgia,serif;color:#9f1239;opacity:.85}' +
+    '.msp-pp.id .pp-r3{display:grid;grid-template-columns:.6fr .8fr 1.6fr;gap:10px;padding:9px 14px 0}' +
+    '.msp-pp.id .pp-m{display:flex;gap:13px;padding:10px 14px 4px;align-items:flex-start}' +
+    '.msp-pp.id .msp-photo{width:100px;flex:none;aspect-ratio:3/4;border:1.5px solid #14213d66;border-radius:3px;box-shadow:0 0 0 3px #fff8;background:linear-gradient(#dbe7f7,#a9c1e6)}.msp-pp.id .msp-photo.f{background:linear-gradient(#fbe3f0,#efb4d3)}.msp-pp.id .msp-photo.n{background:linear-gradient(#eceff3,#c5ccd6)}' +
+    '.msp-pp.id .msp-photo:after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:color-dodge;opacity:.5;background:linear-gradient(120deg,transparent 20%,#a5f3fc 40%,#f0abfc 55%,#fde68a 70%,transparent 85%);background-size:250% 100%;animation:msp-ho 5s linear infinite}@keyframes msp-ho{from{background-position:130% 0}to{background-position:-130% 0}}' +
+    '.msp-pp.id .pp-f{display:grid;gap:7px;min-width:0;flex:1}.msp-pp.id .pp-x{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;padding:8px 14px 8px;flex:1;align-content:space-evenly}.msp-pp.id .pp-x .pf:last-child:nth-child(odd){grid-column:1/-1}' +
+    '.msp-pp.id .pf{min-width:0;border-bottom:1px dotted #14213d4d;padding-bottom:3px}.msp-pp.id .pf small{display:block;font-size:9px;font-weight:800;letter-spacing:.06em;color:#4b5d83;text-transform:uppercase}.msp-pp.id .pf small i{font-style:italic;font-weight:600;text-transform:none;letter-spacing:0}' +
+    '.msp-pp.id .pf b{display:block;font-size:14px;font-weight:800;color:#0f172a;letter-spacing:.03em;text-transform:uppercase;overflow-wrap:anywhere;min-height:0}.msp-pp.id .pf.big b{font-size:19px;line-height:1.15}.msp-pp.id .pf b .msp-dots{color:#7f8cab}' +
+    '.msp-pp.id .msp-ul,.msp-pp.id .msp-fpd{margin:4px 14px 12px;border-color:#9f1239aa;background:#fffaf0cc}.msp-pp.id .msp-ul button{background:#1e2a5a}' +
+    '.msp-pp.id .msp-mrz{margin:0;padding:9px 12px 11px;border-top:1px solid #14213d33;background:#fffd;color:#1f2937;opacity:1;font-size:10px;letter-spacing:0;word-break:normal;white-space:nowrap;overflow:hidden}' +
+    '@media(prefers-reduced-motion:reduce){.msp-pp.id:after,.msp-pp.id .msp-photo:after{animation:none}}' +
+    '.msp-sheet{cursor:zoom-in;transition:width .25s}.msp-sheet.zm{max-width:none;width:230%;cursor:zoom-out}.msp-rt3 .sheet{cursor:zoom-in}.msp-rvs{-webkit-overflow-scrolling:touch}' +
+    '.msp-stp{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:5px;counter-reset:s}.msp-stp li{counter-increment:s;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:#6b5b3e}.msp-stp li:before{content:counter(s);flex:none;width:20px;height:20px;border-radius:50%;background:#d9cfb4;color:#1f2937;display:grid;place-items:center;font-size:11px;font-weight:900}.msp-stp li.on{color:#1f2937;font-weight:900}.msp-stp li.on:before{background:#1f2937;color:#fff}.msp-stp li.dn:before{content:"✓";background:#15803d;color:#fff}' +
     '.msp-fpb:not(.hold):not(.done){animation:msp-pl 1.6s ease-out infinite}@keyframes msp-pl{0%{box-shadow:0 0 0 0 #38bdf8aa}100%{box-shadow:0 0 0 18px #38bdf800}}.msp-hand{display:block;font-size:26px;margin-top:6px;animation:msp-hd 1.2s ease-in-out infinite}@keyframes msp-hd{50%{transform:translateY(-6px)}}.msp-fpb.hold~.msp-hand,.msp-fpb.done~.msp-hand{display:none}' +
     '.msp-ul input::placeholder{letter-spacing:0;text-transform:none;font-family:Cairo,system-ui,sans-serif;font-weight:700;font-size:13px}.msp-f2 .msp-f b{font-size:13.5px}' +
     '.msp-fpd{margin-top:12px;padding:14px 11px 12px;border-radius:12px;border:1.5px solid #b4975a;background:#fffaf0;text-align:center}.msp-fpd b{display:block;font-size:13.5px}.msp-fpd p{margin:3px 0 10px;font-size:12px;color:#6b5b3e}' +
@@ -97,13 +116,13 @@
   };
 
   var T = {
-    ar: { s1: 'اكتب رقم وثيقة الهوية الكامل', s2: 'اضغط «فتح»', s3: 'ضع إصبعك على البصمة', fph: 'اضغط مطولاً بالفأرة أو بإصبعك', t: 'جواز السكوتر', sub: 'MS Scooter · السجل الرسمي', sec: 'موثّق', alert: 'تنبيه', chk: 'قيد التحقق', p1: 'الهوية', p2: 'التأشيرة', p1t: 'صفحة الهوية', p2t: 'تأشيرة السكوتر', sn: 'اللقب', gn: 'الاسم', sx: 'الجنس', sxm: 'ذكر', sxf: 'أنثى', bd: 'تاريخ الميلاد', pob: 'مكان الميلاد', wil: 'الولاية', idn: 'رقم وثيقة الهوية', iss: 'تاريخ الإصدار', pno: 'رقم الجواز', lkT: 'الهوية محمية', lkP: 'أدخل رقم وثيقة الهوية الكامل لفتح الجواز كاملاً ونسخة الوصل.', p3: 'الوصل', p3t: 'نسخة الوصل', fpT: 'ضع إصبعك على البصمة', fpH: 'اضغط مطولاً على البصمة حتى تكتمل الدائرة', fpS: 'جارٍ المسح…', fpOk: 'تم التحقق من الهوية', idph: 'رقم وثيقة الهوية الكامل', rcl: 'الوصل مرتبط بالهوية', rcg: 'افتح الهوية أولاً بإدخال رقم وثيقة الهوية الكامل.', rco: 'فتح الهوية', rpdf: 'تحميل PDF', rimg: 'تحميل صورة', rpe: 'تعذّر إنشاء الملف، حاول مرة أخرى.',  un: 'فتح', bad: 'رمز غير صحيح', noid: 'لم تُسجَّل هوية المالك بعد.', nocr: 'تعذّر الفك : يلزم HTTPS.', own: 'المالك', loading: 'جارٍ الفتح…', rct: 'نسخة الوصل', rcs: 'نسخة من وصل الشراء الخاص بك', rcv: 'عرض الوصل', rcd: 'تحميل صورة', rcpr: 'PDF / طباعة', rce: 'تعذّر عرض الوصل، حاول لاحقاً.', cls: 'إغلاق',
+    ar: { xp: 'تاريخ الانتهاء', au: 'الجهة المصدرة', rno: 'رقم الوصل', rtt: 'وصل شراء', rdt: 'تاريخ الشراء', rcn: 'نسخة للاطلاع · MS Scooter', zm: 'اضغط على الوصل للتكبير', s1: 'اكتب رقم وثيقة الهوية الكامل', s2: 'اضغط «فتح»', s3: 'ضع إصبعك على البصمة', fph: 'اضغط مطولاً بالفأرة أو بإصبعك', t: 'جواز السكوتر', sub: 'MS Scooter · السجل الرسمي', sec: 'موثّق', alert: 'تنبيه', chk: 'قيد التحقق', p1: 'الهوية', p2: 'التأشيرة', p1t: 'صفحة الهوية', p2t: 'تأشيرة السكوتر', sn: 'اللقب', gn: 'الاسم', sx: 'الجنس', sxm: 'ذكر', sxf: 'أنثى', bd: 'تاريخ الميلاد', pob: 'مكان الميلاد', wil: 'الولاية', idn: 'رقم وثيقة الهوية', iss: 'تاريخ الإصدار', pno: 'رقم الجواز', lkT: 'الهوية محمية', lkP: 'أدخل رقم وثيقة الهوية الكامل لفتح الجواز كاملاً ونسخة الوصل.', p3: 'الوصل', p3t: 'نسخة الوصل', fpT: 'ضع إصبعك على البصمة', fpH: 'اضغط مطولاً على البصمة حتى تكتمل الدائرة', fpS: 'جارٍ المسح…', fpOk: 'تم التحقق من الهوية', idph: 'رقم وثيقة الهوية الكامل', rcl: 'الوصل مرتبط بالهوية', rcg: 'افتح الهوية أولاً بإدخال رقم وثيقة الهوية الكامل.', rco: 'فتح الهوية', rpdf: 'تحميل PDF', rimg: 'تحميل صورة', rpe: 'تعذّر إنشاء الملف، حاول مرة أخرى.',  un: 'فتح', bad: 'رمز غير صحيح', noid: 'لم تُسجَّل هوية المالك في قاعدة البيانات لهذا السكوتر بعد.', nocr: 'تعذّر الفك : يلزم HTTPS.', own: 'المالك', loading: 'جارٍ الفتح…', rct: 'نسخة الوصل', rcs: 'نسخة من وصل الشراء الخاص بك', rcv: 'عرض الوصل', rcd: 'تحميل صورة', rcpr: 'PDF / طباعة', rce: 'تعذّر عرض الوصل، حاول لاحقاً.', cls: 'إغلاق',
       sold: 'تم البيع', warr: 'الضمان', mo: 'أشهر', mo2: 'شهراً', act: 'ساري', exp: 'منتهي', left: 'يوم', svc: 'الورشة', none: 'لا إصلاحات', rep: 'تدخل', now: 'قيد الإصلاح', veh: 'المركبة', brand: 'الماركة', model: 'الطراز', color: 'اللون', ser: 'الرقم التسلسلي', km: 'المسافة', orig: 'المالك الأصلي', tr: 'انتقلت الملكية', stolen: 'مسروق', disp: 'قيد التحقق', ext: 'مسجّل', visa: 'تأشيرة رقم',
       ok: 'جواز أصلي : السكوتر مسجّل لدى MS Scooter', vstolen: 'مُبلَّغ عنه كمسروق : لا تشتريه واتصل بنا', vdisp: 'الملكية قيد التحقق : انتبه قبل الشراء', nf: 'لم نجد هذا الرقم التسلسلي', nfp: 'تحقق من الرقم المكتوب على الوصل أو على الهيكل ثم أعد المحاولة.', priv: 'الهوية مشفّرة ولا تظهر إلا برمز المالك.', loc: 'ar-DZ-u-nu-latn' },
-    fr: { s1: 'Saisissez le n° complet', s2: 'Appuyez sur « Ouvrir »', s3: 'Posez le doigt sur l’empreinte', fph: 'Maintenez avec la souris ou le doigt', t: 'Passeport du scooter', sub: 'MS Scooter · Registre officiel', sec: 'Authentique', alert: 'ALERTE', chk: 'À vérifier', p1: 'Identité', p2: 'Visa', p1t: 'Page d’identité', p2t: 'Visa du scooter', sn: 'Nom', gn: 'Prénom(s)', sx: 'Sexe', sxm: 'Masculin', sxf: 'Féminin', bd: 'Date de naissance', pob: 'Lieu de naissance', wil: 'Wilaya', idn: 'N° pièce d’identité', iss: 'Date d’émission', pno: 'N° de passeport', lkT: 'Identité protégée', lkP: 'Saisissez le n° complet de votre pièce d’identité pour ouvrir le passeport complet et la copie du reçu.', p3: 'Reçu', p3t: 'Copie du reçu', fpT: 'Posez votre doigt sur l’empreinte', fpH: 'Maintenez appuyé jusqu’à ce que le cercle soit complet', fpS: 'Lecture…', fpOk: 'Identité vérifiée', idph: 'N° complet de la pièce d’identité', rcl: 'Le reçu est lié à l’identité', rcg: 'Ouvrez d’abord l’identité avec le n° complet de la pièce d’identité.', rco: 'Ouvrir l’identité', rpdf: 'Télécharger le PDF', rimg: 'Télécharger l’image', rpe: 'Impossible de créer le fichier, réessayez.',  un: 'Ouvrir', bad: 'Code incorrect', noid: 'Identité du propriétaire non enregistrée.', nocr: 'Déchiffrement impossible : HTTPS requis.', own: 'Propriétaire', loading: 'Ouverture…', rct: 'Copie du reçu', rcs: 'Copie de votre reçu d’achat', rcv: 'Voir le reçu', rcd: 'Télécharger l’image', rcpr: 'PDF / Imprimer', rce: 'Impossible d’afficher le reçu, réessayez plus tard.', cls: 'Fermer',
+    fr: { xp: 'Date d’expiration', au: 'Autorité', rno: 'N° du reçu', rtt: 'Reçu d’achat', rdt: 'Date d’achat', rcn: 'Copie pour information · MS Scooter', zm: 'Touchez le reçu pour agrandir', s1: 'Saisissez le n° complet', s2: 'Appuyez sur « Ouvrir »', s3: 'Posez le doigt sur l’empreinte', fph: 'Maintenez avec la souris ou le doigt', t: 'Passeport du scooter', sub: 'MS Scooter · Registre officiel', sec: 'Authentique', alert: 'ALERTE', chk: 'À vérifier', p1: 'Identité', p2: 'Visa', p1t: 'Page d’identité', p2t: 'Visa du scooter', sn: 'Nom', gn: 'Prénom(s)', sx: 'Sexe', sxm: 'Masculin', sxf: 'Féminin', bd: 'Date de naissance', pob: 'Lieu de naissance', wil: 'Wilaya', idn: 'N° pièce d’identité', iss: 'Date d’émission', pno: 'N° de passeport', lkT: 'Identité protégée', lkP: 'Saisissez le n° complet de votre pièce d’identité pour ouvrir le passeport complet et la copie du reçu.', p3: 'Reçu', p3t: 'Copie du reçu', fpT: 'Posez votre doigt sur l’empreinte', fpH: 'Maintenez appuyé jusqu’à ce que le cercle soit complet', fpS: 'Lecture…', fpOk: 'Identité vérifiée', idph: 'N° complet de la pièce d’identité', rcl: 'Le reçu est lié à l’identité', rcg: 'Ouvrez d’abord l’identité avec le n° complet de la pièce d’identité.', rco: 'Ouvrir l’identité', rpdf: 'Télécharger le PDF', rimg: 'Télécharger l’image', rpe: 'Impossible de créer le fichier, réessayez.',  un: 'Ouvrir', bad: 'Code incorrect', noid: 'Identité du propriétaire non enregistrée.', nocr: 'Déchiffrement impossible : HTTPS requis.', own: 'Propriétaire', loading: 'Ouverture…', rct: 'Copie du reçu', rcs: 'Copie de votre reçu d’achat', rcv: 'Voir le reçu', rcd: 'Télécharger l’image', rcpr: 'PDF / Imprimer', rce: 'Impossible d’afficher le reçu, réessayez plus tard.', cls: 'Fermer',
       sold: 'VENDU', warr: 'GARANTIE', mo: 'mois', mo2: 'mois', act: 'ACTIVE', exp: 'EXPIRÉE', left: 'j', svc: 'ATELIER', none: 'AUCUNE RÉPARATION', rep: 'INTERVENTION(S)', now: 'EN RÉPARATION', veh: 'VÉHICULE', brand: 'Marque', model: 'Modèle', color: 'Couleur', ser: 'N° série', km: 'Km', orig: 'PROPRIÉTAIRE D’ORIGINE', tr: 'TRANSFÉRÉ', stolen: 'DÉCLARÉ VOLÉ', disp: 'EN LITIGE', ext: 'ENREGISTRÉ', visa: 'VISA N°',
       ok: 'Passeport authentique : scooter enregistré chez MS Scooter', vstolen: 'DÉCLARÉ VOLÉ : ne l’achetez pas et contactez-nous', vdisp: 'Propriété en cours de vérification : prudence avant l’achat', nf: 'Numéro de série introuvable', nfp: 'Vérifiez le numéro inscrit sur le reçu ou sur le châssis, puis réessayez.', priv: 'L’identité est chiffrée : visible seulement avec le code du propriétaire.', loc: 'fr-FR' },
-    en: { s1: 'Type the full ID number', s2: 'Press “Open”', s3: 'Place your finger on the print', fph: 'Hold with the mouse or your finger', t: 'Scooter Passport', sub: 'MS Scooter · Official registry', sec: 'Verified', alert: 'ALERT', chk: 'Check', p1: 'Identity', p2: 'Visa', p1t: 'Identity page', p2t: 'Scooter visa', sn: 'Surname', gn: 'Given names', sx: 'Sex', sxm: 'Male', sxf: 'Female', bd: 'Date of birth', pob: 'Place of birth', wil: 'Wilaya', idn: 'ID document no.', iss: 'Date of issue', pno: 'Passport no.', lkT: 'Identity protected', lkP: 'Enter your full ID document number to open the complete passport and the receipt copy.', p3: 'Receipt', p3t: 'Receipt copy', fpT: 'Place your finger on the print', fpH: 'Press and hold until the circle is complete', fpS: 'Scanning…', fpOk: 'Identity verified', idph: 'Full ID document number', rcl: 'Receipt is tied to the identity', rcg: 'Open the identity first with the full ID document number.', rco: 'Open identity', rpdf: 'Download PDF', rimg: 'Download image', rpe: 'Could not create the file, try again.',  un: 'Open', bad: 'Wrong code', noid: 'Owner identity not registered yet.', nocr: 'Cannot decrypt: HTTPS required.', own: 'Owner', loading: 'Opening…', rct: 'Receipt copy', rcs: 'A copy of your purchase receipt', rcv: 'View receipt', rcd: 'Download image', rcpr: 'PDF / Print', rce: 'Could not display the receipt, try again later.', cls: 'Close',
+    en: { xp: 'Date of expiry', au: 'Authority', rno: 'Receipt no.', rtt: 'Purchase receipt', rdt: 'Purchase date', rcn: 'Information copy · MS Scooter', zm: 'Tap the receipt to zoom', s1: 'Type the full ID number', s2: 'Press “Open”', s3: 'Place your finger on the print', fph: 'Hold with the mouse or your finger', t: 'Scooter Passport', sub: 'MS Scooter · Official registry', sec: 'Verified', alert: 'ALERT', chk: 'Check', p1: 'Identity', p2: 'Visa', p1t: 'Identity page', p2t: 'Scooter visa', sn: 'Surname', gn: 'Given names', sx: 'Sex', sxm: 'Male', sxf: 'Female', bd: 'Date of birth', pob: 'Place of birth', wil: 'Wilaya', idn: 'ID document no.', iss: 'Date of issue', pno: 'Passport no.', lkT: 'Identity protected', lkP: 'Enter your full ID document number to open the complete passport and the receipt copy.', p3: 'Receipt', p3t: 'Receipt copy', fpT: 'Place your finger on the print', fpH: 'Press and hold until the circle is complete', fpS: 'Scanning…', fpOk: 'Identity verified', idph: 'Full ID document number', rcl: 'Receipt is tied to the identity', rcg: 'Open the identity first with the full ID document number.', rco: 'Open identity', rpdf: 'Download PDF', rimg: 'Download image', rpe: 'Could not create the file, try again.',  un: 'Open', bad: 'Wrong code', noid: 'Owner identity not registered yet.', nocr: 'Cannot decrypt: HTTPS required.', own: 'Owner', loading: 'Opening…', rct: 'Receipt copy', rcs: 'A copy of your purchase receipt', rcv: 'View receipt', rcd: 'Download image', rcpr: 'PDF / Print', rce: 'Could not display the receipt, try again later.', cls: 'Close',
       sold: 'SOLD', warr: 'WARRANTY', mo: 'months', mo2: 'months', act: 'ACTIVE', exp: 'EXPIRED', left: 'd', svc: 'SERVICE', none: 'NO REPAIRS', rep: 'VISIT(S)', now: 'IN REPAIR', veh: 'VEHICLE', brand: 'Brand', model: 'Model', color: 'Colour', ser: 'Serial no.', km: 'Km', orig: 'ORIGINAL OWNER', tr: 'TRANSFERRED', stolen: 'REPORTED STOLEN', disp: 'UNDER REVIEW', ext: 'REGISTERED', visa: 'VISA NO.',
       ok: 'Authentic passport : scooter registered with MS Scooter', vstolen: 'REPORTED STOLEN : do not buy it, contact us', vdisp: 'Ownership under verification : be careful before buying', nf: 'Serial number not found', nfp: 'Check the number on the receipt or on the frame, then try again.', priv: 'Identity is encrypted: visible only with the owner’s code.', loc: 'en-GB' }
   };
@@ -154,8 +173,8 @@
   function ck(s) { var w = [7, 3, 1], t = 0; for (var i = 0; i < s.length; i++) { var c = s.charAt(i), v = c === '<' ? 0 : /\d/.test(c) ? +c : c.charCodeAt(0) - 55; t += v * w[i % 3]; } return t % 10; }
   function ymd(d) { return d ? String(d.getFullYear()).slice(2) + ('0' + (d.getMonth() + 1)).slice(-2) + ('0' + d.getDate()).slice(-2) : '<<<<<<'; }
   function mrz(e, id, wEnd) {
-    var l1 = 'P<DZA' + mz(id ? (id.ln + '<<' + String(id.fn).replace(/ /g, '<')) : '', 39), s9 = mz(e.s, 9), bd = id ? ymd(pd(id.bd)) : '<<<<<<', ex = ymd(wEnd);
-    var l2 = s9 + ck(s9) + 'DZA' + bd + ck(bd) + (id && id.sex ? id.sex.toUpperCase() : '<') + ex + ck(ex) + mz(e.b + e.m, 16);
+    var l1 = 'P<MSS' + mz(id ? (id.ln + '<<' + String(id.fn).replace(/ /g, '<')) : '', 39), s9 = mz(e.s, 9), bd = id ? ymd(pd(id.bd)) : '<<<<<<', ex = ymd(wEnd);
+    var l2 = s9 + ck(s9) + 'MSS' + bd + ck(bd) + (id && id.sex ? id.sex.toUpperCase() : '<') + ex + ck(ex) + mz(e.b + e.m, 16);
     return esc(l1) + '<br>' + esc(l2.slice(0, 44));
   }
 
@@ -214,7 +233,7 @@
   }
   function openRcp(rcp, act) {
     if (!rcp) return;
-    var lg = lang(), L = T[lg], name = 'MS-Scooter-' + String((rcp.d && (rcp.d.rno || rcp.d.serial)) || 'recu').replace(/[^A-Za-z0-9_-]+/g, '');
+    var lg = lang(), L = T[lg], name = 'MS-Scooter-' + String(rcp.name || (rcp.d && (rcp.d.rno || rcp.d.serial)) || 'recu').replace(/[^A-Za-z0-9_-]+/g, '');
     var ov = document.createElement('div'); ov.className = 'msp-rv' + (dark() ? ' dark' : ''); ov.setAttribute('dir', lg === 'ar' ? 'rtl' : 'ltr'); ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true');
     ov.innerHTML = '<div class="msp-rvb"><div class="msp-rvh"><b>' + esc(L.rct) + '</b><button type="button" class="x" data-a="x" aria-label="' + esc(L.cls) + '">✕</button></div><div class="msp-rvs"><div class="msp-sheet"><p class="msp-rvl">' + esc(L.loading) + '</p></div></div><div class="msp-rvf"><button type="button" data-a="d">' + esc(L.rcd) + '</button><button type="button" data-a="p" class="alt">' + esc(L.rcpr) + '</button></div></div>';
     document.body.appendChild(ov);
@@ -228,11 +247,10 @@
       if (a === 'p') printSheet(sheet, name);
       else if (a === 'd') { busy = true; savePng(sheet, name).catch(function () { printSheet(sheet, name); }).then(function () { busy = false; }); }
     }
-    ov.onclick = function (e) { var a = e.target.getAttribute && e.target.getAttribute('data-a'); if (e.target === ov || a === 'x') { close(); return; } if (a) run(a); };
-    needRc().then(function () {
-      window.MSReceipt.render(sheet, rcp.d, { copy: true, qrUrl: rcp.q }); ready = true;
-      if (act === 'd' || act === 'p') setTimeout(function () { run(act); }, 800);
-    }).catch(function () { sheet.innerHTML = '<p class="msp-rvl">' + esc(L.rce) + '</p>'; });
+    ov.onclick = function (e) { if (e.target.closest && e.target.closest('.msp-sheet') && ready) { sheet.classList.toggle('zm'); return; } var a = e.target.getAttribute && e.target.getAttribute('data-a'); if (e.target === ov || a === 'x') { close(); return; } if (a) run(a); };
+    (rcp.d ? needRc().then(function () { window.MSReceipt.render(sheet, rcp.d, { copy: true, qrUrl: rcp.q }); }) : Promise.reject(0)).catch(function () { sheet.innerHTML = rcp.fb(); }).then(function () {
+      ready = true; if (act === 'd' || act === 'p') setTimeout(function () { run(act); }, 800);
+    });
   }
 
   /* ---- direct PDF : the receipt sheet -> JPEG -> single-page A4 PDF (no library) ---- */
@@ -275,12 +293,13 @@
   }
   /* receipt tab : inline preview + PDF / image download */
   function mountRc(host, rcp, L) {
-    var name = 'MS-Scooter-' + String((rcp.d && (rcp.d.rno || rcp.d.serial)) || 'recu').replace(/[^A-Za-z0-9_-]+/g, '');
-    host.innerHTML = '<div class="msp-rt3"><div class="hd"><span class="ri">' + SV.doc + '</span><div><b>' + esc(L.rct) + '</b><small>' + esc(L.rcs) + '</small></div></div><div class="sheet"><p class="msp-rvl">' + esc(L.loading) + '</p></div><div class="rb"><button type="button" data-a="pdf" disabled>' + esc(L.rpdf) + '</button><button type="button" data-a="png" class="alt" disabled>' + esc(L.rimg) + '</button></div></div>';
+    var name = 'MS-Scooter-' + String(rcp.name || (rcp.d && (rcp.d.rno || rcp.d.serial)) || 'recu').replace(/[^A-Za-z0-9_-]+/g, '');
+    host.innerHTML = '<div class="msp-rt3"><div class="hd"><span class="ri">' + SV.doc + '</span><div><b>' + esc(L.rct) + '</b><small>' + esc(L.rcs) + '</small></div></div><div class="sheet"><p class="msp-rvl">' + esc(L.loading) + '</p></div><small style="text-align:center;color:#6b5b3e;font-size:11.5px;font-weight:700">' + esc(L.zm) + '</small><div class="rb"><button type="button" data-a="pdf" disabled>' + esc(L.rpdf) + '</button><button type="button" data-a="png" class="alt" disabled>' + esc(L.rimg) + '</button></div></div>';
     var sheet = host.querySelector('.sheet'), btns = host.querySelectorAll('button'), busy = false;
     function en(v) { [].forEach.call(btns, function (b) { b.disabled = !v; }); }
-    needRc().then(function () { window.MSReceipt.render(sheet, rcp.d, { copy: true, qrUrl: rcp.q }); en(true); }).catch(function () { sheet.innerHTML = '<p class="msp-rvl">' + esc(L.rce) + '</p>'; });
+    (rcp.d ? needRc().then(function () { window.MSReceipt.render(sheet, rcp.d, { copy: true, qrUrl: rcp.q }); }) : Promise.reject(0)).catch(function () { sheet.innerHTML = rcp.fb(); }).then(function () { en(true); });
     host.onclick = function (ev) {
+      if (ev.target.closest && ev.target.closest('.sheet') && sheet.querySelector('svg')) { openRcp(rcp); return; }
       var a = ev.target.getAttribute && ev.target.getAttribute('data-a'); if (!a || busy) return; busy = true; en(false);
       (a === 'pdf' ? savePdf(sheet, name) : savePng(sheet, name)).catch(function () { printSheet(sheet, name); }).then(function () { busy = false; en(true); });
     };
@@ -295,6 +314,21 @@
     var d = pd(e.d), w = +e.w || 0, end = d && w > 0 ? addM(d, w) : null, now = new Date(), left = end ? Math.ceil((end - now) / 864e5) : 0, active = end && left > 0;
     var r = repOf(e.s), n = r ? +r.v || 0 : 0, rot = function (k) { return ((hash(e.s + k) % 13) - 6) + 'deg'; };
     var city = (window.MS_SITE && (MS_SITE.city || MS_SITE.ci)) || '';
+
+    /* receipt copy built from MS_DATA only (no ID, no code) : used when no full receipt data is published */
+    function fbRc() {
+      var rtl = lg === 'ar', W = 595, H = 842, X1 = rtl ? W - 48 : 48, X2 = rtl ? 48 : W - 48, dir = rtl ? 'rtl' : 'ltr', an = rtl ? 'end' : 'start';
+      var rows = [[L.rno, e.r || e.s], [L.rdt, d ? fd(d, L) : '—'], [L.own, e.n || '—'], [L.brand, e.b], [L.model, (e.m || '') + (e.v ? ' · VIP' : '')]];
+      if (e.c) rows.push([L.color, e.c]); rows.push([L.ser, e.s]); if (e.k) rows.push([L.km, e.k + ' km']);
+      rows.push([L.warr, w ? w + ' ' + (lg === 'ar' && w > 10 ? L.mo2 : L.mo) + (end ? ' · ' + sd(end) : '') : '—']);
+      var y = 178, g = '';
+      rows.forEach(function (r0) { g += '<text x="' + X1 + '" y="' + y + '" font-size="12.5" font-weight="700" fill="#71717a" text-anchor="' + an + '">' + esc(r0[0]) + '</text><text x="' + X1 + '" y="' + (y + 25) + '" font-size="19" font-weight="900" fill="#09090b" text-anchor="' + an + '">' + esc(r0[1]) + '</text><line x1="48" y1="' + (y + 38) + '" x2="' + (W - 48) + '" y2="' + (y + 38) + '" stroke="#e4e4e7"/>'; y += 56; });
+      var bc = barcode(e.s).replace('<svg class="msp-bc"', '<svg x="' + ((W - 240) / 2) + '" y="' + (H - 140) + '" width="240" height="44"');
+      return '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg" direction="ltr" font-family="Cairo,system-ui,sans-serif"><rect width="' + W + '" height="' + H + '" fill="#fff"/><rect width="' + W + '" height="124" fill="#dc2626"/>' +
+        '<text x="' + X1 + '" y="62" font-size="34" font-weight="900" fill="#fff" direction="ltr" text-anchor="' + (rtl ? 'end' : 'start') + '">MS Scooter</text><text x="' + X1 + '" y="98" font-size="17" font-weight="700" fill="#fff" fill-opacity=".9" text-anchor="' + an + '">' + esc(L.rtt) + (city ? ' · ' + esc(city) : '') + '</text>' +
+        '<text x="' + W / 2 + '" y="' + (H / 2 + 60) + '" font-size="120" font-weight="900" fill="#09090b" fill-opacity=".04" text-anchor="middle" transform="rotate(-30 ' + W / 2 + ' ' + (H / 2) + ')" direction="ltr">COPY</text>' +
+        g + bc + '<text x="' + W / 2 + '" y="' + (H - 70) + '" font-size="13" font-weight="800" fill="#52525b" text-anchor="middle" direction="ltr">' + esc(e.s) + '</text><text x="' + W / 2 + '" y="' + (H - 40) + '" font-size="12" font-weight="700" fill="#a1a1aa" text-anchor="middle">' + esc(L.rcn) + '</text></svg>';
+    }
 
     /* page 2 : visa */
     var stamps = '';
@@ -314,28 +348,40 @@
     var page2 = '<div class="msp-pp msp-visa"><div class="msp-ph"><b>' + esc(L.p2t) + '</b><small>' + esc(L.sub) + '</small></div><div class="msp-st">' + stamps + '</div>' +
       '<div class="msp-vn"><span>' + esc(L.visa) + ' ' + esc(e.r || e.s) + '</span>' + barcode(e.s) + '</div></div>';
 
+    function ulHtml(msg) {
+      return r ? '<div class="msp-ul"><b>' + SV.lock.replace('<svg', '<svg width="16" height="16"') + esc(L.lkT) + '</b><p>' + esc(L.lkP) + '</p><form><input maxlength="24" placeholder="' + esc(L.idph) + '" autocomplete="off" spellcheck="false" inputmode="text" aria-label="' + esc(L.idph) + '"><button>' + esc(L.un) + '</button></form><div class="er">' + esc(msg || '') + '</div></div>' : '<div class="msp-ul"><p style="margin:0">' + esc(L.noid) + '</p></div>';
+    }
     /* page 1 : identity (locked until the owner's code opens MS_REP) */
     function page1(id, locked, msg, rcp) {
       var HN = r && r.h || null, sexK = id ? id.sex : (HN && HN.sx) || '', sexC = sexK === 'f' ? 'f' : 'm';
       var half = function (w) { var q = Array.from(String(w)), k = q.length > 1 ? Math.ceil(q.length / 2) : 0; return q.slice(0, k).join('') + new Array(q.length - k + 1).join('•'); };
       /* locked : only the half-masked hint published next to the encrypted blob (never the full value) ; unlocked : the real value */
+      var h2 = function (w) { w = w == null ? '' : String(w); return !w || w.indexOf('•') > -1 ? w : half(w); };
       var fld = function (lab, val, ltr, hint) {
-        var inner = !locked ? (val ? esc(val) : '—') : hint ? '<bdi>' + esc(hint).replace(/•+/g, function (m) { return '<span class="msp-dots">' + m + '</span>'; }) + '</bdi>' : '••••••••';
-        return '<div class="msp-f"><small>' + esc(lab) + '</small><b' + (locked && !hint ? ' class="lkd"' : '') + (ltr ? ' style="direction:ltr;unicode-bidi:isolate;text-align:start"' : '') + '>' + inner + '</b></div>';
+        var inner = !locked ? (val ? esc(val) : '—') : hint ? '<bdi>' + esc(hint).replace(/•+/g, function (m) { return '<span class="msp-dots">' + m + '</span>'; }) + '</bdi>' : (r ? '••••••••' : '—');
+        return '<div class="msp-f"><small>' + esc(lab) + '</small><b' + (locked && !hint && r ? ' class="lkd"' : '') + (ltr ? ' style="direction:ltr;unicode-bidi:isolate;text-align:start"' : '') + '>' + inner + '</b></div>';
       };
       var bdT = id && pd(id.bd) ? fd(pd(id.bd), L) : '';
       var sexT = id ? (id.sex === 'm' ? L.sxm : id.sex === 'f' ? L.sxf : '') : '';
       var idT = id ? (id.idn ? String(id.idn) : id.idl ? '•••••••' + id.idl : '') : '', idH = HN && HN.idl ? '•••••••••••' + String(HN.idl).slice(-3) : '';
-      var stp = function (n) { return '<ol class="msp-stp">' + [L.s1, L.s2, L.s3].map(function (t, i) { return '<li class="' + (i + 1 < n ? 'dn' : i + 1 === n ? 'on' : '') + '">' + esc(t) + '</li>'; }).join('') + '</ol>'; }; window.__stp = stp;
       var form = '';
-      if (locked) form = r ? '<div class="msp-ul"><b>' + SV.lock.replace('<svg', '<svg width="16" height="16"') + esc(L.lkT) + '</b><p>' + esc(L.lkP) + '</p>' + stp(1) + '<form><input maxlength="24" placeholder="' + esc(L.idph) + '" autocomplete="off" spellcheck="false" inputmode="text" aria-label="' + esc(L.idph) + '"><button>' + esc(L.un) + '</button></form><div class="er">' + esc(msg || '') + '</div></div>' : '<div class="msp-ul"><p style="margin:0">' + esc(L.noid) + '</p></div>';
+      if (locked) form = ulHtml(msg);
       else if (!id) form = '<div class="msp-ul"><p style="margin:0">' + esc(L.noid) + '</p></div>';
       var rc = false && rcp ? '<div class="msp-rc"><div class="rt"><span class="ri">' + SV.doc + '</span><div><b>' + esc(L.rct) + '</b><small>' + esc(L.rcs) + '</small></div></div><div class="rb"><button type="button" data-a="v">' + esc(L.rcv) + '</button><button type="button" data-a="d" class="alt">' + esc(L.rcd) + '</button><button type="button" data-a="p" class="alt">' + esc(L.rcpr) + '</button></div></div>' : '';
-      return '<div class="msp-pp"><div class="msp-ph"><b>' + esc(L.p1t) + '</b><small>' + esc(L.sub) + '</small></div>' +
-        '<div class="msp-i1"><div class="msp-photo ' + sexC + '">' + (sexC === 'f' ? SV.wom : SV.man) + (locked ? '<span class="lkb">' + SV.lock + '</span>' : (id && id.sex ? '<span class="sx">' + (sexC === 'm' ? 'M' : 'F') + '</span>' : '')) + '</div>' +
-        '<div class="msp-fl">' + fld(L.sn, id && id.ln, 0, HN && HN.ln) + fld(L.gn, id && id.fn, 0, HN && HN.fn) + fld(L.sx, sexT, 0, HN && HN.sx ? (HN.sx === 'f' ? L.sxf : L.sxm) : '') + fld(L.bd, bdT, locked, HN && HN.bd) + fld(L.pob, id && id.pob, 0, HN && HN.pob) + '</div></div>' +
-        '<div class="msp-f2">' + fld(L.wil, id && id.wil, 0, HN && HN.wil) + fld(L.idn, idT, 1, idH) + '<div class="msp-f"><small>' + esc(L.iss) + '</small><b>' + (d ? esc(fd(d, L)) : '—') + '</b></div><div class="msp-f"><small>' + esc(L.pno) + '</small><b style="direction:ltr;unicode-bidi:isolate">' + esc(e.s) + '</b></div></div>' +
-        (locked ? '<div class="msp-f" style="margin-top:8px"><small>' + esc(L.own) + '</small><b style="direction:ltr;unicode-bidi:isolate">' + esc(e.n || '—') + '</b></div>' : '') + form + rc +
+      var EN = { sn: 'Surname', gn: 'Given names', sx: 'Sex', bd: 'Date of birth', pob: 'Place of birth', wil: 'Wilaya', idn: 'ID document no.', iss: 'Date of issue', xp: 'Date of expiry', veh: 'Vehicle', color: 'Colour', km: 'Km', pno: 'Passport no.', rno: 'Receipt no.', own: 'Owner', au: 'Authority', ty: 'Type', cd: 'Code' };
+      var cell = function (k, v, ltr, big) { return v ? '<div class="pf' + (big ? ' big' : '') + '"><small>' + esc(L[k] || EN[k]) + (lg === 'en' ? '' : ' <i>/ ' + EN[k] + '</i>') + '</small><b' + (ltr ? ' style="direction:ltr;unicode-bidi:isolate;text-align:start"' : '') + '>' + esc(v).replace(/•+/g, function (m) { return '<span class="msp-dots">' + m + '</span>'; }) + '</b></div>' : ''; };
+      var X = locked ? { ln: h2(HN && HN.ln), fn: h2(HN && HN.fn), sx: HN && HN.sx ? h2(HN.sx === 'f' ? L.sxf : L.sxm) : '', bd: h2(HN && HN.bd), pob: h2(HN && HN.pob), wil: h2(HN && HN.wil), idn: idH }
+                      : { ln: id && id.ln, fn: id && id.fn, sx: sexT, bd: bdT, pob: id && id.pob, wil: id && id.wil, idn: idT };
+      var wtxt = end ? fd(end, L) : '';
+      var hasId = !!(X.ln || X.fn), sxk = id ? id.sex : (HN && HN.sx) || '';
+      var photoC = sxk === 'f' ? 'f' : sxk === 'm' ? 'm' : 'n', vehT = ((e.b || '') + ' ' + (e.m || '') + (e.v ? ' · VIP' : '')).trim();
+      var main = hasId ? cell('sn', X.ln, 0, 1) + cell('gn', X.fn, 0, 1) + cell('sx', X.sx) + cell('bd', X.bd, locked) + cell('pob', X.pob) : cell('veh', vehT, 0, 1) + cell('own', e.n, 1) + cell('color', e.c) + cell('km', e.k ? e.k + ' km' : '');
+      var xtra = cell('wil', X.wil) + cell('idn', X.idn, 1) + cell('iss', d ? fd(d, L) : '') + cell('xp', wtxt) + (hasId ? cell('veh', vehT) + cell('color', e.c) + cell('km', e.k ? e.k + ' km' : '') + cell('own', e.n, 1) : '') + cell('rno', e.r, 1) + cell('au', 'MS SCOOTER' + (city ? ' · ' + String(city).toUpperCase() : ''), 1);
+      var logoI = function (cls) { return '<img ' + (cls ? 'class="' + cls + '" ' : '') + 'src="brand-' + esc(slug(e.b)) + '.webp" alt="" onerror="' + (cls ? 'this.remove()' : 'this.parentNode.innerHTML=\'<span>' + esc((e.b || '?').charAt(0).toUpperCase()) + '</span>\'') + '">'; };
+      return '<div class="msp-pp id"><div class="pp-h"><span class="lg2">' + logoI() + '</span><div class="tt"><b>SCOOTER PASSPORT</b><small>' + esc(L.t) + ' · ' + esc(vehT) + '</small></div><span class="pp-ty">P</span></div>' + logoI('wm') +
+        '<div class="pp-r3">' + cell('ty', 'P', 1) + cell('cd', 'MSS', 1) + cell('pno', e.s, 1) + '</div>' +
+        '<div class="pp-m"><div class="msp-photo ' + photoC + '">' + (photoC === 'f' ? SV.wom : photoC === 'm' ? SV.man : SV.neu) + (locked && hasId ? '<span class="lkb">' + SV.lock + '</span>' : (id && id.sex ? '<span class="sx">' + (sxk === 'm' ? 'M' : 'F') + '</span>' : '')) + '</div><div class="pp-f">' + main + '</div></div>' +
+        '<div class="pp-x">' + xtra + '</div>' + (locked && r ? form : '') +
         '<div class="msp-mrz">' + mrz(e, id, end) + '</div></div>';
     }
     var verdict = st === 'v' ? ['bad', SV.bad, L.vstolen] : st === 'l' ? ['warn', SV.bad, L.vdisp] : ['ok', SV.ok, L.ok], page = opt.page === 2 ? 2 : 1;
@@ -347,45 +393,50 @@
       '<div class="msp-v ' + verdict[0] + '">' + verdict[1] + '<span>' + esc(verdict[2]) + '</span></div><p class="msp-ft">' + esc(L.priv) + '</p></div></div></div>';
 
     var p1 = el.querySelector('[data-pg="1"]'), p3 = el.querySelector('.p3'), pgs = el.querySelectorAll('.msp-pg'), tabs = el.querySelectorAll('.msp-tabs button'), cur = 1, st3 = { locked: true, rcp: null, done: false };
-    function mount3() {
-      if (st3.done) return; st3.done = true;
-      if (st3.locked) { p3.innerHTML = '<div class="msp-rtl"><span class="lk">' + SV.lock + '</span><b>' + esc(L.rcl) + '</b><p>' + esc(L.rcg) + '</p><button type="button">' + esc(L.rco) + '</button></div>'; p3.querySelector('button').onclick = function () { go(1); var i = p1.querySelector('input'); if (i) i.focus(); }; }
-      else if (st3.rcp) mountRc(p3, st3.rcp, L);
-      else p3.innerHTML = '<div class="msp-rtl"><p>' + esc(L.rce) + '</p></div>';
+    function rcSrc() {
+      var dd = function (x) { return x ? ('0' + x.getDate()).slice(-2) + '/' + ('0' + (x.getMonth() + 1)).slice(-2) + '/' + x.getFullYear() : ''; };
+      var pub = { d: { rno: e.r, name: e.n, brand: e.b, model: e.m, serial: e.s, km: e.k ? String(e.k) : '', color: e.c, date: dd(d) }, q: location.href.split(/[?#]/)[0].replace(/[^\/]*$/, '') + '?s=' + encodeURIComponent(e.s) };
+      var real = st3.rcp || pub, o = { d: real.d, q: real.q };
+      o.fb = fbRc; o.name = String(e.r || e.s).replace(/[^A-Za-z0-9_-]+/g, ''); return o;
     }
+    function mount3() { if (st3.done) return; st3.done = true; mountRc(p3, rcSrc(), L); }
     function go(n) { cur = +n; [].forEach.call(pgs, function (p) { p.classList.toggle('off', p.getAttribute('data-pg') != n); }); [].forEach.call(tabs, function (t) { t.classList.toggle('on', t.getAttribute('data-p') == n); }); if (+n === 3) mount3(); }
     function tryOpen(v) {
       var first = r && r.ik ? openBlob(v, r.ik) : Promise.resolve(null);
       return first.then(function (o) { if (o) return { o: o, byId: true, code: v }; return openBlob(v, r).then(function (o2) { return o2 ? { o: o2, code: v } : null; }); });
     }
     /* after the ID is accepted : hold-to-scan fingerprint, then the full passport opens */
-    function fpStage(res) {
-      var ul = p1.querySelector('.msp-ul'); if (!ul) return;
+    function reveal(res) { var o = res.o, id = o.id || null; if (id && res.byId && !id.idn) { id = JSON.parse(JSON.stringify(id)); id.idn = ncode(res.code); } draw(id, false, '', o.rcp || null); }
+    function fpStage(root, res) {
+      var ul = root.querySelector('.msp-ul'); if (!ul) return;
       ul.className = 'msp-fpd';
-      ul.innerHTML = '<b>' + esc(L.fpT) + '</b>' + window.__stp(3) + '<p>' + esc(L.fph) + '</p><button type="button" class="msp-fpb" aria-label="' + esc(L.fpT) + '"><svg class="rg" viewBox="0 0 116 116"><circle class="t" cx="58" cy="58" r="54"/><circle class="f" cx="58" cy="58" r="54"/></svg>' + SV.fp.replace('<svg', '<svg class="ic"') + '<i class="sl"></i></button><span class="msp-hand" aria-hidden="true">👆</span><div class="st"></div>';
+      ul.innerHTML = '<b>' + esc(L.fpT) + '</b><p>' + esc(L.fph) + '</p><button type="button" class="msp-fpb" aria-label="' + esc(L.fpT) + '"><svg class="rg" viewBox="0 0 116 116"><circle class="t" cx="58" cy="58" r="54"/><circle class="f" cx="58" cy="58" r="54"/></svg>' + SV.fp.replace('<svg', '<svg class="ic"') + '<i class="sl"></i></button><span class="msp-hand" aria-hidden="true">👆</span><div class="st"></div>';
       var btn = ul.querySelector('button'), st = ul.querySelector('.st'), tm = 0, fin = false;
       function start(ev) { if (fin) return; if (ev && ev.preventDefault) ev.preventDefault(); btn.classList.add('hold'); st.textContent = L.fpS; clearTimeout(tm); tm = setTimeout(done, 1200); }
       function stop() { if (fin) return; clearTimeout(tm); btn.classList.remove('hold'); st.textContent = ''; }
       function done() {
         fin = true; btn.classList.remove('hold'); btn.classList.add('done'); st.className = 'st ok'; st.textContent = L.fpOk; try { if (navigator.vibrate) navigator.vibrate(40); } catch (x) {}
-        setTimeout(function () { var o = res.o, id = o.id || null; if (id && res.byId && !id.idn) { id = JSON.parse(JSON.stringify(id)); id.idn = ncode(res.code); } draw(id, false, '', o.rcp || null); }, 750);
+        setTimeout(function () { reveal(res); }, 750);
       }
       btn.addEventListener('pointerdown', start); ['pointerup', 'pointerleave', 'pointercancel'].forEach(function (k) { btn.addEventListener(k, stop); });
       btn.addEventListener('contextmenu', function (ev) { ev.preventDefault(); });
       btn.addEventListener('keydown', function (ev) { if ((ev.key === ' ' || ev.key === 'Enter') && !ev.repeat) start(ev); }); btn.addEventListener('keyup', stop); btn.addEventListener('blur', stop);
       btn.focus();
     }
-    function draw(id, locked, msg, rcp) {
-      p1.innerHTML = page1(id, locked, msg, rcp);
-      st3.locked = locked; st3.rcp = rcp; st3.done = false; p3.innerHTML = ''; if (cur === 3) mount3();
-      var f = p1.querySelector('form'); if (!f) return;
+    function bindUnlock(root) {
+      var f = root.querySelector('form'); if (!f) return;
       f.onsubmit = function (ev) {
-        ev.preventDefault(); var inp = f.querySelector('input'), er = p1.querySelector('.er'), v = inp.value; if (ncode(v).length < 6) { er.textContent = L.bad; return; }
+        ev.preventDefault(); var inp = f.querySelector('input'), er = root.querySelector('.er'), v = inp.value; if (ncode(v).length < 6) { er.textContent = L.bad; return; }
         er.textContent = L.loading;
-        tryOpen(v).then(function (res) { if (!res) { er.textContent = L.bad; return; } fpStage(res); }).catch(function (x) { er.textContent = x && x.message === 'nocrypto' ? L.nocr : L.bad; });
+        tryOpen(v).then(function (res) { if (!res) { er.textContent = L.bad; return; } fpStage(root, res); }).catch(function (x) { er.textContent = x && x.message === 'nocrypto' ? L.nocr : L.bad; });
       };
     }
-    draw(null, true);
+    function draw(id, locked, msg, rcp) {
+      p1.innerHTML = page1(id, locked, msg, rcp);
+      st3.locked = locked; if (rcp) { st3.rcp = rcp; st3.done = false; p3.innerHTML = ''; mount3(); }
+      bindUnlock(p1);
+    }
+    draw(null, true); mount3();
     [].forEach.call(tabs, function (t) { t.onclick = function () { go(t.getAttribute('data-p')); }; });
     var sx = 0; el.addEventListener('touchstart', function (ev) { sx = ev.touches[0].clientX; }, { passive: true });
     el.addEventListener('touchend', function (ev) { var dx = ev.changedTouches[0].clientX - sx; if (Math.abs(dx) > 70 && !/INPUT|BUTTON/.test((ev.target || {}).tagName || '')) go(Math.max(1, Math.min(3, cur + ((dx < 0) === (lg !== 'ar') ? 1 : -1)))); }, { passive: true });
