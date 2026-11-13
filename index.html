@@ -639,9 +639,9 @@ html:not([data-th=dark]) .dl .ph img{mix-blend-mode:multiply}
 #lb .lt small{opacity:.7;font-weight:800;font-variant-numeric:tabular-nums}
 #lb .lb-b{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;border:1px solid #ffffff30;background:#ffffff14;color:#fff;flex:none}
 #lb .lb-b:hover{background:#ffffff30}#lb .lb-b svg{width:22px;height:22px}
-#lbs{flex:1;min-height:0;position:relative;overflow:hidden;display:grid;place-items:center;touch-action:none;cursor:zoom-in;user-select:none;-webkit-user-select:none}
+#lbs{flex:1;min-height:0;position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);place-items:center;touch-action:none;cursor:zoom-in;user-select:none;-webkit-user-select:none}
 #lbs.z{cursor:grab}
-#lbs img{max-width:100%;max-height:100%;object-fit:contain;transform-origin:50% 50%;will-change:transform;-webkit-user-drag:none;pointer-events:none;background:transparent;border-radius:6px}
+#lbs img{width:auto;height:auto;max-width:100%;max-height:100%;min-height:0;min-width:0;object-fit:contain;transform-origin:50% 50%;will-change:transform;-webkit-user-drag:none;pointer-events:none;background:transparent;border-radius:6px}
 #lbs.drag img{transition:none}#lbs img{transition:transform .18s ease-out}
 #lb .lnv{position:absolute;top:50%;translate:0 -50%;z-index:2}#lb .lnv.p{inset-inline-start:10px}#lb .lnv.n{inset-inline-end:10px}
 #lb .lnv.p svg{transform:scaleX(-1)}[dir=rtl] #lb .lnv.p svg{transform:none}[dir=rtl] #lb .lnv.n svg{transform:scaleX(-1)}
@@ -730,7 +730,7 @@ body.xo .blob,body.xo .mq{display:none}
     <span class="bdg r"><i></i><span data-i="bd"></span></span>
     <h1 data-i="h1"></h1>
     <p class="hp" data-i="hp"></p>
-    <div class="hcta"><button type="button" class="btn lg" id="cfb">⚙️ <span id="cfbt"></span></button><a class="btn lg out" id="hwa" target="_blank" rel="noopener" href="#"><svg><use href="#i-wa"/></svg><span data-i="wbt"></span></a><a class="btn lg out" href="#verify"><svg><use href="#i-shield"/></svg><span data-i="vt"></span></a></div>
+    <div class="hcta"><button type="button" class="btn lg" id="cfb">⚙️ <span id="cfbt"></span></button><a class="btn lg out" id="hwa" href="#store"><svg><use href="#i-down"/></svg><span data-i="wpt"></span></a><a class="btn lg out" href="#verify"><svg><use href="#i-shield"/></svg><span data-i="vt"></span></a></div>
     <div class="card vc" id="verify">
       <b><svg><use href="#i-shield"/></svg><span data-i="vt"></span></b><p data-i="vp"></p>
       <form class="vf" data-vf><input class="inp" name="s" required autocomplete="off" autocapitalize="characters" spellcheck="false" data-ph="vph" aria-label="Serial"><button class="btn" type="submit" data-i="vb"></button></form>
@@ -890,7 +890,7 @@ bd:['الشلف · توصيل إلى 58 ولاية','Chlef · Livraison 58 wilay
 h1:['دراجتك الكهربائية، تصلك أينما كنت','Votre scooter électrique, livré partout en Algérie','Your electric scooter, delivered across Algeria'],
 hp:['دراجات كهربائية NIU وScoozer وEziRide وAIMA بضمان 12 شهراً، مع قطع الغيار والصيانة وتوصيل مجاني للولايات القريبة. للأسعار والتفاصيل راسلنا على واتساب.','Scooters électriques NIU, Scoozer, EziRide et AIMA avec 12 mois de garantie, pièces détachées, réparation et livraison gratuite dans les wilayas proches. Prix et détails sur WhatsApp.','NIU, Scoozer, EziRide and AIMA electric scooters with a 12-month warranty, spare parts, repairs and free delivery to nearby wilayas. Prices and details on WhatsApp.'],
 hpOld:['NIU وScoozer وEziRide وAIMA. اختر الموديل والباقة، أضفها إلى السلة واطلب عبر واتساب.','NIU, Scoozer, EziRide, AIMA. Choisissez modèle et pack, ajoutez au panier et commandez sur WhatsApp.','NIU, Scoozer, EziRide, AIMA. Pick model and pack, add to cart and order on WhatsApp.'],
-wbt:['اطلب الأسعار عبر واتساب','Prix sur WhatsApp','Get prices on WhatsApp'],fth:['كل ما تحتاجه بعد الشراء','Tout ce qu’il vous faut après l’achat','Everything you need after you buy'],ftp:['ضمان وقطع غيار وصيانة وتوصيل، في مكان واحد.','Garantie, pièces, réparation et livraison, au même endroit.','Warranty, parts, repair and delivery, all in one place.'],
+wbt:['اطلب الأسعار عبر واتساب','Prix sur WhatsApp','Get prices on WhatsApp'],wpt:['شاهد أسعار السكوترات','Voir les prix des scooters','See scooter prices'],fth:['كل ما تحتاجه بعد الشراء','Tout ce qu’il vous faut après l’achat','Everything you need after you buy'],ftp:['ضمان وقطع غيار وصيانة وتوصيل، في مكان واحد.','Garantie, pièces, réparation et livraison, au même endroit.','Warranty, parts, repair and delivery, all in one place.'],
 f1h:['ضمان على الدراجة','Garantie sur le scooter','Scooter warranty'],f1u:['شهراً','mois','months'],
 f2h:['ضمان قابل للتحقق','Garantie vérifiable','Verifiable warranty'],f2p:['امسح رمز QR على وصلك أو أدخل الرقم التسلسلي، وشاهد حالة ضمانك في ثوانٍ.','Scannez le QR de votre reçu ou saisissez le n° de série pour voir l’état de votre garantie en quelques secondes.','Scan the QR on your receipt or enter the serial number to see your warranty status in seconds.'],f2b:['تحقق الآن','Vérifier maintenant','Verify now'],
 f3h:['ورشة صيانة وإصلاح','Atelier SAV et réparation','Service and repair workshop'],f3p:['ورشتنا في الشلف تتكفل بكل الإصلاحات والمراجعة الدورية.','Notre atelier à Chlef s’occupe de toutes les réparations et révisions.','Our Chlef workshop handles every repair and check-up.'],f3t:['فحص دوري|تغيير البطارية|ضبط الفرامل|تركيب القطع','Contrôle|Batterie|Freins|Montage pièces','Check-up|Battery swap|Brake tuning|Parts fitting'],
@@ -1504,7 +1504,7 @@ function apply(){H.lang=L;H.dir=L==='ar'?'rtl':'ltr';
  document.querySelectorAll('#lang button').forEach(function(b){b.classList.toggle('on',b.dataset.l===L)});
  var ST={ar:'تخطي إلى المحتوى',fr:'Aller au contenu',en:'Skip to content'};$('skp').textContent=ST[L];
  var a=$('ann'),bn=S.banner_on?(L=='ar'?S.banner_ar:S.banner_fr)||S.banner_fr||S.banner_ar:'';a.textContent=bn||'';a.classList.toggle('hide',!bn);
- closeAll();closeNav();var w=wa(t('wp'));$('wa').href=w;$('fwa').href=wa(t('wp'));$('swa').href=w;$('hwa').href=w;hero();tiles();store();parts();sold();battery();lists();feat();proof();videos();renderCart();saveW();contact();reveal()}
+ closeAll();closeNav();var w=wa(t('wp'));$('wa').href=w;$('fwa').href=wa(t('wp'));$('swa').href=w;hero();tiles();store();parts();sold();battery();lists();feat();proof();videos();renderCart();saveW();contact();reveal()}
 document.querySelectorAll('#lang button').forEach(function(b){b.onclick=function(){L=b.dataset.l;try{localStorage.setItem('ms-lang',L)}catch(e){}apply()}});
 $('th').onclick=function(){var n=H.dataset.th==='dark'?'light':'dark';H.dataset.th=n;try{localStorage.setItem('ms-th',n)}catch(e){}};
 $('up').onclick=function(){scrollTo({top:0,behavior:'smooth'})};
